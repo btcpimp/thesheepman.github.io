@@ -1,0 +1,226 @@
+.burger__button {
+    top: 20px;
+    left: 20px;
+    display: block;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.5s ease;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 8px -2px #333;
+    background: #f4d32c;
+}
+
+.burger__button.open {
+    border: 2px solid #fff;
+    box-shadow: none;
+}
+
+.burger__button__icon {
+    display: inline-block;
+    position: absolute;
+    background: #fff;
+    margin: 0 auto;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    transform: translateY(-1px);
+}
+
+.burger__button__icon:before,
+.burger__button__icon:after {
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    background: #fff;
+    width: 20px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.burger__button__icon:before {
+    bottom: 10px;
+}
+
+.burger__button__icon:after {
+    top: 10px;
+}
+
+.burger__button.open .burger__button__icon {
+    background: transparent;
+}
+
+.burger__button.open .burger__button__icon:before,
+.burger__button.open .burger__button__icon:after {
+    transform-origin: 0 50%;
+    width: 28.28427125px;
+}
+
+.burger__button.open .burger__button__icon:before {
+    transform: rotateZ(0.78539816rad);
+}
+
+.burger__button.open .burger__button__icon:after {
+    transform: rotateZ(-0.78539816rad);
+}
+
+.burger__menu {
+    list-style-type: none;
+    padding: 0 0 0 20px;
+}
+
+.burger__menu li {
+    display: block;
+    position: relative;
+    margin: 15px 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    transform: translateX(-400px);
+}
+
+.burger__menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: normal;
+    transition: all 0.4s ease;
+    border-left: 3px solid transparent;
+    padding-left: 0;
+}
+
+.burger__menu a:hover {
+    padding-left: 30px;
+    border-left: 3px solid #fff;
+}
+
+.burger__button.open + .burger__menu li {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+}
+
+.main .header > * {
+    color: #191919;
+}
+
+.main {
+    padding: 200px 0px;
+}
+
+section {
+    padding-top: 300px;
+    padding-bottom: 200px;
+}
+
+.numbers-heading {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 67px;
+    color: #fff;
+    font-size: 80px;
+    line-height: 1.13;
+    font-weight: 600;
+}
+
+.numbers-heading:after {
+    position: absolute;
+    width: 104px;
+    height: 5px;
+    margin-left: -52px;
+    background-color: #ffc107;
+    content: "";
+    left: 50%;
+    bottom: 0;
+}
+
+.numbers-heading-text {
+    color: white;
+    padding-top: 100px;
+    max-width: 600px;
+    margin: 0 auto 115px;
+}
+
+.numbers-heading-text,
+.numbers__text {
+    font-size: 30px;
+    line-height: 1.33;
+}
+
+.lab1 {
+    background: #34439b;
+}
+
+.formula {
+    color: #f4d32c;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+.input-field label {
+    color: #fff !important;
+}
+
+input[type=number],
+textarea {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+input[type=number]:focus,
+textarea {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+    color: #fff !important;
+}
+
+.material-icons {
+    color: #fff !important;
+}
+
+.result {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.hartly-btn {
+    background: #ffa000;
+}
+
+.hartly-btn:hover,
+.hartly-btn:focus {
+    background: #f57f17;
+}
+
+.lab2 {
+    background: #00cf6b;
+}
+
+.hartly-btn {
+    margin-top: 20px;
+}
+.lab3{
+  background: #00d2f7;
+}
