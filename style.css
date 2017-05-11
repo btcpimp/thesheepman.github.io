@@ -224,3 +224,8 @@ input::-webkit-inner-spin-button {
 .lab3{
   background: #00d2f7;
 }
+@media screen and (max-device-width: 568px){
+.numbers-heading{
+    font-size: 36px !important;
+}
+}
