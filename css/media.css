@@ -1,0 +1,40 @@
+@media screen and (max-width:767px) {
+    header {
+        text-align: center;
+    }
+    .logo {
+        font-size: 48px;
+    }
+    .socials a {
+        font-size: 36px;
+    }
+    .play_block {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .playlist {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .search_tracklist_block {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .underline {
+        width: 90%;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .audiojs {
+        max-width: 250px;
+    }
+    #master {
+        display: none;
+    }
+    .daily_track_block {
+    	visibility: hidden;
+    }
+}
