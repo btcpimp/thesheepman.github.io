@@ -221,9 +221,16 @@ input::-webkit-inner-spin-button {
 .hartly-btn {
     margin-top: 20px;
 }
-.lab3{
-  background: #547681;
+#sec3{
+    background: #4d6975;
 }
+#exam{
+  background: #74b1be;
+}
+#sec3 .result{
+font-size:  .9em;
+}
+
 @media screen and (max-device-width: 568px){
 .numbers-heading{
     font-size: 36px !important;

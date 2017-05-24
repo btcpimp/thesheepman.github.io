@@ -66,4 +66,21 @@ $(document).ready(function() {
         $(".entropy").text("Энтропия по Шеннону: " + entropyResult);
     });
 
+    $('.cryptButton').on('click', function() {
+        var alice = $('.alice').val();
+        var bob = $('.bob').val();
+        var key = $('.key').val();
+
+        var a = Math.pow(2, alice) % key;
+        var b = Math.pow(2, bob) % key;
+
+        var aRes = Math.pow(b, alice) % key;
+        var bRes = Math.pow(a, bob) % key;
+
+        $('.forAlice').text('Открытый ключ Alice: '+ a)
+        $('.forBob').text('Открытый ключ Bob: '+ b)
+        $('.cryptResultA').text('Закрытый ключ Alice: '+ aRes)
+        $('.cryptResultB').text('Закрытый ключ Bob: '+ bRes)
+    })
+
 });
