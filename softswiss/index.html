@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<!-- META -->
+    <!-- META -->
     <meta charset=utf-8>
     <meta content="IE=edge" http-equiv=X-UA-Compatible>
     <meta content="width=device-width,initial-scale=1" name=viewport>
@@ -15,6 +15,7 @@
 </head>
 
 <body ng-app="testTask">
+    <!-- HEADER -->
     <header>
         <div class='top-wrapper'>
             <div class="top-menu">
@@ -37,19 +38,18 @@
         </div>
     </header>
     <div ng-controller="productsCtrl">
+        <!-- CHOOSE -->
         <section class='choose-section' id="choose">
             <div class="choose-product">
                 <form name="choose-product">
                     <label ng-repeat="(key, value) in showCategory">
                         <input type="checkbox" ng-model="showCategory[key]">{{key}}
                     </label>
-                    <!--                 <label>
-                    <input type="checkbox" ng-model="showCategory.men" ng-true-value="Men" ng-false-value="">Men
-                </label> -->
                 </form>
                 <div class='see-all-button'><a href="" ng-click='noFilter()'>See all products</a></div>
             </div>
         </section>
+        <!-- SHOP -->
         <section class='shop-section' id="shop">
             <div class="shop-product-wrapper">
                 <div class="shop-product-wrapper__item-wrapper" ng-repeat="item in data.items | filter:showChosen">
@@ -70,6 +70,7 @@
             </div>
         </section>
     </div>
+    <!-- FOOTER -->
     <footer ng-controller="menuCtrl">
         <div class='footer-upper'>
             <div class='footer-upper__content'><span class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>“ E-commerce psd theme available ”</div>
@@ -91,6 +92,23 @@
             </div>
         </div>
     </footer>
+    <!-- GA -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-85721434-5', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
 
 </html>
