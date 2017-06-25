@@ -1,96 +1,116 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-<!-- META -->
-    <meta charset=utf-8>
     <meta content="IE=edge" http-equiv=X-UA-Compatible>
     <meta content="width=device-width,initial-scale=1" name=viewport>
-    <title>Soft Swiss</title>
-    <link rel="icon" type="images" sizes="60x60" href="images/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="compressed/css/style.min.css">
-    <script type="text/javascript" src='compressed/js/script.min.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <script src="libs/jquery-3.1.1.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="common.js"></script>
+    <title>Теория информации</title>
 </head>
 
-<body ng-app="testTask">
-    <header>
-        <div class='top-wrapper'>
-            <div class="top-menu">
-                <div class='top-menu__logo'><img src="images/logo.png" alt="logo"></div>
-                <ul>
-                    <li class='top-menu__item'><a href="#">Home</a></li>
-                    <li class='top-menu__item'><a href="#">Products</a></li>
-                    <li class='top-menu__item'>
-                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                    </li>
-                </ul>
+<body>
+    <navigation>
+        <a href="#" href="#" data-activates="slide-out" class="burger__button" id="burger-button">
+            <span class="burger__button__icon"></span>
+        </a>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="#andrei">Андрей</a></li>
+            <li><a href="#sec1">Количество информации</a></li>
+            <li><a href="#sec2">Энтропия Шеннона</a></li>
+            <li><a href="#exam">Экзамен</a></li>
+        </ul>
+    </navigation>
+    <section id='andrei' class='main scrollspy'>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="header">
+                        <h1 class='numbers-heading'>Теория информации</h1>
+                        <div class="numbers-heading-text">Тавкинь Андрей Сергеевич
+                            <br>УИР 551-1</div>
+                    </div>
+                </div>
             </div>
-            <div class='top-heading'>
-                <div class='top-heading__header'>Our clothing, your comfort</div>
-                <div class='top-heading__subheader'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    <br> tempor incididunt ut labore et dolore
-                    <br> magna aliqua.</div>
-            </div>
-            <div class='bottom-arrow'><a href="#" id='scroll'><i class="fa fa-chevron-down" aria-hidden="true"></i></a></div>
         </div>
-    </header>
-    <div ng-controller="productsCtrl">
-        <section class='choose-section' id="choose">
-            <div class="choose-product">
-                <form name="choose-product">
-                    <label ng-repeat="(key, value) in showCategory">
-                        <input type="checkbox" ng-model="showCategory[key]">{{key}}
-                    </label>
-                    <!--                 <label>
-                    <input type="checkbox" ng-model="showCategory.men" ng-true-value="Men" ng-false-value="">Men
-                </label> -->
-                </form>
-                <div class='see-all-button'><a href="" ng-click='noFilter()'>See all products</a></div>
-            </div>
-        </section>
-        <section class='shop-section' id="shop">
-            <div class="shop-product-wrapper">
-                <div class="shop-product-wrapper__item-wrapper" ng-repeat="item in data.items | filter:showChosen">
-                    <div class="shop-product-wrapper__item-block">
-                        <select class="item-block__size" ng-model="item.options[0]" ng-options="option for option in item.options">
-                        </select>
-                        <div class="item-block__image">
-                            <img src="images/{{item.img}}" alt="{{item.img}}">
-                        </div>
-                        <div class="item-block__name">
-                            {{item.name}}
-                        </div>
-                        <div class="item-block__price">
-                            {{item.price}}€
+    </section>
+    <section id='sec1' class='lab1 scrollspy'>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="header">
+                        <h1 class='numbers-heading'>Лабораторная работа #1</h1>
+                        <div class="numbers-heading-text">Количество информации по формуле Хартли:
+                            <div class="formula">I = log<sub>2</sub>N</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-    <footer ng-controller="menuCtrl">
-        <div class='footer-upper'>
-            <div class='footer-upper__content'><span class="twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>“ E-commerce psd theme available ”</div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="m" type="number" class="m">
+                            <label for="m">Введите M</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="n" type="number" class="n">
+                            <label for="n">Введите N</label>
+                        </div>
+                        <a class="waves-effect calc waves-light btn-large hartly-btn">Рассчитать</a>
+                        <div class="result1 result"></div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class='footer-bottom'>
-            <div class='footer-bottom__content'>
-                <div class='content-left'><span class='content-left__header'>Trekking</span>
-                    <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    <br> sed do eiusmod tempor incididunt ut labore et dolore
-                    <br> magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    <br> exercitation ullamco laboris nisi ut aliquip ex ea
-                    <br> commodo consequat.</div>
-                <div class='content-right'>
-                    <ul class='content-right__menu'>
-                        <li ng-repeat="links in data.footerMenu"><a href="{{links.link}}" title="{{links.title}}">{{links.name}}</a></li>
-                    </ul>
-                    <div class='content-right__designed'>Design by gianluca cosetta</div>
+    </section>
+    <section id='sec2' class='lab2 scrollspy'>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="header">
+                        <h1 class='numbers-heading'>Лабораторная работа #2</h1>
+                        <div class="numbers-heading-text">Информационная энтропия по Шеннону
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="icon_prefix2" class="materialize-textarea text"></textarea>
+                            <label for="icon_prefix2">Введите ваш текст</label>
+                        </div>
+                        <a class="waves-effect parseButton waves-light btn-large hartly-btn">Рассчитать</a>
+                        <div class="result"></div>
+                        <div class='result'>
+                            <div class="length"></div>
+                            <div class="unicSymbols"></div>
+                            <div class="symbolsKeys"></div>
+                            <div class="entropy"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+        <section id='exam' class='lab3 scrollspy'>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="header">
+                        <h1 class='numbers-heading'>Экзамен</h1>
+                        <div class="numbers-heading-text">Будет в июне
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 </body>
-
-</html>
