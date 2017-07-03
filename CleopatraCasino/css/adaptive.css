@@ -1,0 +1,169 @@
+@media (max-width: 1272px) {
+    .top-nav__menu-main li {
+        margin: 0px 5px;
+    }
+    .top-nav__menu-main li a {
+        font-size: 8px;
+        font-weight: 600;
+    }
+    .top-nav__search {
+        margin: 0px 5px;
+    }
+}
+
+@media (max-width: 1072px) {
+    .top-nav__menu-main li a {
+        font-size: 10px;
+    }
+    .top-nav__menu-main li {
+        margin: 0px 0px;
+    }
+    .top-nav__mobile-button {
+        display: inline-block;
+    }
+    .wrapper-promo {
+        left: 5%;
+    }
+    .wrapper__form {
+        right: 5%;
+    }
+    .side-nav {
+        display: none;
+    }
+    main {
+        margin-left: 0px;
+        width: 100%
+    }
+    .wrapper__rights {
+        padding: 20px 35px 60px 35px;
+        background: #000;
+    }
+    .wrapper__payment {
+        display: none;
+    }
+    ul.top-nav__menu-main {
+        position: fixed;
+        top: 45px;
+        z-index: 25;
+        background: #000;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 5px 0px;
+        transform: translate3d(0, -200%, 0);
+        transition: transform .2s ease-in;
+    }
+    .top-nav__menu-main li {
+        padding: 5px 20px;
+        display: block;
+        border-bottom: none;
+    }
+    .top-nav__menu-main li:hover > a {
+        color: #e32f2f;
+    }
+    .top-nav {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        top: 0;
+    }
+}
+
+@media (max-width: 742px) {
+    .mobile-nav__buttons {
+        display: block;
+    }
+    .wrapper__form {
+        top: 370px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: inline-block;
+    }
+    .promo__info {
+        margin-left: 0px;
+    }
+    .wrapper__form input,
+    .wrapper__form select {
+        background: #fff;
+    }
+    .wrapper__form-block {
+        margin-top: 195px;
+        text-align: center;
+        padding: 25px;
+    }
+    .wrapper-promo {
+        left: 0;
+        top: 100px;
+        right: 0;
+    }
+    .promo__forth {
+        position: relative;
+        font-size: 17px;
+        float: none;
+        left: 0;
+        text-align: center;
+        top: 0;
+    }
+    .__search-visible {
+        top: 45px;
+        left: 77px;
+        z-index: 55;
+    }
+    .top-nav__profile .profile__button {
+        display: none;
+    }
+    .top-nav__profile .profile__lang {
+        display: none;
+    }
+    .search-input input {
+        width: 250px;
+    }
+    .search-input__close {
+        left: 230px;
+    }
+    .winner-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .games__block {
+        justify-content: center;
+    }
+    .nav__information {
+        margin-bottom: 50px;
+    }
+    .nav__sort {
+        left: 0px;
+        bottom: -33px;
+    }
+}
+
+@media (max-width: 450px) {
+    .top-nav__profile {
+        float: none;
+        left: 20px;
+        position: relative;
+    }
+    .top-nav {
+        height: 100px;
+    }
+    ul.top-nav__menu-main {
+        top: 100px;
+    }
+    .wrapper-promo {
+        top: 125px;
+    }
+    .promo__third {
+        font-size: 35px;
+        left: 0px;
+    }
+    .promo__first {
+        font-size: 20px;
+    }
+    .promo__second {
+        font-size: 30px;
+    }
+}
