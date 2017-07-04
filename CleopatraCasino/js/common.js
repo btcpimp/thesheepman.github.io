@@ -39,4 +39,16 @@ $(document).ready(function() {
         event.preventDefault();
         $('.mobile-nav').toggleClass('mobile-visible');
     });
+    var selectedOption = $('#popular-select');
+
+    var block__preview = $('.block__preview')
+    selectedOption.on('change', function() {
+        if (selectedOption.val() == 'Popular') {
+            block__preview.not('.popular').addClass('game-hidden')
+        } else {
+            block__preview.removeClass('game-hidden')
+        }
+    })
+
+
 });

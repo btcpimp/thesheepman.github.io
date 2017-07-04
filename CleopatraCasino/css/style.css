@@ -681,3 +681,9 @@ content {
 .mobile-nav__buttons .profile__lang {
     text-align: right;
 }
+.nav__sort option{
+color: #000;
+}
+.promo__third span{
+    display: none;
+}

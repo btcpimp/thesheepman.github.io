@@ -9,9 +9,16 @@
     .top-nav__search {
         margin: 0px 5px;
     }
+    .search-input {
+        left: 271px;
+    }
 }
 
 @media (max-width: 1072px) {
+    .search-input {
+        left: 77px;
+        top: 44px;
+    }
     .top-nav__menu-main li a {
         font-size: 10px;
     }
@@ -70,6 +77,11 @@
 }
 
 @media (max-width: 742px) {
+    .promo__third span {
+        font-size: 24px;
+        font-weight: 800;
+        display: inline-block;
+    }
     .mobile-nav__buttons {
         display: block;
     }
@@ -99,15 +111,13 @@
         right: 0;
     }
     .promo__forth {
-        position: relative;
-        font-size: 17px;
-        float: none;
+        display: none;
+    }
+    .promo__third {
         left: 0;
-        text-align: center;
-        top: 0;
     }
     .__search-visible {
-        top: 45px;
+        top: 44px;
         left: 77px;
         z-index: 55;
     }
@@ -142,6 +152,26 @@
 }
 
 @media (max-width: 450px) {
+    .promo__third span {
+        font-size: 15px;
+    }
+    .block__preview img {
+        width: 123px;
+    }
+    .games__block {
+        justify-content: flex-start;
+    }
+    .__search-visible {
+        top: 15px;
+        left: 123px;
+        z-index: 101;
+    }
+    .search-input input {
+        width: 150px;
+    }
+    .search-input__close {
+        left: 130px;
+    }
     .top-nav__profile {
         float: none;
         left: 20px;
