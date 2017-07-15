@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-top__inner">
+                <div class="inner-wrapper">
+                    <div class="mobile-toggle">
+                        <img class="toggle-img menu-open" src="img/menu.png" alt="open">
+                        <img class="toggle-img menu-close close-hidden" src="img/menu-close.png" alt="close"></div>
+                    <div class="mobile-nav">
+                        <ul class='mobile-nav__current'>
+                            <li class="mobile-current__item">
+                                <a href="#">Проектирование</a>
+                            </li>
+                            <li class="mobile-current__item">
+                                <a href="#">Строительство</a>
+                            </li>
+                            <li class="mobile-current__item">
+                                <a href="#">Быстровозводимые здания</a>
+                            </li>
+                            <li class="mobile-current__item">
+                                <a href="#">Оборудование</a>
+                            </li>
+                            <li class="mobile-current__item">
+                                <a href="#">Цены</a>
+                            </li>
+                        </ul>
+                        <ul class="mobile-nav__menu">
+                            <li class="mobile-menu__item">
+                                <a href="#">О нас</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#">Портфолио</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#">Сертификаты</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#">Новости</a>
+                            </li>
+                            <li class="mobile-menu__item">
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="mobile-nav__socials">
+                            <div class="mobile-socials__title">Наша компания в соцсетях</div>
+                            <div class="mobile-socials__links"><img src="img/g+.png" alt="googleplus"><img src="img/f.png" alt="facebook"></div>
+                        </div>
+                    </div>
+                    <img src="img/logo.png" alt="logo" class="header__logo">
+                    <div class="inner__location">
+                        <ul class="location__region">
+                            <li class="region__choose region-active"><a href="#">Беларусь/страны СНГ</a></li>
+                            <li class="region__choose"><a href="#">Россия(Russia)</a></li>
+                            <li class="region__choose"><a href="#">Baltic States/Europe</a></li>
+                            <li class="region__choose"><a href="#">Middle East/Africa</a></li>
+                        </ul>
+                        <div class="inner__contacts">
+                            <div class="contacts__tab region-active">
+                                <div class="contacts-block">
+                                    <div class="contacts__top">
+                                        <div class="contacts__left">Телефон:</div>
+                                        <div class="contacts__right">+3725 29 685-10-75</div>
+                                    </div>
+                                    <div class="contacts__bottom">
+                                        <div class="contacts__left">Телефон/Факс:</div>
+                                        <div class="contacts__right">+3725 17 369-49-94</div>
+                                    </div>
+                                </div>
+                                <div class="contacts-block">
+                                    <div class="contacts__top">
+                                        <div class="contacts__left">Viber:</div>
+                                        <div class="contacts__right">+3725 29 685-10-75</div>
+                                    </div>
+                                    <div class="contacts__bottom justify-start">
+                                        <div class="contacts__left">Skype:</div>
+                                        <div class="contacts__right">mmmm</div>
+                                    </div>
+                                </div>
+                                <div class="contacts-block">
+                                    <div class="contacts__top">
+                                        <div class="contacts__left">Режим работы:</div>
+                                        <div class="contacts__right"></div>
+                                    </div>
+                                    <div class="contacts__bottom">
+                                        <div class="contacts__left"></div>
+                                        <div class="contacts__right margin-none">пн-пт: с 8.00 до 22.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="inner__preview-menu">
+                            <li class="preview-menu__item"><a href="#">О нас</a></li>
+                            <li class="preview-menu__item"><a href="#">Портфолио</a></li>
+                            <li class="preview-menu__item"><a href="#">Отзывы</a></li>
+                            <li class="preview-menu__item"><a href="#">Сертификаты</a></li>
+                            <li class="preview-menu__item"><a href="#">Новости</a></li>
+                            <li class="preview-menu__item"><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <ul class="inner__language">
+                        <li class="language__choose"><a href="#" class="language-active">ru</a></li>
+                        <li class="language__choose"><a href="#">en</a></li>
+                        <li class="language__choose"><a href="#">lt</a></li>
+                        <li class="language__choose"><a href="">ee</a></li>
+                        <a href="#" class="language__consulting-button form-popup">Заказать консультацию</a>
+                    </ul>
+                    <a href="tel:+3725296851075" class="call"><img src="img/call.png" alt="call"></a>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav default">
+            <ul class="header-nav__menu">
+                <li class="menu__parent project">
+                    <a href="#">Проектирование</a>
+                    <ul class="parent__child">
+                        <li class="child__item"><a href="#">Промышленные объекты</a>
+                            <div class="item__subchild">
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Генплан</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектура</a></li>
+                                    <li class="subchild__item"><a href="#">Водоснабжение</a></li>
+                                    <li class="subchild__item"><a href="#">Пожаротушение</a></li>
+                                </ul>
+                                <div class="subchild__divider"></div>
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Предпроектные решения</a></li>
+                                    <li class="subchild__item"><a href="#">Эскизное проектирование</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектурный раздел</a></li>
+                                    <li class="subchild__item"><a href="#">Строительный раздел</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                        <li class="child__item"><a href="">Общественные объекты</a></li>
+                        <li class="child__item"><a href="">Промышленные объекты</a></li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                    </ul>
+                </li>
+                <li class="menu__parent building">
+                    <a href="#">Строительство</a>
+                    <ul class="parent__child">
+                        <li class="child__item"><a href="#">Промышленные объекты</a>
+                            <div class="item__subchild">
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Генплан</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектура</a></li>
+                                    <li class="subchild__item"><a href="#">Водоснабжение</a></li>
+                                    <li class="subchild__item"><a href="#">Пожаротушение</a></li>
+                                </ul>
+                                <div class="subchild__divider"></div>
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Предпроектные решения</a></li>
+                                    <li class="subchild__item"><a href="#">Эскизное проектирование</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектурный раздел</a></li>
+                                    <li class="subchild__item"><a href="#">Строительный раздел</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                        <li class="child__item"><a href="">Общественные объекты</a></li>
+                        <li class="child__item"><a href="">Промышленные объекты</a></li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                    </ul>
+                </li>
+                <li class="menu__parent prefabricated">
+                    <a href="#">Быстровозводимые здания</a>
+                    <ul class="parent__child">
+                        <li class="child__item"><a href="#">Промышленные объекты</a>
+                            <div class="item__subchild">
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Генплан</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектура</a></li>
+                                    <li class="subchild__item"><a href="#">Водоснабжение</a></li>
+                                    <li class="subchild__item"><a href="#">Пожаротушение</a></li>
+                                </ul>
+                                <div class="subchild__divider"></div>
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Предпроектные решения</a></li>
+                                    <li class="subchild__item"><a href="#">Эскизное проектирование</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектурный раздел</a></li>
+                                    <li class="subchild__item"><a href="#">Строительный раздел</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                        <li class="child__item"><a href="">Общественные объекты</a></li>
+                        <li class="child__item"><a href="">Промышленные объекты</a></li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                    </ul>
+                </li>
+                <li class="menu__parent equipment">
+                    <a href="#">Оборудование</a>
+                    <ul class="parent__child">
+                        <li class="child__item"><a href="#">Промышленные объекты</a>
+                            <div class="item__subchild">
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Генплан</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектура</a></li>
+                                    <li class="subchild__item"><a href="#">Водоснабжение</a></li>
+                                    <li class="subchild__item"><a href="#">Пожаротушение</a></li>
+                                </ul>
+                                <div class="subchild__divider"></div>
+                                <ul>
+                                    <li class="subchild__item"><a href="#">Предпроектные решения</a></li>
+                                    <li class="subchild__item"><a href="#">Эскизное проектирование</a></li>
+                                    <li class="subchild__item"><a href="#">Архитектурный раздел</a></li>
+                                    <li class="subchild__item"><a href="#">Строительный раздел</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                        <li class="child__item"><a href="">Общественные объекты</a></li>
+                        <li class="child__item"><a href="">Промышленные объекты</a></li>
+                        <li class="child__item"><a href="">Сельскохозяйственные объекты</a></li>
+                    </ul>
+                </li>
+                <li class="menu__parent costs">
+                    <a href="#">Цены</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <content>
+        <div class="content main">
+            <div class="main__heding">
+                <form class="main-form">
+                    <div class="main-form__item">Мне нужно <span>Запроектировать</span>
+                        <select class="main-form__select">
+                            <option value="" disabled selected>Выбрать</option>
+                            <option>Пример</option>
+                        </select>
+                        <div class="main-form__arrow">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="main-form__item">Мне нужно <span>Построить</span>
+                        <select class="main-form__select">
+                            <option value="" disabled selected>Выбрать</option>
+                            <option>Пример</option>
+                        </select>
+                        <div class="main-form__arrow">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="main-form__item">Мне нужно <span>Здание</span>
+                        <select class="main-form__select">
+                            <option value="" disabled selected>Выбрать</option>
+                            <option>Пример</option>
+                        </select>
+                        <div class="main-form__arrow">
+                            <span></span>
+                        </div>
+                    </div>
+                </form>
+                <div class="main__slider">
+                    <div class="main-slider owl-carousel">
+                        <div class="main__slider__content">
+                            <div class="slider__content__heading"><a href="#">Проектирование, изготовление, монтаж Торгово-логистического центра "Марко"</a></div>
+                            <a class="slider__content__button" href="#">Подробнее</a>
+                        </div>
+                        <div class="main__slider__content">
+                            <div class="slider__content__heading"><a href="">Проектирование, изготовление, монтаж Торгово-логистического центра "Марко" </a></div>
+                            <a class="slider__content__button" href="#">Подробнее</a>
+                        </div>
+                        <div class="main__slider__content">
+                            <div class="slider__content__heading"><a href="">Проектирование, изготовление, монтаж Торгово-логистического центра "Марко" </a></div>
+                            <a class="slider__content__button" href="#">Подробнее</a>
+                        </div>
+                        <div class="main__slider__content">
+                            <div class="slider__content__heading"><a href="">Проектирование, изготовление, монтаж Торгово-логистического центра "Марко" </a></div>
+                            <a class="slider__content__button" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__description">Центр промышленного и гражданского проектирования Stilios предлагает проектирование Зданий и сооружений промышленного и гражданского назначения, выполнение всех изыскательских работ, а также осуществляет консультирование, инжиниринг и техническое спровождение проектов.</div>
+            <div class="main__content">
+                <img src="img/banner.png" alt="banner" class="banner">
+                <div class="main__content__text">Не важно, на какой стадии вы находитесь: в начале пути, выбираете ли генерального проектировщика, генерального подрядчика, поставщика обрудования, наши специалисты готовы поделиться своими знаниями и опытом в любой точке.</div>
+                <div class="main__content__heading">Инженерный отдел быстро и с минимальными первоначальными вложении выполнит:</div>
+                <div class="main__content__blocks">
+                    <div class="blocks__item">Оценку участка</div>
+                    <div class="blocks__item">Геодезические изыскания</div>
+                    <div class="blocks__item">Геологические изыскания</div>
+                    <div class="blocks__item">Обследование существующих конструкций
+                    </div>
+                </div>
+                <div class="main__content__text">Наше проектное подразделение "Центр промышленного и гражданского проектирования Stilios" готовы выполнить как весь Генеральный проект объекта, так и отдельные его стадии. Поработав всего несколько часов с нашими архитекторами, конструкторами, технологами и инженерами, лично, по email или через skype. Вы получите достаточно точное представление о том, как может выглядеть Ваше здание и комплекс зданий, какое оборудование в каком объеме необходимо, какие конструкции и материалы следует применить, как правильно распланировать существующий участкок или подобрать новый.</div>
+                <div class="main__content__blocks">
+                    <div class="blocks__item">Архитектурная концепция</div>
+                    <div class="blocks__item">Технологическая концепция</div>
+                    <div class="blocks__item">Технологическая концепция</div>
+                    <div class="blocks__item">Концепция развития участка
+                    </div>
+                </div>
+                <div class="main__content__text">На этом же этапе Заказчику предоставляется возможность познакомиться ближе с нашими серийными и индивидуальными быстровозводимыми зданиями</div>
+                <div class="main__content__blocks">
+                    <div class="blocks__item">Склады</div>
+                    <div class="blocks__item">Ангары</div>
+                    <div class="blocks__item">Промышленные здания</div>
+                    <div class="blocks__item">Магазины, супермаркеты</div>
+                    <div class="blocks__item">Холодильные склады</div>
+                    <div class="blocks__item">Морозильные склады</div>
+                    <div class="blocks__item">Пищевые производства</div>
+                </div>
+                <div class="main__content__text">Большое количество собственных запроектированных и построенных объектов позволяет оценить стоимость предстоящего строительства и принять решение, в каком направлении, с каким бюджетом, временными ограничениями следует планировать инвестиционный проект, каких собственных сотрудников следует нанять, а каких сотрудников следует переучить в целях интеграции во взаимоотношения Заказчик-Подрядчик. В зависимости от того, насколько Заказчик готов начать реальное полномасштабное строительство, мы готовы выполнить сразу или поэтапно:</div>
+                <div class="main__content__blocks">
+                    <div class="blocks__item">Предпроектные решения</div>
+                    <div class="blocks__item">Эскизное проектирование</div>
+                    <div class="blocks__item">Архитектурное проектирование</div>
+                    <div class="blocks__item">Строительный (рабочий) проект</div>
+                </div>
+                <div class="main__content__text">На любом из этапов мы готовы подготовить и пройти <a href="#"><span class="content__text__dotted">обязательную</span> </a>или <a href="#"><span class="content__text__dotted">добровольную</span> </a>экспертизу всего проекта или отдельных разделов проекта. Если Ваш проект уже выполнен и строительство начато, мы можем подключиться и значительно упростить и удешевить процесс строительства как инженерная организация: </div>
+                <div class="main__content__blocks">
+                    <div class="blocks__item">Технический надзор</div>
+                    <div class="blocks__item">Инженерное сопровождение</div>
+                    <div class="blocks__item">Технический заказчик</div>
+                    <div class="blocks__item">Обследование существующих. Сдача объекта органам контроля</div>
+                </div>
+            </div>
+            <div class="main__tabs">
+                <div class="tabs">
+                    <ul class="tabs__caption">
+                        <li class="tab-active">Проектирование</li>
+                        <li>Строительство</li>
+                        <li>Быстровозводимые здания</li>
+                        <li>Оборудования и инженерия</li>
+                    </ul>
+                    <div class="tabs__content tab-active">
+                        <div class="tabs__content__item">
+                            <a href="#"><img src="img/water.png" alt="water" class="tabs__image"></a>
+                            <div class="tabs__text">
+                                <a href="#" class="tabs__text__heading">«Минский Завод Безалкогольных напитков»</a>
+                                <div class="tabs__text__about">Комплексное проектирование и строительство "под ключ" Логистического комплекса со встроенными АБК, площадью 10 000 кв.м. в качестве Генерального проектировщика и Генерального подрядчика.</div>
+                            </div>
+                        </div>
+                        <div class="tabs__content__item">
+                            <a href="#"><img src="img/belservice.png" alt="belservice" class="tabs__image"></a>
+                            <div class="tabs__text">
+                                <a href="#" class="tabs__text__heading">«Белтаможсервис»</a>
+                                <div class="tabs__text__about">Строительство Логистического центра в д. Щитомиричи для Белтаможсерви площадью 20 000 кв.м. + АБК 4000 кв.м.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__news">
+                <div class="news__heading">Акции и новости<span><a href="#">Все новости <img src="img/arrow-news.png"></a></span></div>
+                <div class="news-block">
+                    <div class="news-block__item">
+                        <div class="news-block__item__cover" style='background-image: url(img/news1.png);'></div>
+                        <div class="news-block__item__type">Новости</div>
+                        <div class="news-block__item__title"><a href="#">Проектирование, изготовление и монтаж быстровозводимого здания производственно-складского комплекса "Могилевсоюзпечать"</a></div>
+                        <div class="news-block__item__date">21<span>Апреля<br>2017</span></div>
+                        <a href="#" class="news-block__item__button">Подробнее</a>
+                    </div>
+                    <div class="news-block__item">
+                        <div class="news-block__item__cover" style='background-image: url(img/news2.png);'></div>
+                        <div class="news-block__item__type promo">Акции</div>
+                        <div class="news-block__item__title"><a href="#">Снижение цен на проектирование быстровозводимого здания со скидкой 10% до конца полугодия</a></div>
+                        <div class="news-block__item__date">18<span>Апреля<br>2017</span></div>
+                        <a href="#" class="news-block__item__button">Подробнее</a>
+                    </div>
+                    <div class="news-block__item">
+                        <div class="news-block__item__cover" style='background-image: url(img/news3.png);'></div>
+                        <div class="news-block__item__type">Новости</div>
+                        <div class="news-block__item__title"><a href="#">Проектирование, изготовление и монтаж быстровозводимого здания производственно-складского комплекса "Могилевсоюзпечать"</a></div>
+                        <div class="news-block__item__date">11<span>Марта<br>2017</span></div>
+                        <a href="#" class="news-block__item__button">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main__certificates">
+                <div class="certificates__heading">Наши сертификаты</div>
+                <div class="certificates__block">
+                    <a href="#">
+                        <div class="certificates__block__item"><img src="img/cert1.png" alt="">Проектирование</div>
+                    </a>
+                    <a href="#">
+                        <div class="certificates__block__item"><img src="img/cert2.png" alt="">Строительство</div>
+                    </a>
+                    <a href="#">
+                        <div class="certificates__block__item"><img src="img/cert3.png" alt="">Быстровозводимые здания</div>
+                    </a>
+                </div>
+            </div>
+            <div class="main__clients">
+                <div class="clients__heading">Наши клиенты</div>
+                <div class="clients__slider owl-carousel">
+                    <div class="clients__slider__block">
+                        <img src="img/clients1.png" alt="">
+                        <div class="slider__block__heading">Холдинг «Белорусская кожевенно-обувная компания «Марко»
+                        </div>
+                        <div class="slider__block__letter">
+                            <a href="img/news1.png"><img src="img/doc.png" alt="">Благодарственное письмо</a>
+                        </div>
+                    </div>
+                    <div class="clients__slider__block">
+                        <img src="img/clients2.png" alt="">
+                        <div class="slider__block__heading">Республиканское унитарное предприятие «Белтаможсервис»
+                        </div>
+                        <div class="slider__block__letter">
+                            <a href="img/news1.png"><img src="img/doc.png" alt="">Благодарственное письмо</a>
+                        </div>
+                    </div>
+                    <div class="clients__slider__block">
+                        <img src="img/clients3.png" alt="">
+                        <div class="slider__block__heading">Республиканское унитарное предприятие «Белтаможсервис»
+                        </div>
+                        <div class="slider__block__letter">
+                            <a href="img/news2.png"><img src="img/doc.png" alt="">Благодарственное письмо</a>
+                        </div>
+                    </div>
+                    <div class="clients__slider__block">
+                        <img src="img/clients4.png" alt="">
+                        <div class="slider__block__heading">Республиканское унитарное предприятие «Белтаможсервис»
+                        </div>
+                        <div class="slider__block__letter">
+                            <a href="img/news3.png"><img src="img/doc.png" alt="">Благодарственное письмо</a>
+                        </div>
+                    </div>
+                    <div class="clients__slider__block">
+                        <img src="img/clients2.png" alt="">
+                        <div class="slider__block__heading">Республиканское унитарное предприятие «Белтаможсервис»
+                        </div>
+                        <div class="slider__block__letter">
+                            <a href="img/news1.png"><img src="img/doc.png" alt="">Благодарственное письмо</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__about">
+                <div class="main__about__text">Строительная компания ЕвроСтальСтрой предлагает комплексное проектирование и изготовление промышленных, коммерческих и сельскохозяйственных зданий на основе типовых металлоконструкций.</div>
+                <div class="main__about__text">Однако, наши технологии, применяемые в производственном процессе, позволяют изготавливать индивидуальные однопролетные здания из металлоконструкций шириной от 6 до 100 метров, многопролетные промышленные здания с неограниченной шириной и длиной, различной этажности, без кранового оборудования и с кранами. Эта продукция несколько дороже каркасов, типовых решений, однако также пользуется большим спросом.</div>
+                <div class="main__about__text">Вы можете заказать у нас полнокомплектное промышленное здание "сделай сам", здание с монтажом, фундаментами и базовым проектом, а также строительство на условиях строительного генподряда с полами, сетями, благоустройством, а также полным генеральным проектом с необходимыми согласованиями и экспертизой.</div>
+            </div>
+        </div>
+    </content>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-upper">
+                <div class="footer-upper__menu-block">
+                    <div class="menu-block__footer-heading">Начать проектирование</div>
+                    <ul class="menu-block__footer-nav">
+                        <li class="footer-nav__item"><a href="#">Промышленные объекты</a></li>
+                        <li class="footer-nav__item"><a href="#">Сельскохозяйственные объекты</a></li>
+                        <li class="footer-nav__item"><a href="#">Общественные здания</a></li>
+                        <li class="footer-nav__item"><a href="#">Административные здания</a></li>
+                        <li class="footer-nav__item"><a href="#">Жилые комплексы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-upper__menu-block">
+                    <div class="menu-block__footer-heading">Строительство</div>
+                    <ul class="menu-block__footer-nav">
+                        <li class="footer-nav__item"><a href="#">Промышленные объекты</a></li>
+                        <li class="footer-nav__item"><a href="#">Сельскохозяйственные объекты</a></li>
+                        <li class="footer-nav__item"><a href="#">Общественные здания</a></li>
+                        <li class="footer-nav__item"><a href="#">Административные здания</a></li>
+                        <li class="footer-nav__item"><a href="#">Жилые комплексы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-upper__menu-block">
+                    <div class="menu-block__footer-heading">Быстровозводимые здания</div>
+                    <ul class="menu-block__footer-nav">
+                        <li class="footer-nav__item"><a href="#">Промышленные здания</a></li>
+                        <li class="footer-nav__item"><a href="#">Сельскохозяйственные здания</a></li>
+                        <li class="footer-nav__item"><a href="#">Конструкции для общественных зданий</a></li>
+                        <li class="footer-nav__item"><a href="#">Конструкции для административных зданий</a></li>
+                        <li class="footer-nav__item"><a href="#">Тентовые здания</a></li>
+                    </ul>
+                </div>
+                <div class="footer-upper__menu-block">
+                    <div class="menu-block__footer-heading">Подбор оборудования</div>
+                    <ul class="menu-block__footer-nav">
+                        <li class="footer-nav__item"><a href="#">Промышленное оборудование</a></li>
+                        <li class="footer-nav__item"><a href="#">Сельскохозяйственное оборудование</a></li>
+                        <li class="footer-nav__item"><a href="#">Складское оборудование и техника</a></li>
+                        <li class="footer-nav__item"><a href="#">Складское оборудование и техника</a></li>
+                        <li class="footer-nav__item"><a href="#">Инженерное оснащение зданий</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <ul class="footer-middle__footer-main-nav">
+                <li class="footer-main-nav__item"><a href="#">О компании</a></li>
+                <li class="footer-main-nav__item"><a href="#">Деятельность</a></li>
+                <li class="footer-main-nav__item"><a href="#">Сертификаты</a></li>
+                <li class="footer-main-nav__item"><a href="#">Отзывы</a></li>
+                <li class="footer-main-nav__item"><a href="#">Новости и Акции</a></li>
+                <li class="footer-main-nav__item"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <ul class="footer-bottom__footer-bottom-nav">
+                <li class="footer-bottom-nav__item copyright">© ЕвроСтальСтрой, 2016</li>
+                <li class="footer-bottom-nav__item socials">Наша компания в социальных сетях
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.219" height="25.18" viewBox="0 0 25.219 25.18">
+                            <path id="g_" data-name="g+" class="cls-1" d="M823.142,3606.09c-0.082-.06-0.165-0.12-0.253-0.18a3.06,3.06,0,0,0-.805-0.12H822.05c-1.277,0-2.4.77-2.4,1.65a1.969,1.969,0,0,0,2.184,1.71c1.615,0,2.434-.55,2.434-1.65a1.408,1.408,0,0,0-.038-0.32A2.209,2.209,0,0,0,823.142,3606.09Zm-0.905-3.35h0a0.976,0.976,0,0,0,.763-0.35,1.991,1.991,0,0,0,.369-1.56,2.2,2.2,0,0,0-1.767-2.05H821.57a1,1,0,0,0-.754.34,1.951,1.951,0,0,0-.358,1.53,2.267,2.267,0,0,0,1.768,2.09h0.011Zm2.6-11.34a12.6,12.6,0,1,0,12.613,12.6A12.62,12.62,0,0,0,824.832,3591.4Zm-1.454,18.73a5.442,5.442,0,0,1-1.534.21,6.865,6.865,0,0,1-1.721-.21,3.338,3.338,0,0,1-2.179-1.4,1.812,1.812,0,0,1-.234-0.88,2.26,2.26,0,0,1,.225-0.96,4.1,4.1,0,0,1,3.754-2.04h0.048a1.471,1.471,0,0,1-.2-0.74,1.628,1.628,0,0,1,.052-0.4,3.008,3.008,0,0,1-3.066-3.01,3.215,3.215,0,0,1,2.322-2.83,3.817,3.817,0,0,1,1.236-.21h3.751a0.294,0.294,0,0,1,.28.2,0.3,0.3,0,0,1-.107.33l-0.839.61a0.342,0.342,0,0,1-.173.05h-0.3a2.93,2.93,0,0,1,.616,1.87,2.8,2.8,0,0,1-1.173,2.19,0.948,0.948,0,0,0-.607.84,2.452,2.452,0,0,0,.863.92,2.907,2.907,0,0,1,1.436,2.68A3.051,3.051,0,0,1,823.378,3610.13Zm8.47-6.42a0.293,0.293,0,0,1-.295.29h-2.132v2.13a0.3,0.3,0,0,1-.293.3H828.52a0.3,0.3,0,0,1-.295-0.3V3604h-2.131a0.293,0.293,0,0,1-.3-0.29v-0.61a0.293,0.293,0,0,1,.3-0.29h2.131v-2.13a0.3,0.3,0,0,1,.295-0.3h0.608a0.3,0.3,0,0,1,.293.3v2.13h2.132a0.293,0.293,0,0,1,.295.29v0.61Z" transform="translate(-812.219 -3591.41)" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.219" height="25.18" viewBox="0 0 25.219 25.18">
+                            <path id="f" class="facebook" d="M859.077,3591.4A12.6,12.6,0,1,0,871.69,3604,12.619,12.619,0,0,0,859.077,3591.4Zm3.137,13.04h-2.052v7.31h-3.041v-7.31h-1.445v-2.58h1.445v-1.67a2.845,2.845,0,0,1,3.069-3.06h2.252v2.51h-1.635a0.616,0.616,0,0,0-.645.7v1.52h2.318Z" transform="translate(-846.469 -3591.41)" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer-bottom-nav__item developed">Разработка сайта — <a href="https://www.imedia.by/">iMedia Solutions</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="consulting-form" class="mfp-hide white-popup">
+        <div class="consulting-form__heading">Оставьте контакты и получите консультацию</div>
+        <form id="callback-form" action="#" class="callback-form">
+            <div class="callback-form__item">Имя<span>*</span>
+                <input class="callback-form__input callback-form__name" type="text" name="name" required="" placeholder="Андрей">
+            </div>
+            <div class="callback-form__item"> Телефон<span>*</span>
+                <input class="callback-form__input callback-form__phone" type="tel" name="phone" pattern="[+]?[0-9]{11,}" required="" placeholder="+375259007536">
+            </div>
+            <div class="callback-form__item"> Электронная почта<span>*</span>
+                <input class="callback-form__input callback-form__email" type="email" name="email" pattern="\S+@[a-z]+.[a-z]+" placeholder="mail@mail.ru">
+            </div>
+            <div class="callback-form__item"> Сообщение<span>*</span>
+                <textarea class="callback-form__input callback-form__message" type="text" name="message" placeholder="Ваше сообщение"></textarea>
+            </div>
+            <div class="callback-form__button">
+                <button class="callback-form__submit" type="submit">Отправить заявку</button>
+            </div>
+        </form>
+    </div>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.theme.default.css">
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
