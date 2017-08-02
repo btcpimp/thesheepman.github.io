@@ -125,7 +125,7 @@
                         <li class="language__choose"><a href="">ee</a></li>
                         <a href="#" class="language__consulting-button form-popup">Заказать консультацию</a>
                     </ul>
-                    <a href="#" class="call"><img src="img/call.png" alt="call"></a>
+                    <a href="tel:+3725(29) 685-10-75" class="call"><img src="img/call.png" alt="call"></a>
                 </div>
             </div>
         </div>
@@ -305,15 +305,16 @@
                 <input class="callback-form__input callback-form__phone" type="tel" name="phone" pattern="[+]?[0-9]{11,}" required="" placeholder="+375259007536">
             </div>
             <div class="callback-form__item"> Электронная почта<span>*</span>
-                <input class="callback-form__input callback-form__email" type="email" name="email" pattern="\S+@[a-z]+.[a-z]+" placeholder="mail@mail.ru">
+                <input class="callback-form__input callback-form__email" type="email" name="email" pattern="\S+@\S+[.]+\S+" placeholder="mail@mail.ru">
             </div>
             <div class="callback-form__item"> Сообщение<span>*</span>
-                <textarea class="callback-form__input callback-form__message" type="text" name="message" placeholder="Ваше сообщение"></textarea>
+                <textarea class="callback-form__input callback-form__message" required="" type="text" name="message" placeholder="Ваше сообщение"></textarea>
             </div>
             <div class="callback-form__button">
                 <button class="callback-form__submit" type="submit">Отправить заявку</button>
             </div>
         </form>
+                <div class="form-success" style=" display: none;padding: 20px; position: relative;background: #e4eaf2;margin-top: 24px;width: 720px;text-align: center;left: -40px;font-size: 14px;font-weight: bold;">Благодарим! Данные приняты, наш менеджер свяжется с вами в самое ближайшее время</div>
     </div>
     <link rel="stylesheet" href="css/about.min.css">
     <link rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css">
