@@ -1,0 +1,122 @@
+body {
+    background: #6c6775;
+    color: #fff;
+    font-family: 'Overpass', sans-serif;
+}
+
+.faq {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 25px;
+}
+
+.faq-header {
+    text-align: center;
+    position: relative;
+}
+
+.faq-header__brain {
+    margin-left: -100px;
+}
+
+.faq-header__text {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.faq-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.faq-wrapper__question-list {
+    width: 33%;
+    background: #65606f;
+    padding: 50px 0px;
+    max-height: 475px;
+}
+
+.question-list__item {
+    padding: 12px 0px 12px 60px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+}
+
+.question-list__item:hover {
+    background: #726d7b;
+    color: #fff;
+}
+
+.question-active {
+    color: #fff;
+    background: #726d7b;
+}
+
+.question-active:before {
+    content: '';
+    display: block;
+    top: 16px;
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    left: 35px;
+    border-radius: 10em;
+    background: #e1e1e1;
+}
+
+.faq-wrapper__answer-block {
+    width: calc(66% - 100px);
+    background: #65606f;
+    padding: 40px 35px 35px 50px;
+    height: 475px;
+}
+
+.answer-block__text {
+    overflow-y: scroll;
+    padding-right: 45px;
+    height: 475px;
+    display: none;
+}
+
+.answer-block__text p {
+    font-size: 16px;
+    color: #c3bfec;
+    line-height: 25px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.answer-block__text h3 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.answer-block__text h3 span {
+    font-size: 30px;
+    font-weight: 800;
+}
+.answer-block__text::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.answer-block__text::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #e1e1e1;
+}
+.answer-block__text::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+}
+.answer-active{
+    display: block;
+}
