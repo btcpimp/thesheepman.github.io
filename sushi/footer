@@ -1,0 +1,124 @@
+<div id="footerContent">
+
+        <div id="row1">
+            <span><img src="icons/icons8-clock-25.png" height="25" width="25"/><span>Åbningstider<br> 15:00pm - 21:00pm<br> Every day</span></span>
+            <span><img src="icons/icons8-phone-25.png" height="25" width="25"/><span>+45 53 26 52 75</span></span>
+        </div>
+
+        <div id="row2">
+            <span id="adresses">
+                <span id="adress">
+                    <span id="adress1"><a href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&rtp=~pos.56.15635_10.17984_L%C3%A6kker+Sushi&cp=56.15635~10.17984&lvl=16&sty=r&rtop=0~0~0~&mode=D&FORM=FBKPL6&mkt=en-US" target="_blank"><img src="icons/icons8-Marker.png" height="14" width="14"/>Silkeborgvej 122 Aarhus, Denmark-8000</a></span>
+                </span>
+            </span>
+
+            <span id="footerLinks">
+                <span><a href="mailto:info@laekkersushi.com" target="_blank">Write to Us on email!</a></span>
+                <span><a href="https://www.facebook.com/laekkersushi/" target="_blank">Follow Us on Facebook!</a></span>
+                <span><a href="https://www.instagram.com/laekkersushi.dk/" target="_blank">instagram.com/laekkersushi.dk</a></span>
+            </span>
+        </div>
+
+    </div>
+
+
+
+footer{
+  display: flex;
+  width: 100%;
+  height: 70px;
+  font-size: 1.1em;
+  font-weight: 600;
+  bottom: 0;
+  & #footerContent{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: @red;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+    @light: #e1e4eb;
+    @blue: #02147f;
+    @red: #c4002d;
+
+    footer{
+       display: flex;
+       justify-content: space-between;
+       width: 100%;
+       height: 180px;
+       font-size: 1.1em;
+       font-weight: 600;
+       bottom: 0;
+       & #footerContent{
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+         height: 100%;
+         background-color: @red;
+         & #row1, #row2{
+           display: flex;
+           align-items: center;
+           justify-content: space-around;
+           width: 100%;
+           height: 50%;
+           & span{
+             display: flex;
+             align-items: center;
+             text-align: center;
+             color: #000;
+           }
+           & span:hover{
+             color: white;
+             transition: .2s linear;
+             cursor: pointer;
+           }
+           & img{
+             margin-right: 5px;
+             color: #000;
+           }
+           & #footerLinks{
+             display: flex;
+             flex-direction: column;
+             & a{
+               text-decoration: none;
+               color: black;
+             }
+             & a:hover{
+               color: white;
+               transition: .2s linear;
+             }
+           }
+           & #adresses{
+             display: flex;
+             & #adress{
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               height: 25px;
+               & #adress1, #adress2{
+                 & a{
+                   text-decoration: none;
+                   color: #000;
+                   //font-family: 'Muli', sans-serif;
+                 }
+                 & a:hover{
+                   color: white;
+                   transition: .2s linear;
+                 }
+               }
+             }
+           }
+         }
+       }
+       & #footerIcon{
+         display: flex;
+         align-items: center;
+         background-color: #02147f;
+         width: 30%;
+         height: 100%;
+       }

@@ -1,0 +1,136 @@
+@light: #e1e4eb;
+@blue: #02147f;
+@red: #c4002d;
+
+html{
+  min-height: 100%;
+  width: 100%;
+  & a{
+    text-decoration: none;
+  }
+}
+
+body{
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Faustina', serif;
+}
+
+#Bagtroll, #Gunkan, #Hosokomaki, #KaburiMaki, #Nigiri, #Tempura_roll, #Uramaki{
+  width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  & h1{
+    font-size: 3em;
+    border: 2px solid @red;
+    background-color: @red;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px gray;
+    padding: 8px;
+  }
+  & .sushi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+    height: auto;
+    & .row1, .row2{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 90%;
+      height: auto;
+      margin: 30px;
+      & .sushiContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 265px;
+        width: 265px;
+        background-color: @red;
+        position: relative;
+        border-radius: 10px;
+        padding: 0;
+        & .sushiItem{
+          & img{
+            border-radius: 10px;
+          }
+          & .consist{
+            position: absolute;
+            top: 7px;
+            border-radius: 10px;
+            width: 166px;
+            height: 166px;
+            background-color: rgba(0, 0, 0, .7);
+            text-align: center;
+            opacity: 0;
+          }
+        }
+        & .sushiItem:hover{
+          & .consist{
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            transition: all .25s linear;
+            animation: fade-OutSushi .25s;
+          }
+        }
+        & h3{
+          font-size: 1.4em;
+          margin: 0;
+          color: white;
+        }
+        & a .button{
+          text-decoration: none;
+          border: 2px solid white;
+          border-radius: 5px;
+          padding: 4px;
+          width: 20px;
+          font-size: 1.1em;
+          color: white;
+          }
+          & .button:hover{
+            background-color: white;
+            border: 2px solid @red;
+            transition: .3s;
+            color: #000;
+          }
+
+        @media all and (min-width: 200px) and (max-width: 960px){
+          margin: 35px 5px;
+        }
+      }
+      @media all and (min-width: 200px) and (max-width: 960px){
+        flex-direction: column;
+      }
+    }
+    #fake1, #fake2, #fake3, #fake4, #fake5, #fake6, #fake7, #fake8, #fake9, #fake10, #fake11{
+      @media all and (min-width: 200px) and (max-width: 960px){
+        display: none;
+      }
+    }
+      & .fakeItem{
+        opacity: 0;
+      }
+    }
+  }
+
+.scrollTop{
+  background:url('images/logo/arrow.png') 0 0 no-repeat;
+  width: 40px; /* изменяем: ширина картинки */
+  height: 47px; /* изменяем: высота кнопки - половина высоты картинки */
+  bottom: 40px;
+  right: 60px;
+}

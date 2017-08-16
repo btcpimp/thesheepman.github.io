@@ -1,0 +1,360 @@
+html {
+  min-height: 100%;
+  width: 100%;
+}
+html a {
+  text-decoration: none;
+}
+body {
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Faustina', serif;
+}
+#Bagtroll,
+#Gunkan,
+#Hosokomaki,
+#KaburiMaki,
+#Nigiri,
+#Tempura_roll,
+#Uramaki {
+  width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#Bagtroll h1,
+#Gunkan h1,
+#Hosokomaki h1,
+#KaburiMaki h1,
+#Nigiri h1,
+#Tempura_roll h1,
+#Uramaki h1 {
+  font-size: 3em;
+  border: 2px solid #c4002d;
+  background-color: #c4002d;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px gray;
+  padding: 8px;
+}
+#Bagtroll .sushi,
+#Gunkan .sushi,
+#Hosokomaki .sushi,
+#KaburiMaki .sushi,
+#Nigiri .sushi,
+#Tempura_roll .sushi,
+#Uramaki .sushi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  height: auto;
+}
+#Bagtroll .sushi .row1,
+#Gunkan .sushi .row1,
+#Hosokomaki .sushi .row1,
+#KaburiMaki .sushi .row1,
+#Nigiri .sushi .row1,
+#Tempura_roll .sushi .row1,
+#Uramaki .sushi .row1,
+#Bagtroll .sushi .row2,
+#Gunkan .sushi .row2,
+#Hosokomaki .sushi .row2,
+#KaburiMaki .sushi .row2,
+#Nigiri .sushi .row2,
+#Tempura_roll .sushi .row2,
+#Uramaki .sushi .row2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  height: auto;
+  margin: 30px;
+}
+#Bagtroll .sushi .row1 .sushiContent,
+#Gunkan .sushi .row1 .sushiContent,
+#Hosokomaki .sushi .row1 .sushiContent,
+#KaburiMaki .sushi .row1 .sushiContent,
+#Nigiri .sushi .row1 .sushiContent,
+#Tempura_roll .sushi .row1 .sushiContent,
+#Uramaki .sushi .row1 .sushiContent,
+#Bagtroll .sushi .row2 .sushiContent,
+#Gunkan .sushi .row2 .sushiContent,
+#Hosokomaki .sushi .row2 .sushiContent,
+#KaburiMaki .sushi .row2 .sushiContent,
+#Nigiri .sushi .row2 .sushiContent,
+#Tempura_roll .sushi .row2 .sushiContent,
+#Uramaki .sushi .row2 .sushiContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 265px;
+  width: 265px;
+  background-color: #c4002d;
+  position: relative;
+  border-radius: 10px;
+  padding: 0;
+}
+#Bagtroll .sushi .row1 .sushiContent .sushiItem img,
+#Gunkan .sushi .row1 .sushiContent .sushiItem img,
+#Hosokomaki .sushi .row1 .sushiContent .sushiItem img,
+#KaburiMaki .sushi .row1 .sushiContent .sushiItem img,
+#Nigiri .sushi .row1 .sushiContent .sushiItem img,
+#Tempura_roll .sushi .row1 .sushiContent .sushiItem img,
+#Uramaki .sushi .row1 .sushiContent .sushiItem img,
+#Bagtroll .sushi .row2 .sushiContent .sushiItem img,
+#Gunkan .sushi .row2 .sushiContent .sushiItem img,
+#Hosokomaki .sushi .row2 .sushiContent .sushiItem img,
+#KaburiMaki .sushi .row2 .sushiContent .sushiItem img,
+#Nigiri .sushi .row2 .sushiContent .sushiItem img,
+#Tempura_roll .sushi .row2 .sushiContent .sushiItem img,
+#Uramaki .sushi .row2 .sushiContent .sushiItem img {
+  border-radius: 10px;
+}
+#Bagtroll .sushi .row1 .sushiContent .sushiItem .consist,
+#Gunkan .sushi .row1 .sushiContent .sushiItem .consist,
+#Hosokomaki .sushi .row1 .sushiContent .sushiItem .consist,
+#KaburiMaki .sushi .row1 .sushiContent .sushiItem .consist,
+#Nigiri .sushi .row1 .sushiContent .sushiItem .consist,
+#Tempura_roll .sushi .row1 .sushiContent .sushiItem .consist,
+#Uramaki .sushi .row1 .sushiContent .sushiItem .consist,
+#Bagtroll .sushi .row2 .sushiContent .sushiItem .consist,
+#Gunkan .sushi .row2 .sushiContent .sushiItem .consist,
+#Hosokomaki .sushi .row2 .sushiContent .sushiItem .consist,
+#KaburiMaki .sushi .row2 .sushiContent .sushiItem .consist,
+#Nigiri .sushi .row2 .sushiContent .sushiItem .consist,
+#Tempura_roll .sushi .row2 .sushiContent .sushiItem .consist,
+#Uramaki .sushi .row2 .sushiContent .sushiItem .consist {
+  position: absolute;
+  top: 7px;
+  border-radius: 10px;
+  width: 166px;
+  height: 166px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  opacity: 0;
+}
+#Bagtroll .sushi .row1 .sushiContent .sushiItem:hover .consist,
+#Gunkan .sushi .row1 .sushiContent .sushiItem:hover .consist,
+#Hosokomaki .sushi .row1 .sushiContent .sushiItem:hover .consist,
+#KaburiMaki .sushi .row1 .sushiContent .sushiItem:hover .consist,
+#Nigiri .sushi .row1 .sushiContent .sushiItem:hover .consist,
+#Tempura_roll .sushi .row1 .sushiContent .sushiItem:hover .consist,
+#Uramaki .sushi .row1 .sushiContent .sushiItem:hover .consist,
+#Bagtroll .sushi .row2 .sushiContent .sushiItem:hover .consist,
+#Gunkan .sushi .row2 .sushiContent .sushiItem:hover .consist,
+#Hosokomaki .sushi .row2 .sushiContent .sushiItem:hover .consist,
+#KaburiMaki .sushi .row2 .sushiContent .sushiItem:hover .consist,
+#Nigiri .sushi .row2 .sushiContent .sushiItem:hover .consist,
+#Tempura_roll .sushi .row2 .sushiContent .sushiItem:hover .consist,
+#Uramaki .sushi .row2 .sushiContent .sushiItem:hover .consist {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: all .25s linear;
+  animation: fade-OutSushi 0.25s;
+}
+#Bagtroll .sushi .row1 .sushiContent h3,
+#Gunkan .sushi .row1 .sushiContent h3,
+#Hosokomaki .sushi .row1 .sushiContent h3,
+#KaburiMaki .sushi .row1 .sushiContent h3,
+#Nigiri .sushi .row1 .sushiContent h3,
+#Tempura_roll .sushi .row1 .sushiContent h3,
+#Uramaki .sushi .row1 .sushiContent h3,
+#Bagtroll .sushi .row2 .sushiContent h3,
+#Gunkan .sushi .row2 .sushiContent h3,
+#Hosokomaki .sushi .row2 .sushiContent h3,
+#KaburiMaki .sushi .row2 .sushiContent h3,
+#Nigiri .sushi .row2 .sushiContent h3,
+#Tempura_roll .sushi .row2 .sushiContent h3,
+#Uramaki .sushi .row2 .sushiContent h3 {
+  font-size: 1.4em;
+  margin: 0;
+  color: white;
+}
+#Bagtroll .sushi .row1 .sushiContent a .button,
+#Gunkan .sushi .row1 .sushiContent a .button,
+#Hosokomaki .sushi .row1 .sushiContent a .button,
+#KaburiMaki .sushi .row1 .sushiContent a .button,
+#Nigiri .sushi .row1 .sushiContent a .button,
+#Tempura_roll .sushi .row1 .sushiContent a .button,
+#Uramaki .sushi .row1 .sushiContent a .button,
+#Bagtroll .sushi .row2 .sushiContent a .button,
+#Gunkan .sushi .row2 .sushiContent a .button,
+#Hosokomaki .sushi .row2 .sushiContent a .button,
+#KaburiMaki .sushi .row2 .sushiContent a .button,
+#Nigiri .sushi .row2 .sushiContent a .button,
+#Tempura_roll .sushi .row2 .sushiContent a .button,
+#Uramaki .sushi .row2 .sushiContent a .button {
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 4px;
+  width: 20px;
+  font-size: 1.1em;
+  color: white;
+}
+#Bagtroll .sushi .row1 .sushiContent .button:hover,
+#Gunkan .sushi .row1 .sushiContent .button:hover,
+#Hosokomaki .sushi .row1 .sushiContent .button:hover,
+#KaburiMaki .sushi .row1 .sushiContent .button:hover,
+#Nigiri .sushi .row1 .sushiContent .button:hover,
+#Tempura_roll .sushi .row1 .sushiContent .button:hover,
+#Uramaki .sushi .row1 .sushiContent .button:hover,
+#Bagtroll .sushi .row2 .sushiContent .button:hover,
+#Gunkan .sushi .row2 .sushiContent .button:hover,
+#Hosokomaki .sushi .row2 .sushiContent .button:hover,
+#KaburiMaki .sushi .row2 .sushiContent .button:hover,
+#Nigiri .sushi .row2 .sushiContent .button:hover,
+#Tempura_roll .sushi .row2 .sushiContent .button:hover,
+#Uramaki .sushi .row2 .sushiContent .button:hover {
+  background-color: white;
+  border: 2px solid #c4002d;
+  transition: .3s;
+  color: #000;
+}
+@media all and (min-width: 200px) and (max-width: 960px) {
+  #Bagtroll .sushi .row1 .sushiContent,
+  #Gunkan .sushi .row1 .sushiContent,
+  #Hosokomaki .sushi .row1 .sushiContent,
+  #KaburiMaki .sushi .row1 .sushiContent,
+  #Nigiri .sushi .row1 .sushiContent,
+  #Tempura_roll .sushi .row1 .sushiContent,
+  #Uramaki .sushi .row1 .sushiContent,
+  #Bagtroll .sushi .row2 .sushiContent,
+  #Gunkan .sushi .row2 .sushiContent,
+  #Hosokomaki .sushi .row2 .sushiContent,
+  #KaburiMaki .sushi .row2 .sushiContent,
+  #Nigiri .sushi .row2 .sushiContent,
+  #Tempura_roll .sushi .row2 .sushiContent,
+  #Uramaki .sushi .row2 .sushiContent {
+    margin: 35px 5px;
+  }
+}
+@media all and (min-width: 200px) and (max-width: 960px) {
+  #Bagtroll .sushi .row1,
+  #Gunkan .sushi .row1,
+  #Hosokomaki .sushi .row1,
+  #KaburiMaki .sushi .row1,
+  #Nigiri .sushi .row1,
+  #Tempura_roll .sushi .row1,
+  #Uramaki .sushi .row1,
+  #Bagtroll .sushi .row2,
+  #Gunkan .sushi .row2,
+  #Hosokomaki .sushi .row2,
+  #KaburiMaki .sushi .row2,
+  #Nigiri .sushi .row2,
+  #Tempura_roll .sushi .row2,
+  #Uramaki .sushi .row2 {
+    flex-direction: column;
+  }
+}
+@media all and (min-width: 200px) and (max-width: 960px) {
+  #Bagtroll .sushi #fake1,
+  #Gunkan .sushi #fake1,
+  #Hosokomaki .sushi #fake1,
+  #KaburiMaki .sushi #fake1,
+  #Nigiri .sushi #fake1,
+  #Tempura_roll .sushi #fake1,
+  #Uramaki .sushi #fake1,
+  #Bagtroll .sushi #fake2,
+  #Gunkan .sushi #fake2,
+  #Hosokomaki .sushi #fake2,
+  #KaburiMaki .sushi #fake2,
+  #Nigiri .sushi #fake2,
+  #Tempura_roll .sushi #fake2,
+  #Uramaki .sushi #fake2,
+  #Bagtroll .sushi #fake3,
+  #Gunkan .sushi #fake3,
+  #Hosokomaki .sushi #fake3,
+  #KaburiMaki .sushi #fake3,
+  #Nigiri .sushi #fake3,
+  #Tempura_roll .sushi #fake3,
+  #Uramaki .sushi #fake3,
+  #Bagtroll .sushi #fake4,
+  #Gunkan .sushi #fake4,
+  #Hosokomaki .sushi #fake4,
+  #KaburiMaki .sushi #fake4,
+  #Nigiri .sushi #fake4,
+  #Tempura_roll .sushi #fake4,
+  #Uramaki .sushi #fake4,
+  #Bagtroll .sushi #fake5,
+  #Gunkan .sushi #fake5,
+  #Hosokomaki .sushi #fake5,
+  #KaburiMaki .sushi #fake5,
+  #Nigiri .sushi #fake5,
+  #Tempura_roll .sushi #fake5,
+  #Uramaki .sushi #fake5,
+  #Bagtroll .sushi #fake6,
+  #Gunkan .sushi #fake6,
+  #Hosokomaki .sushi #fake6,
+  #KaburiMaki .sushi #fake6,
+  #Nigiri .sushi #fake6,
+  #Tempura_roll .sushi #fake6,
+  #Uramaki .sushi #fake6,
+  #Bagtroll .sushi #fake7,
+  #Gunkan .sushi #fake7,
+  #Hosokomaki .sushi #fake7,
+  #KaburiMaki .sushi #fake7,
+  #Nigiri .sushi #fake7,
+  #Tempura_roll .sushi #fake7,
+  #Uramaki .sushi #fake7,
+  #Bagtroll .sushi #fake8,
+  #Gunkan .sushi #fake8,
+  #Hosokomaki .sushi #fake8,
+  #KaburiMaki .sushi #fake8,
+  #Nigiri .sushi #fake8,
+  #Tempura_roll .sushi #fake8,
+  #Uramaki .sushi #fake8,
+  #Bagtroll .sushi #fake9,
+  #Gunkan .sushi #fake9,
+  #Hosokomaki .sushi #fake9,
+  #KaburiMaki .sushi #fake9,
+  #Nigiri .sushi #fake9,
+  #Tempura_roll .sushi #fake9,
+  #Uramaki .sushi #fake9,
+  #Bagtroll .sushi #fake10,
+  #Gunkan .sushi #fake10,
+  #Hosokomaki .sushi #fake10,
+  #KaburiMaki .sushi #fake10,
+  #Nigiri .sushi #fake10,
+  #Tempura_roll .sushi #fake10,
+  #Uramaki .sushi #fake10,
+  #Bagtroll .sushi #fake11,
+  #Gunkan .sushi #fake11,
+  #Hosokomaki .sushi #fake11,
+  #KaburiMaki .sushi #fake11,
+  #Nigiri .sushi #fake11,
+  #Tempura_roll .sushi #fake11,
+  #Uramaki .sushi #fake11 {
+    display: none;
+  }
+}
+#Bagtroll .sushi .fakeItem,
+#Gunkan .sushi .fakeItem,
+#Hosokomaki .sushi .fakeItem,
+#KaburiMaki .sushi .fakeItem,
+#Nigiri .sushi .fakeItem,
+#Tempura_roll .sushi .fakeItem,
+#Uramaki .sushi .fakeItem {
+  opacity: 0;
+}
+.scrollTop {
+  background: url('images/logo/arrow.png') 0 0 no-repeat;
+  width: 40px;
+  /* изменяем: ширина картинки */
+  height: 47px;
+  /* изменяем: высота кнопки - половина высоты картинки */
+  bottom: 40px;
+  right: 60px;
+}
