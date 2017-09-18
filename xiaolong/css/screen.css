@@ -2703,8 +2703,8 @@ box-shadow: 10px 10px 108px -6px rgba(40,149,251,1);
     margin: 5px 0;
 }
 .pricing .column .pricing-box ul li {
-    list-style-type: none !important;
-    list-style-image: none;
+/*    list-style-type: none !important;
+    list-style-image: none;*/
     margin: 0 !important;
     text-align: left;
     padding: 7px 7px 7px 35px !important;
@@ -2730,11 +2730,15 @@ box-shadow: 10px 10px 108px -6px rgba(40,149,251,1);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.pricing ul li:after {
+/*.pricing ul li:after {
     display: none;
 }
-.pe-7s-id:before {
+*/.pe-7s-id:before {
     content: "\e68f";
+}
+.pricing-box-content ul li:after{
+left: 1em;
+top: 1em;
 }
 .pricing .column .pricing-box-price {
     padding: 10px;
