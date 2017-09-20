@@ -13,7 +13,12 @@ output, ruby, section, summary, time, mark, audio, video {
     vertical-align: baseline;
     font-size: 100%;
 }
-
+.footer-contact-list{
+    display: none !important;
+}
+footer .footer-contact-list:first-child{
+    display: block !important;
+}
 body, html {
     height: 100%;
     font-family: 'Raleway', sans-serif !important;
