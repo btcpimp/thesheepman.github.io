@@ -1,19 +1,39 @@
 jQuery(document).ready(function($) {
-    $('.modal-head li').click(function() {
-        var text = $(this).text()
-        $('.head-text').text(text)
-        $('.modal').removeClass('active')
+    $('.print-btn').click(function() {
+        window.print();
     });
+    $('.modal-head li').click(function() {
+        if ($('.head-text__item').length < 2) {
+            var text = $(this).text()
+            $('.default-head').hide()
+            $('.head-text').append('<div class="head-text__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        } else {
+            $('.head-text').text('')
+            var text = $(this).text()
+            $('.head-text').append('<div class="head-text__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        }
 
+    });
     $('.modal-neck li').click(function() {
         var text = $(this).text()
         $('.neck-text').text(text)
         $('.modal').removeClass('active')
     });
     $('.modal-left-arm li').click(function() {
-        var text = $(this).text()
-        $('.text-left-arm').text(text)
-        $('.modal').removeClass('active')
+        if ($('.text-left-arm__item').length < 2) {
+            var text = $(this).text()
+            $('.default-left').hide()
+            $('.text-left-arm').append('<div class="text-left-arm__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        } else {
+            $('.text-left-arm').text('')
+            var text = $(this).text()
+            $('.text-left-arm').append('<div class="text-left-arm__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        }
+
     });
     $('.modal-body li').click(function() {
         if ($('.body-text__item').length < 4) {
@@ -30,19 +50,46 @@ jQuery(document).ready(function($) {
 
     });
     $('.modal-right-arm li').click(function() {
-        var text = $(this).text()
-        $('.text-right-arm').text(text)
-        $('.modal').removeClass('active')
+        if ($('.text-right-arm__item').length < 2) {
+            var text = $(this).text()
+            $('.default-right').hide()
+            $('.text-right-arm').append('<div class="text-right-arm__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        } else {
+            $('.text-right-arm').text('')
+            var text = $(this).text()
+            $('.text-right-arm').append('<div class="text-right-arm__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        }
+
     });
     $('.modal-left-foot li').click(function() {
-        var text = $(this).text()
-        $('.text-left-foot').text(text)
-        $('.modal').removeClass('active')
+        if ($('.text-left-foot__item').length < 2) {
+            var text = $(this).text()
+            $('.left-foot-default').hide()
+            $('.text-left-foot').append('<div class="text-left-foot__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        } else {
+            $('.text-left-foot').text('')
+            var text = $(this).text()
+            $('.text-left-foot').append('<div class="text-left-foot__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        }
+
     });
     $('.modal-right-foot li').click(function() {
-        var text = $(this).text()
-        $('.text-right-foot').text(text)
-        $('.modal').removeClass('active')
+        if ($('.text-right-foot__item').length < 2) {
+            var text = $(this).text()
+            $('.right-foot-default').hide()
+            $('.text-right-foot').append('<div class="text-right-foot__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        } else {
+            $('.text-right-foot').text('')
+            var text = $(this).text()
+            $('.text-right-foot').append('<div class="text-right-foot__item">' + text + '</div><br>')
+            $('.modal').removeClass('active')
+        }
+
     });
     $('.modal-foots li').click(function() {
         var text = $(this).text()

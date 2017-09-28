@@ -191,3 +191,6 @@ position: absolute;
 .active{
 	display: block;
 }
+.default-text{
+	font-weight: bold;
+}

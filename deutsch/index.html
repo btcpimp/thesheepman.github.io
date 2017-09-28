@@ -12,7 +12,7 @@
 
 <body>
     <section>
-        <div class="character">
+        <div class="character" id="print-character">
             <div class="character__head">
                 <div class="modal-head modal">
                     <ul>
@@ -37,7 +37,7 @@
                         <li>Man legt viel Wert (auf Akk)…</li>
                     </ul>
                 </div>
-                <div class="text head-text">Einleitung+Themenanker
+                <div class="text head-text"><span class="default-head default-text">Einleitung+Themenanker</span>
                 </div>
             </div>
             <div class="character__neck">
@@ -56,7 +56,7 @@
                         <li>Ein wichtiger/zentraler Punkt des Textes ist …</li>
                     </ul>
                 </div>
-                <div class="text neck-text">Überleitung</div>
+                <div class="text neck-text"><span class="default-text">Überleitung</span></div>
             </div>
             <div class="character__body">
                 <div class="modal-body modal">
@@ -98,7 +98,7 @@
                         <li>Das führt dazu, dass…</li>
                     </ul>
                 </div>
-                <div class="text  body-text"><span class="tees">Tees</span></div>
+                <div class="text  body-text"><span class="tees default-text">Tees</span></div>
                 <div class="body__left-arm">
                     <div class="modal-left-arm modal">
                         <ul>
@@ -113,7 +113,7 @@
                             <li>Was positiv ist…</li>
                         </ul>
                     </div>
-                    <div class="text text-left-arm">dafür</div>
+                    <div class="text text-left-arm"><span class="default-left default-text">dafür</span></div>
                 </div>
                 <div class="body__right-arm">
                     <div class="modal-right-arm modal">
@@ -130,7 +130,7 @@
                             <li>Ein weiteres Argument gegen … ist …</li>
                         </ul>
                     </div>
-                    <div class="text text-right-arm">dagegen</div>
+                    <div class="text text-right-arm"><span class="default-right default-text">dagegen</span></div>
                 </div>
             </div>
             <div class="character__legs">
@@ -154,7 +154,7 @@
                             <li>Es ist mir auch bekannt, dass…</li>
                         </ul>
                     </div>
-                    <div class="text text-left-foot">Eigene Erfahrung</div>
+                    <div class="text text-left-foot"><span class="left-foot-default default-text">Eigene Erfahrung</span></div>
                 </div>
                 <div class="legs__right-foot">
                     <div class="modal-right-foot modal">
@@ -175,7 +175,7 @@
                             <li>Für mich steht fest, dass ... </li>
                         </ul>
                     </div>
-                    <div class="text text-right-foot">Eigene Meinung </div>
+                    <div class="text text-right-foot"><span class="right-foot-default default-text">Eigene Meinung</span> </div>
                 </div>
             </div>
             <div class="character__foots">
@@ -190,9 +190,12 @@
                         <li>Abschließend kann ich sagen, dass…</li>
                     </ul>
                 </div>
-                <div class="text text-foots">Schluss</div>
+                <div class="text text-foots"><span class="default-text">Schluss</span></div>
             </div>
         </div>
+    </section>
+    <section>
+    	<button class="print-btn">Print</button>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
