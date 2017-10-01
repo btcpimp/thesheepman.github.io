@@ -130,4 +130,11 @@ jQuery(document).ready(function($) {
 
         }
     });
+
+
+    $(".arrow").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#print-character").offset().top
+        }, 2000);
+    });
 });
