@@ -1,0 +1,134 @@
+html,
+body {
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 9;
+    top: 0;
+    background: #fff;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+}
+.content-wrapper{
+    margin: 0 auto;
+    max-width: 920px;
+}
+.header-menu {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu__button i {
+    padding-right: 10px;
+}
+
+.header-logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contacts__phones {
+    font-size: 24px;
+}
+
+.contacts__phones i {
+    padding-right: 10px;
+    color: #e81331;
+}
+
+.contacts__phones span {
+    color: #e81331;
+    font-weight: bold;
+}
+
+.contacts__schedule {
+    margin-top: 10px;
+    float: right;
+}
+
+.contacts__schedule span {
+    font-weight: bold;
+}
+
+.promo {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    margin-top: 80px;
+    height: calc(100vh - 80px);
+    width: 100%;
+    position: relative;
+}
+
+.promo:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    background: black;
+}
+
+.promo-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.promo__heading {
+
+    padding: 80px 0px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.promo__heading h1 {
+    font-weight: ;
+    font-size: 46px;
+    color: #fff;
+}
+
+.promo__heading h2 {
+    padding: 40px;
+    font-weight: lighter;
+    font-size: 36px;
+    color: #fff;
+    position: relative;
+}
+
+.promo__heading h2:after {
+    content: "";
+    bottom: 0px;
+    position: absolute;
+    width: 104px;
+    height: 5px;
+    left: calc(50% - 36px);
+    background-color: #f4d32c;
+}
+.scale--animate {
+  animation: scale 2s forwards infinite;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
