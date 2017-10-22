@@ -11,5 +11,6 @@ jQuery(document).ready(function($) {
 	$('.menu__burger').click(function() {
 		$(this).toggleClass('menu-active');
 		$('.nav').toggleClass('nav-active');
+		$('main').toggleClass('hidden');
 	});
 });
