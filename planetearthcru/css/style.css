@@ -240,3 +240,32 @@ content: '';
 .hidden{
     display: none;
 }
+.block-nav{
+    position: fixed;
+}
+.block-nav__list-item{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid #291c09;
+    border-radius: 100%;
+    margin-bottom: 50px;
+    transition: all .3s ease;
+}
+.block-nav__list-item:after{
+    content: '';
+    display: block;
+    height: 22px;
+    width: 1px;
+    position: relative;
+    top: 30px;
+    right: -7px;
+    background-color: #ffb135;
+}
+.block-nav__list-item:last-child:after{
+    display: none;
+}
+.block-nav-active{
+    background-color: #ffb135;
+}
