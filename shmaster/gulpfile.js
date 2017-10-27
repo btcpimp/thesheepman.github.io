@@ -10,20 +10,17 @@ var path = {
         // CSS в порядке подключения
         сss: [
             './css/reset.css',
-            './libs/owl.carousel.css',
-            './libs/grid.css',
             './css/style.css',
             './css/adaptive.css'
         ],
         js: [
             './libs/jquery-3.2.1.min.js',
-            './libs/owl.carousel.js',
             './js/common.js'
         ]
     },
     build: {
-        css: './compressed/css',
-        js: './compressed/js'
+        css: './css',
+        js: './js'
     },
 }
 
