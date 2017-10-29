@@ -90,6 +90,15 @@
 }
 
 @media (max-width: 920px) {
+    .contacts {
+        margin-top: 100PX;
+    }
+    .numbers__phone {
+        font-size: 26px;
+    }
+    .contacts-factory__description-phones p {
+        font-size: 20px;
+    }
     .contacts-staff__profile {
         width: 100%;
         margin: 25px 0px;
