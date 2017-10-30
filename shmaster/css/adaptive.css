@@ -126,8 +126,11 @@
 
 @media (max-width: 920px) {
 	.about-history h1{
-		font-size: 42px;
+		font-size: 32px;
 	}
+	.contacts-factory__description h1 {
+    font-size: 32px;
+}
 	.suppliers-middle img{
 		float: none;
 		width: 100%;
