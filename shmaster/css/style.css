@@ -123,7 +123,9 @@ html {
 .menu-item:hover {
     background-color: #877a55;
 }
-
+.menu-item.active{
+    background-color: #877a55;
+}
 .promo {
     height: 550px;
 }
