@@ -410,6 +410,10 @@ html {
     transform: translate3d(0, 0, 0);
 }
 
+
+
+/*Contacts*/
+
 .contacts-factory {
     padding-top: 20px;
     flex-flow: row wrap;
@@ -427,6 +431,7 @@ html {
 }
 
 .contacts-factory__description h1 {
+    text-transform: uppercase;
     display: inline-block;
     font-size: 52px;
     line-height: .5em;
@@ -561,4 +566,82 @@ html {
 .phone__fix {
     font-size: 26px;
     margin: 10px 0px;
+}
+
+
+
+/*ABOUT*/
+
+.about {
+    padding-top: 40px;
+}
+
+.about-history h1 {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 52px;
+    line-height: .5em;
+    margin-bottom: 40px;
+}
+
+.about-history h1:after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    display: inline-block;
+    background-color: #8b7d56;
+}
+
+.about-history p {
+    padding: 12px 0px;
+    font-size: 20px;
+    line-height: 1.3em;
+}
+
+.about-history__first {
+    width: 75%;
+    margin-bottom: 350px;
+}
+
+.about-history__meat-top {
+    position: absolute;
+    right: 0px;
+    height: 988px;
+    top: 400px;
+}
+
+.about-history__second {
+    padding-left: 30%;
+    margin-bottom: 500px;
+}
+
+.about-history__meat-middle {
+    position: absolute;
+    left: 0;
+    top: 1370px;
+}
+
+.about-history__meat-bottom {
+    width: 51%;
+    float: right;
+}
+
+.timing {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.timing__text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 0px 50px;
+}
+
+.about-history__banner {
+    text-align: center;
+    margin-top: 100px;
 }
