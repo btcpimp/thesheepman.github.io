@@ -46,6 +46,9 @@
 }
 
 @media (max-width: 1200px) {
+	.suppliers-middle img {
+    padding-left: 60px;
+}
     .timing__text {
         padding: 0px 25px;
     }
@@ -122,6 +125,20 @@
 }
 
 @media (max-width: 920px) {
+	.about-history h1{
+		font-size: 42px;
+	}
+	.suppliers-middle img{
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	.suppliers-text{
+		text-align: left;
+	}
+	.suppliers{
+		margin-top: 100px;
+	}
     .timing__text {
         width: 100%;
         text-align: center;

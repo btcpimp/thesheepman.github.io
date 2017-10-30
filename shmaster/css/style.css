@@ -647,3 +647,43 @@ html {
     text-align: center;
     margin-top: 100px;
 }
+/*suppliers*/
+.suppliers-text{
+    text-align: center;
+}
+.suppliers-text p{
+
+}
+.suppliers-text ul {
+    display: inline-block;
+    font-weight: bold;
+    text-align: left;
+}
+.suppliers-text ul {
+position: relative;
+    font-size: 22px;
+}
+.suppliers-text ul li{
+    padding-bottom: 5px;
+}
+.suppliers-text ul li:before {
+    content: "";
+    display: block;
+    height: 7px;
+    width: 7px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: -20px;
+    margin-top: 9px;
+}
+.suppliers-middle{
+    margin: 40px 0px;   
+}
+.suppliers-middle img{
+    float: right;
+    padding-left: 150px;
+}
+.suppliers-last{
+    margin-top: 30px;
+}
