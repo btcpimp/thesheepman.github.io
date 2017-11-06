@@ -1,4 +1,8 @@
 @media (max-width: 1470px) {
+
+    .products-inner-item {
+        width: 100%;
+    }
     .about-history__meat-top {
         top: 500px;
     }
@@ -46,9 +50,12 @@
 }
 
 @media (max-width: 1200px) {
-	.suppliers-middle img {
-    padding-left: 60px;
-}
+    .products-inner {
+        min-width: 100%;
+    }
+    .suppliers-middle img {
+        padding-left: 60px;
+    }
     .timing__text {
         padding: 0px 25px;
     }
@@ -125,23 +132,55 @@
 }
 
 @media (max-width: 920px) {
-	.about-history h1{
-		font-size: 32px;
-	}
-	.contacts-factory__description h1 {
-    font-size: 32px;
-}
-	.suppliers-middle img{
-		float: none;
-		width: 100%;
-		padding: 0;
-	}
-	.suppliers-text{
-		text-align: left;
-	}
-	.suppliers{
-		margin-top: 100px;
-	}
+    .products-inner.active {
+        position: fixed;
+        top: 150px;
+        left: 30px;
+    }
+    .products-item__title.active {
+        z-index: 0;
+    }
+    .products-inner__title {
+        font-size: 16px;
+        text-align: center;
+    }
+    .products-item__img {
+        text-align: center;
+    }
+    .products-item-6 .procuts-item {
+        width: 50%;
+    }
+    .procuts-item img {
+        width: auto;
+        height: 150px;
+    }
+    .products-item__title {
+        width: 100%;
+    }
+    .procuts-item {
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .products {
+        justify-content: center;
+    }
+    .about-history h1 {
+        font-size: 32px;
+    }
+    .contacts-factory__description h1 {
+        font-size: 32px;
+    }
+    .suppliers-middle img {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .suppliers-text {
+        text-align: left;
+    }
+    .suppliers {
+        margin-top: 100px;
+    }
     .timing__text {
         width: 100%;
         text-align: center;
@@ -232,6 +271,19 @@
 }
 
 @media (max-width: 640px) {
+    .products-item__title {
+        text-align: center;
+    }
+    .procuts-img-fix {
+        width: 100%;
+    }
+    .procuts-item img {
+        width: auto;
+        height: auto;
+    }
+    .products-item-6 .procuts-item {
+        width: 100%;
+    }
     .about-history__banner img {
         width: 100%;
     }
@@ -298,6 +350,9 @@
 }
 
 @media (max-width: 450px) {
+    .procuts-item img {
+        width: 100%;
+    }
     .header-info {
         display: none;
     }

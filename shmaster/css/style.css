@@ -687,3 +687,81 @@ position: relative;
 .suppliers-last{
     margin-top: 30px;
 }
+/*products*/
+.products{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.procuts-item{
+    cursor: pointer;
+    width: 33%;
+
+}
+.procuts-item img {
+    width: 100%;
+    margin-top: 10px;
+}
+.procuts-img-fix {
+    width: auto !important;
+}
+.products-item__title{
+    font-size: 21px;
+    text-transform: uppercase;
+    width: 90%;
+    line-height: 1.2em;
+}
+.products-item__title.active{
+    position: relative;
+    z-index: 1;
+}
+.products-inner{
+    display: none;
+    opacity: 0;
+    transition: .3s ease all;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+    min-width: 1200px;
+    left: 0;
+}
+.products-inner-item{
+    display: flex;
+    align-items: center;
+    width: 33%;
+    margin-top: -20px;
+}
+
+.products-inner__title{
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: right;
+    padding-right: 5px;
+}
+.products-inner.active{
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.modal{
+    visibility: hidden;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: .2s ease all;
+}
+.modal.active{
+    visibility: visible;
+    opacity: 1;
+}
+.products-item-6 .procuts-item{
+    width: 16%;
+}
