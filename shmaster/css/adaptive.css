@@ -135,10 +135,10 @@
     .products-inner.active {
         position: fixed;
         top: 125px;
-        left: 30px;
+    	left: 5px;
 		overflow-y:scroll;
     	overflow-x:hidden;
-		max-height: 100%;
+    	max-height: calc(100% - 125px);
     }
     .products-item__title.active {
         z-index: 0;
