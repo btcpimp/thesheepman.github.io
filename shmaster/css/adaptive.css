@@ -134,10 +134,11 @@
 @media (max-width: 920px) {
     .products-inner.active {
         position: fixed;
-        top: 150px;
+        top: 125px;
         left: 30px;
 		overflow-y:scroll;
     	overflow-x:hidden;
+		max-height: 100%;
     }
     .products-item__title.active {
         z-index: 0;
