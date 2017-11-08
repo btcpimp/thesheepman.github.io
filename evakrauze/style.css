@@ -1,0 +1,12 @@
+body{
+	background: #000;
+	text-align: center;
+}
+.wrapper{
+		display: flex;
+	align-items: center;
+	justify-content: center;
+}
+iframe{
+	text-align: center;
+}
