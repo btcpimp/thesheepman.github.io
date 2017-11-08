@@ -1,0 +1,48 @@
+body{
+	background-color: #191919;
+}
+.login-form input{
+	color: #fff;
+	border-color: #908B67 !important;
+}
+.login-form label.active{
+	color: #908B67 !important;
+}
+.login-form input:active{
+border-bottom: 1px solid #908B67 !important;
+    -webkit-box-shadow: 0 1px 0 0 #908B67 !important;
+    box-shadow: 0 1px 0 0 #908B67 !important;
+}
+.login-btn {
+	background-color: #908B67;
+}
+.login-btn:hover{
+	background-color: #B9B384;
+}
+.login-wrap{
+   display: block;
+	transition: opacity 1s ease-out;
+    opacity: 1; 
+}
+.login-wrap.inactive{
+	opacity: 1;
+	display: none;
+}
+.miner{
+ transition: opacity 1s ease-out;
+    opacity: 0; 
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+.miner.active{
+opacity: 1;
+width: 256px;
+    height: 310px;
+}
+.wrapper{
+	    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
