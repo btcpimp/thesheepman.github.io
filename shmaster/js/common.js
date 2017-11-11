@@ -21,4 +21,10 @@ jQuery(document).ready(function($) {
 
 		}
 	});
+
+	$('.products-preview-item__about').hover(function() {
+		$(this).addClass('active')
+	}, function() {
+		$(this).removeClass('active')
+	});
 });
