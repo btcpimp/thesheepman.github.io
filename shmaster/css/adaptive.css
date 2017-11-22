@@ -288,16 +288,18 @@
 }
 
 @media (max-width: 640px) {
-
-	.product-overview__descr h3{
-		font-size: 24px;
-	}
-	.product-overview__descr h2{
-		font-size: 24px;
-	}
-	.product-overview__descr h4{
-		font-size: 18px;
-	}
+    .product-overview__img>img {
+        width: 100%;
+    }
+    .product-overview__descr h3 {
+        font-size: 24px;
+    }
+    .product-overview__descr h2 {
+        font-size: 24px;
+    }
+    .product-overview__descr h4 {
+        font-size: 18px;
+    }
     .product-overview__descr {
         width: 100%;
     }
