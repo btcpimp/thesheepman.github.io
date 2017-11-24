@@ -454,6 +454,7 @@ html {
 
 .contacts-factory__description p {
     line-height: 1.2em;
+    letter-spacing: 1px;
 }
 
 .contacts-factory__description i {
@@ -546,9 +547,11 @@ html {
 
 .profile-description__name {
     font-size: 18px;
+    letter-spacing: 1px;
 }
 
 .profile-description__region {
+    letter-spacing: 1px;
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -579,7 +582,9 @@ html {
 
 
 /*ABOUT*/
-
+.about-history p {
+    letter-spacing: 1px;
+}
 .about {
     padding-top: 40px;
 }
@@ -614,8 +619,8 @@ html {
 .about-history__meat-top {
     position: absolute;
     right: 0px;
-    height: 988px;
-    top: 400px;
+    height: 850px;
+    top: 470px;
 }
 
 .about-history__second {
@@ -626,7 +631,7 @@ html {
 .about-history__meat-middle {
     position: absolute;
     left: 0;
-    top: 1370px;
+    top: 1500px;
 }
 
 .about-history__meat-bottom {
@@ -660,6 +665,7 @@ html {
 
 .suppliers-text {
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .suppliers-text p {}
@@ -735,6 +741,7 @@ html {
     text-transform: uppercase;
     width: 90%;
     line-height: 1.2em;
+    margin-bottom: 10px;
 }
 
 .products-item__title.active {
@@ -795,8 +802,19 @@ html {
 .products-item-6 .procuts-item {
     width: 16%;
 }
-
-
+.products-router{
+    padding-left: 20px;
+    color: #f4efed;
+    font-size: 16px;
+    text-transform: none;
+    transition: .3s ease all;
+}
+.products-item-6 .products-router{
+    padding-left: 0px;
+}
+.products-router:hover{
+color: #8b7d56;
+}
 
 /*Products List*/
 
