@@ -335,6 +335,10 @@
         float: none;
         width: 100%;
     }
+        .products-preview-item .img-fullmode {
+        float: none;
+        width: 100%;
+    }
     .products-preview-item__descr {
         width: 100%;
     }
