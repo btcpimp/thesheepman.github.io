@@ -1014,6 +1014,7 @@ font-weight: lighter;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    line-height: 1.5em;
 }
 .product-overview__img-prev img{
     height: 150px;
