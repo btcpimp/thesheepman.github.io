@@ -1,0 +1,33 @@
+<header class="header">
+    <div class="header-info">
+        <a href="mailto:{{site.email}}" class="header-info__link">{{site.email}}</a>
+        <a href="tel:{{site.phone-1}}" class="header-info__link">
+{{site.phone-1}}</a>
+        <a href="tel:{{site.phone-2}}" class="header-info__link">
+{{site.phone-2}}</a>
+    </div>
+    <a href="/" class="header-logo"><img src="/img/logo.png" alt="{{site.title}}"></a>
+    <input type="search" placeholder="Поиск" class="header-search" name="search">
+</header>
+<div class="header-mobile">
+    <div class="header-mobile__button-burger">
+        <div class="button-burger__bar--top"></div>
+        <div class="button-burger__bar--middle"></div>
+        <div class="button-burger__bar--bot"></div>
+    </div>
+    <a href="/" class="header-logo"><img src="/img/logo.png" alt="{{site.title}}"></a>
+    <div class="header-info">
+        <a href="mailto:{{site.email}}" class="header-info__link">{{site.email}}</a>
+        <a href="tel: {{site.phone-1}}" class="header-info__link">
+{{site.phone-1}}</a>
+        <a href="tel:{{site.phone-2}}" class="header-info__link">
+{{site.phone-2}}</a>
+    </div>
+</div>
+<ul class="menu">
+    {% for item in site.header-menu %}
+    <li class="menu-item {% if item.url == page.url %}active{% endif %}">
+      <a class='menu-item__link' href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endfor %}
+</ul>

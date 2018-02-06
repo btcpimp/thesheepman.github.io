@@ -1,0 +1,28 @@
+<section class="about wrapper">
+        <div class="about-history">
+            <div class="products-nav">
+                <h1>Продукция</h1>
+                <ul class="products-nav-list">
+                    {% for item in site.categories-menu %}
+                    <li class="products-nav-list__item {% if item.category == page.category %}active{% endif %}">
+                    <a href="/{{ item.category }}/overview.html">{{ item.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="products-preview">
+            {% for post in site.categories.saltison-textile-shell %}
+                <div class="products-preview-item">
+                    <div class="products-preview-item__title">{{post.type-small}}</div>
+                    <div class="products-preview-item__name">{{post.title}}</div>
+                    <div class="products-preview-item__descr">{{post.descr-small}}</div> <img src="/img/{{post.categories}}/{{post.order}}.png" class="img-fullmode" alt="{{post.name}}">
+                    <div class="products-preview-item__about">Состав
+                        <div class="about-product">{{post.about}}</div>
+                    </div>
+                    <a href="{{post.url}}" class="products-preview-item__more">Подробнее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            {% endfor %}
+            </div>
+            <div class="about-history__banner"> <img src="../img/about/promo.png" alt=""></div>
+        </div>
+    </section>

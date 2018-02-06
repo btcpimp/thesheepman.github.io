@@ -51,6 +51,13 @@
 }
 
 @media (max-width: 1200px) {
+    .map{
+        display: none;
+    }
+    .map-mobile{
+        display: block;
+        width: 100%;
+    }
     .products-nav-list {
         width: 100%;
         margin-bottom: 30px;
@@ -184,6 +191,7 @@
     }
     .about-history h1 {
         font-size: 32px;
+        line-height: 1em;
     }
     .contacts-factory__description h1 {
         font-size: 32px;

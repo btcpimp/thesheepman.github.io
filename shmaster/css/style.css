@@ -314,6 +314,7 @@ html {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    list-style-type: none;
 }
 
 .footer-menu-item {
@@ -413,6 +414,7 @@ html {
     display: flex;
     transform: translate3d(0, 0, 0);
 }
+
 
 
 
@@ -581,10 +583,13 @@ html {
 
 
 
+
 /*ABOUT*/
+
 .about-history p {
     letter-spacing: 1px;
 }
+
 .about {
     padding-top: 40px;
 }
@@ -592,8 +597,8 @@ html {
 .about-history h1 {
     text-transform: uppercase;
     display: inline-block;
-    font-size: 52px;
-    line-height: .5em;
+    font-size: 50px;
+    line-height: 1em;
     margin-bottom: 40px;
 }
 
@@ -661,6 +666,7 @@ html {
 
 
 
+
 /*suppliers*/
 
 .suppliers-text {
@@ -709,6 +715,7 @@ html {
 .suppliers-last {
     margin-top: 30px;
 }
+
 
 
 
@@ -802,19 +809,23 @@ html {
 .products-item-6 .procuts-item {
     width: 16%;
 }
-.products-router{
+
+.products-router {
     padding-left: 20px;
     color: #f4efed;
     font-size: 16px;
     text-transform: none;
     transition: .3s ease all;
 }
-.products-item-6 .products-router{
+
+.products-item-6 .products-router {
     padding-left: 0px;
 }
-.products-router:hover{
-color: #8b7d56;
+
+.products-router:hover {
+    color: #8b7d56;
 }
+
 
 /*Products List*/
 
@@ -841,14 +852,17 @@ color: #8b7d56;
     position: relative;
     z-index: 2;
 }
+
 .products-nav-list__item:hover.products-nav-list__item:before {
     background-color: #fff;
     position: relative;
     z-index: 2;
 }
+
 .products-nav-list__item:hover .products-subnav-list {
-  display: block;
+    display: block;
 }
+
 .products-nav-list__item:before {
     content: '';
     margin-right: 10px;
@@ -960,7 +974,8 @@ color: #8b7d56;
     opacity: 1;
     visibility: visible;
 }
-.products-preview-item__more{
+
+.products-preview-item__more {
     display: inline-block;
     color: #fff;
     font-size: 18px;
@@ -969,80 +984,204 @@ color: #8b7d56;
     top: 10px;
     left: 20px;
 }
-.products-preview-item__more .fa{
+
+.products-preview-item__more .fa {
     padding-left: 2px;
 }
-.products-preview-item__more:hover{
+
+.products-preview-item__more:hover {
     color: #837653;
 }
-.products-preview-item  .img-fullmode{
+
+.products-preview-item .img-fullmode {
     float: none;
     width: auto;
     margin: 10px;
 }
+
+
 /*product overview*/
-.product-overview{
+
+.product-overview {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
-.product-overview__descr{
+
+.product-overview__descr {
     width: 50%;
 }
-.product-overview__img{
+
+.product-overview__img {
     text-align: center;
     width: 48%;
 }
-.product-overview__descr h2{
+
+.product-overview__descr h2 {
     font-weight: lighter;
     font-size: 30px;
     margin-bottom: 20px;
 }
-.product-overview__descr h3{
+
+.product-overview__descr h3 {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 30px;
 }
-.product-overview__descr h4{
+
+.product-overview__descr h4 {
     font-size: 20px;
-font-weight: lighter;
+    font-weight: lighter;
     margin-bottom: 10px;
 }
 
-.product-overview__img-prev{
+.product-overview__img-prev {
     margin-top: 40px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     line-height: 1.5em;
 }
-.product-overview__img-prev img{
+
+.product-overview__img-prev img {
     height: 150px;
     margin: 10px;
     border: 2px solid #877a55;
 }
-.products-subnav-list{
+
+.products-subnav-list {
     display: none;
     position: absolute;
     z-index: 1;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     top: -5px;
     width: 300px;
     left: -10px;
 }
-.products-subnav-list__item a:hover{
+
+.products-subnav-list__item a:hover {
     color: #fff !important;
 }
-.products-subnav-list__item a{
+
+.products-subnav-list__item a {
     color: #837653 !important;
 }
+
 .products-subnav-list__item {
     margin: 10px;
 }
-.products-subnav-list__item.active a{
+
+.products-subnav-list__item.active a {
     color: #fff !important;
 }
-.img-days{
+
+.img-days {
     float: right;
+}
+
+
+/*Clients*/
+
+.shop-list {
+    padding: 12px 0;
+    font-size: 20px;
+    line-height: 1.3em;
+    list-style-type: disc;
+}
+
+.map {
+    position: relative;
+}
+
+.map__brest {
+    left: 8px;
+    bottom: 42px;
+}
+
+.map__grodno {
+    left: 57px;
+    bottom: 278px;
+}
+
+.map__vitebsk {
+    left: 370px;
+    bottom: 572px;
+    z-index: 1;
+}
+
+.map__mogilev {
+    left: 588px;
+    bottom: 268px;
+}
+
+.map__minsk {
+    left: 347px;
+    bottom: 205px;
+}
+
+.map__gomel {
+    left: 498px;
+    bottom: 5px;
+}
+
+.map--item {
+    position: absolute;
+    cursor: pointer;
+}
+.highlighted{
+    opacity: 0;
+    z-index: 2;
+    transition: all ease .3s;
+}
+.highlighted.active{
+    opacity: 1;
+}
+.map-block{
+    position: relative;
+}
+.contacts-staff__profile.map--contact {
+    opacity: 0;
+    transition: all ease .3s;
+    margin: 0px;
+    width: 560px;
+    position: absolute;
+    transform: scale(0.7);
+    z-index: 3;
+}
+.map--contact .profile__background{
+    background: #221511;
+}
+.contacts-staff__profile.map--contact .profile-description__phone{
+font-size: 20px;
+}
+.contacts-staff__profile.map--contact.active{
+    opacity: 1;
+}
+.grodno--contact{
+    bottom: 268px;
+    left: -100px;
+}
+.minsk--contact{
+    bottom: 368px;
+    left: 260px;
+}
+.gomel--contact{
+    bottom: 100px;
+    left: 680px;
+}
+.brest--contact{
+    bottom: 100px;
+    left: 40;
+}
+.vitebsk--contact{
+    bottom: 650px;
+    left: 400px;
+}
+.mogilev--contact{
+       bottom: 350px;
+    right: 50px; 
+}
+.map-mobile{
+    display: none;
 }

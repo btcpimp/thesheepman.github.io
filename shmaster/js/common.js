@@ -31,4 +31,14 @@ jQuery(document).ready(function($) {
     }, function() {
         $(this).removeClass('active')
     });
+
+    //clients
+    $('.map-block').hover(function(){
+        $(this).children('.highlighted').addClass('active')
+        $(this).children('.map--contact').addClass('active')
+    }, function(){
+            $(this).children('.highlighted').removeClass('active')
+            $(this).children('.map--contact').removeClass('active')
+
+        })
 });

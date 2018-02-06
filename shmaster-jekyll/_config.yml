@@ -1,0 +1,71 @@
+title: Шацкий Мастер
+email: info@shmaster.by
+phone-1: +375(1713) 33-2-80
+phone-2: +375(1713) 33-2-85
+description: Мясо
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+#pages
+header-menu:
+  - title: О нас
+    url: /about.html
+
+  - title: Продукция
+    url: /products.html
+ 
+  - title: Новости
+    url: /news.html
+
+  - title: Покупателям
+    url: /clients.html
+
+  - title: Поставщикам
+    url: /suppliers.html
+
+  - title: Контакты
+    url: /contacts.html
+
+#categories
+categories-menu:
+  - category: grudinka-shpak
+    title: Грудинка солёная и изделия из шпика
+
+  - category: saltison-textile-shell 
+    title: Изделия в текстильной оболочке
+
+  - category: saltison-natural-shell
+    title: Сальтисоны в натуральной оболочке
+
+  - category: saltison-poliamid-shell
+    title: Сальтисоны в полиамидной оболочке
+
+  - category: zelc-natural-shell
+    title: Зельцы в натуральной оболочке
+
+  - category: zelc-natural-poliamid
+    title: Зельцы в полиамидной оболочке
+
+  - category: zalivnoe
+    title: Заливное
+
+  - category: holodci
+    title: Холодцы
+
+  - category: ruleti
+    title: Рулеты
+
+  - category: flyachki
+    title: Флячки
+
+  - category: smoked-ears-pennies
+    title: Копчёные уши и пяточки
+
+  - category: smoked-ears-beer
+    title: Копчёные уши к пиву
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed

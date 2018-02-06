@@ -1,0 +1,13 @@
+<footer class="footer wrapper">
+    <ul class="footer-menu">
+        {% for item in site.header-menu %}
+        <li class="footer-menu-item">
+            <a class='footer-menu-item__link' href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="footer__copyright">ООО “Шацкий Мастер”, 222824, Минская обл., Пуховичский р-н, д. Шацк</div>
+</footer>
+</body>
+
+</html>
