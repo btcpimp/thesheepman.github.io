@@ -625,7 +625,7 @@ html {
     position: absolute;
     right: 0px;
     height: 850px;
-    top: 470px;
+    top: 530px;
 }
 
 .about-history__second {
@@ -1184,4 +1184,10 @@ font-size: 20px;
 }
 .map-mobile{
     display: none;
+}
+.clients-points .inner__text{
+    font-size: 20px;
+}
+.clients-alert{
+    text-align: center;
 }

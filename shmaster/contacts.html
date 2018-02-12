@@ -211,10 +211,11 @@
     <section class="feedback wrapper">
         <h1>У ВАС ЕСТЬ К НАМ ВОПРОСЫ?</h1>
         <h3>Напишите нам и мы обязательно с Вами свяжемся</h3>
-        <form action="#" method="post" class="feedback-form">
+        <form class="feedback-form">
             <input class="feedback-form__input" type="text" name="name" placeholder="Ваше имя">
             <input class="feedback-form__input" type="text" name="phone" placeholder="E-mail или телефон">
-            <a href="#" type="button" class="feedback-form__button">Отправить</a>
+            <input class="feedback-form__input" type="text" name="text" placeholder="Сообщение">
+            <a href="#" type="button" onclick="$(this).closest('form').submit()" class="feedback-form__button">Отправить</a>
         </form>
     </section>
     <footer class="footer wrapper">

@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     cssmin = require('gulp-clean-css'),
     concat = require('gulp-concat'),
     jsmin = require('gulp-jsmin');
+const imagemin = require('gulp-imagemin');
+
 var path = {
     src: {
         // CSS в порядке подключения
@@ -20,7 +22,8 @@ var path = {
     },
     build: {
         css: './css',
-        js: './js'
+        js: './js',
+        img: './imgmin'
     },
 }
 
@@ -40,3 +43,9 @@ gulp.task('js:build', function() {
         .pipe(concat('script.min.js'))
         .pipe(gulp.dest(path.build.js))
 });
+
+gulp.task('img:build', () =>
+    gulp.src('img/**')
+        .pipe(imagemin())
+        .pipe(gulp.dest('imgmin'))
+);

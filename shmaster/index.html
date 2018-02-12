@@ -68,8 +68,8 @@
     <ul class="menu">
         <li class="menu-item"><a class="menu-item__link" href="about.html">О нас</a></li>
         <li class="menu-item"><a class="menu-item__link" href="products.html">Продукция</a></li>
-        <li class="menu-item"><a class="menu-item__link" href="">Новости</a></li>
-        <li class="menu-item"><a class="menu-item__link" href="">Покупателям</a></li>
+        <li class="menu-item"><a class="menu-item__link" href="news.html">Новости</a></li>
+        <li class="menu-item"><a class="menu-item__link" href="clients.html">Покупателям</a></li>
         <li class="menu-item"><a class="menu-item__link" href="suppliers.html">Поставщикам</a></li>
         <li class="menu-item"><a class="menu-item__link" href="contacts.html">Контакты</a></li>
     </ul>
@@ -131,17 +131,18 @@
         </div>
         <h1>У ВАС ЕСТЬ К НАМ ВОПРОСЫ?</h1>
         <h3>Напишите нам и мы обязательно с Вами свяжемся</h3>
-        <form action="#" method="post" class="feedback-form">
-            <input class="feedback-form__input" type="text" name="name" placeholder="Ваше имя">
+        <form class="feedback-form">
+            <input class="feedback-form__input" type="" name="name" placeholder="Ваше имя">
             <input class="feedback-form__input" type="text" name="phone" placeholder="E-mail или телефон">
-            <a href="#" type="button" class="feedback-form__button">Отправить</a>
+            <input class="feedback-form__input" type="text" name="text" placeholder="Сообщение">
+            <a href="#" type="button" onclick="$(this).closest('form').submit()" class="feedback-form__button">Отправить</a>
         </form>
     </section>
     <footer class="footer wrapper">
         <ul class="footer-menu">
             <li class="footer-menu-item"><a href="products.html" class="footer-menu-item__link">Продукция</a></li>
-            <li class="footer-menu-item"><a href="#" class="footer-menu-item__link">Новости</a></li>
-            <li class="footer-menu-item"><a href="#" class="footer-menu-item__link">Покупателям</a></li>
+            <li class="footer-menu-item"><a href="news.html" class="footer-menu-item__link">Новости</a></li>
+            <li class="footer-menu-item"><a href="clients.html" class="footer-menu-item__link">Покупателям</a></li>
             <li class="footer-menu-item"><a href="suppliers.html" class="footer-menu-item__link">Поставщикам</a></li>
             <li class="footer-menu-item"><a href="contacts.html" class="footer-menu-item__link">Контакты</a></li>
         </ul>
