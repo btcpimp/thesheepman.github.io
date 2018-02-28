@@ -4,8 +4,8 @@
         width: 100%;
     }
     .about-history__meat-top {
-		top: 740px;
-    	height: 707px;
+        top: 740px;
+        height: 707px;
     }
     .about-history__first {
         width: 65%;
@@ -51,10 +51,10 @@
 }
 
 @media (max-width: 1200px) {
-    .map{
+    .map {
         display: none;
     }
-    .map-mobile{
+    .map-mobile {
         display: block;
         width: 100%;
     }
@@ -148,6 +148,24 @@
 }
 
 @media (max-width: 920px) {
+    .news-note img {
+        width: 100%;
+    }
+    .page__news-small__item img{
+        max-width: 100%;
+    }
+    .page__news-small__content {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .page__news-small__intro .products-router {
+        padding: 0;
+    }
+    .news-note__item {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
     .products-preview-item {
         width: 100%;
     }
@@ -343,7 +361,7 @@
         float: none;
         width: 100%;
     }
-        .products-preview-item .img-fullmode {
+    .products-preview-item .img-fullmode {
         float: none;
         width: 100%;
     }

@@ -1,0 +1,97 @@
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (max-width: 1087px) {
+  .header{
+    margin-top: 74px;
+    padding-top: 30px;
+  }
+ .cryptoconsult{
+  font-size: 22px;
+ }
+ .news-form{
+  display: none;
+ }
+ .features {
+    height: auto;
+    margin-bottom: 50px;
+}
+  .benefits-row__item {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.benefits-row__item:first-child {
+    width: 100%;
+}
+
+.benefits-row__item:before {
+    left: -7px;
+    top: 6px;
+}
+
+.benefits-title{
+  text-align: center;
+  margin: 10px 0px;
+}
+.services{
+  margin-bottom: 30px;
+}
+.footer-menu li {
+width: 50%;
+display: block;
+margin: 10px 0px;
+}
+.services-section{
+  padding-bottom: 70px;
+}
+.left-decor {
+    width: 40%;
+    bottom: 100px;
+}
+.right-decor {
+    width: 40%;
+    top: 100px;
+}
+.invest-button{
+  padding: 30px 40px;
+  margin-top: 30px;
+  position: relative;
+  top: 35px;
+}
+.main-nav{
+  display: none;
+}
+.logo{
+  display: none;
+}
+.header-bg--fix{
+  display: none;
+}
+.header-mobile{
+  display: flex;
+}
+}
