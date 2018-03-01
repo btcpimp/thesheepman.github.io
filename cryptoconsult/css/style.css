@@ -178,11 +178,13 @@ body {
 
 
 
+
 /* Firefox 19+ */
 
 :-moz-placeholder {
     color: #b6afcd;
 }
+
 
 
 
@@ -327,7 +329,23 @@ body {
 
 .benefits {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+}
+
+.benefits-icon {
+    height: 60px;
+    width: 60px;
+    background-color: #ff3c45;
+    border-radius: 100%;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 108px -9px rgba(255, 60, 70, 0.89);
+    -moz-box-shadow: 0px 0px 108px -9px rgba(255, 60, 70, 0.89);
+    box-shadow: 0px 0px 108px -9px rgba(255, 60, 70, 0.89);
+}
+
+.benefits-icon img {
+    width: 100%;
+    height: 100%;
 }
 
 .benefits-title {
@@ -342,6 +360,7 @@ body {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 .benefits-row {
@@ -585,7 +604,7 @@ body {
 }
 
 .footer-button {
-    padding: 15px 50px;
+    padding: 15px 42px;
     color: #1c1c1c;
     background-color: #fff;
     border-radius: 5px;
@@ -633,16 +652,17 @@ body {
     justify-content: space-between;
     margin-bottom: 30px;
     background: #3e2d6b;
-
 }
-.header-preopen{
+
+.header-preopen {
     display: none;
-        position: fixed;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 200;
 }
+
 .header-mobile i {
     padding-top: 20px;
     padding-left: 20px;
@@ -678,9 +698,11 @@ body {
     height: 1px;
     background-color: #4d3e74;
 }
-.mobile-menu.active{
+
+.mobile-menu.active {
     display: block;
 }
+
 .mobile-menu .invest-button {
     top: 0px;
     padding: 20px 30px;
@@ -692,21 +714,33 @@ body {
     padding: 15px 20px;
     transition: .2s ease all;
 }
-.mobile-nav li:hover{
+
+.mobile-nav li:hover {
     background-color: #716592;
 }
+
 .mobile-nav li a {
     color: #fff;
     font-weight: 600;
     font-size: 22px;
     text-decoration: none;
 }
-.mobile-news{
+
+.mobile-news {
     font-weight: 600;
     font-size: 24px;
     color: #fff;
     margin: 30px 0px;
 }
-.mobile-menu .news-form__submit{
+
+.mobile-menu .news-form__submit {
     display: inline-block;
+}
+
+.mobile-centered {
+    text-align: left;
+}
+.mobile-menu .header-mobile img{
+    padding-top: 10px;
+    padding-left: 20px;
 }
