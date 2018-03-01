@@ -12,11 +12,13 @@ var path = {
         // CSS в порядке подключения
         сss: [
             './css/reset.css',
+            './css/bootstrap-grid.min.css',
             './css/style.css',
             './css/adaptive.css'
         ],
         js: [
             './libs/jquery-3.2.1.min.js',
+            './libs/owl.carousel.js',
             './js/common.js'
         ]
     },
