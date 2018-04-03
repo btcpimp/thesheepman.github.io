@@ -7,7 +7,7 @@
     <meta content="IE=edge" http-equiv=X-UA-Compatible>
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <meta name="yandex-verification" content="3134627476ccd68c" />
-	<meta name="Keywords" content="Криптовалюта купить bitcoin минск ico быстро консаультация помощь покупка инвестировать ripple беларусь">
+    <meta name="Keywords" content="Криптовалюта купить bitcoin минск ico быстро консаультация помощь покупка инвестировать ripple беларусь">
     <meta name="Description" content="Поможем купить криптовалюту, составить инвестиционный портфель, продать биткоин, а также проанализировать ICO — Cryptoconsult.by">
     <meta nameE="Author" content="Cryptoconsult.by">
     <meta name="Language" content="русский">
@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <script type="text/javascript" src='js/script.min.js'></script>
     <!-- <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
@@ -24,30 +24,73 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/adaptive.css">
     <script type="text/javascript" src='libs/jquery-3.2.1.min.js'></script>
+    <script src="libs/jq-mask.js"></script>
     <script type="text/javascript" src='libs/owl.carousel.js'></script>
     <script type="text/javascript" src='js/common.js'></script> -->
     <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="img/favicon.png">
     <meta name="theme-color" content="#ffffff">
+
+    <meta name="yandex-verification" content="ad978236e466552f" />
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48171206 = new Ya.Metrika2({
+                    id:48171206,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48171206" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116203727-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116203727-1');
+</script>
+
 </head>
 
 <body>
     <div class="header-mobile header-preopen">
         <i class="fa fa-bars open-btn"></i>
-        <div class="mobile-logo">Cryptoconsult.</div>
+        <a class="mobile-logo" href='/'>Cryptoconsult.</a>
     </div>
     <div class="mobile-menu">
         <div class="header-mobile">
             <img src="img/close-icon.svg" class="close-btn" alt="">
-            <div class="mobile-logo">Cryptoconsult.</div>
+            <a class="mobile-logo">Cryptoconsult.</a>
         </div>
         <div class="mobile__divider"></div>
-        <div class="centered"> <a class="invest-button" href="#">Начать инвестировать</a></div>
+        <div class="centered"> <a class="invest-button callback" href="#">Начать инвестировать</a></div>
         <ul class="mobile-nav">
-            <li><a href="#">О Крипте</a></li>
-            <li><a href="#">Новичкам</a></li>
-            <li><a href="#">Услуги</a></li>
+            <li><a href="newbie.html">Новичкам</a></li>
+            <li><a href="#">О крипте</a></li>
+            <li><a href="services.html">Услуги</a></li>
         </ul>
         <div class="mobile__divider"></div>
         <div class="mobile-news centered">Новости</div>
@@ -64,9 +107,9 @@
                 <div class="col-md-4">
                     <nav class="main-nav">
                         <ul class="main-menu hidden-sm-down">
-                            <li><a class="main-menu__item goto" href="#about">О крипте</a></li>
-                            <li><a class="main-menu__item goto" href="#newbie">Новички</a></li>
-                            <li><a class="main-menu__item goto" href="#services">Услуги</a></li>
+                            <li><a class="main-menu__item goto" href="newbie.html">Новичкам</a></li>
+                            <li><a class="main-menu__item goto" href="#newbie">О крипте</a></li>
+                            <li><a class="main-menu__item goto" href="services.html">Услуги</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -82,13 +125,13 @@
                 </div>
             </div>
             <div class="row header--topfix">
-                <div class="col-md-9">
+                <div class="col-md-12 col-lg-9">
                     <h1 class="cryptoconsult">Cryptoconsult.</h1>
                     <p class="header__description p--default">
                         Первое в Беларуси консалтинговое агентство, помогающие как новичкам, так и опытным игрокам крипторынка. Инвестиции более прибыльны, чем депозит в бaнке. Однако чаще всего, чем больше потенциальная прибыль, тем больше и риск, и именно наши аналитики и трейдеры с 5-ти летним опытом анализа и торговли помогут сделать вам правильный выбор.
                     </p>
                     <div class="mobile-centered">
-                        <div class="shadow-button"> <a href="#" class="shadow-button__link">Реальные кейсы <img src="img/arrow.png" alt=""> </a>
+                        <div class="shadow-button"> <a href="#" class="shadow-button__link">Реальные кейсы <img src="img/arrow.svg" alt=""> </a>
                             <div class="shadow-button__shadow"></div>
                         </div>
                     </div>
@@ -133,7 +176,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 centered">
-                    <a class="invest-button" href="#">Начать инвестировать</a></div>
+                    <a class="invest-button callback" href="#">Начать инвестировать</a></div>
             </div>
         </div>
         <img class="header-bg--fix" src="img/header-bg--fix.svg" alt="">
@@ -168,7 +211,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mobile-centered">
-                        <div class="shadow-button"> <a href="#" class="shadow-button__link  color--light">Реальные кейсы <img src="img/arrow--dark.png" alt=""> </a>
+                        <div class="shadow-button"> <a href="services.html" class="shadow-button__link  color--light">Наши услуги <img src="img/arrow--dark.svg" alt=""> </a>
                             <div class="shadow-button__shadow"></div>
                         </div>
                     </div>
@@ -195,7 +238,7 @@
                             <p class="services__text color--white">Помощь с организацией хранения (выбор и создание кошелька)</p>
                             <p class="services__text">Помощь в продаже криптовалюты</p>
                         </div>
-                        <div class="tothemoon">Лететь на луну</div>
+                        <div class="tothemoon callback">Лететь на луну</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -214,14 +257,14 @@
                             <p class="services__text">Помощь в продаже криптовалюты</p>
                             <p class="services__text color--white">Рекомендации по моменту выхода из каждой монеты.</p>
                         </div>
-                        <div class="tothemoon">Лететь на луну</div>
+                        <div class="tothemoon callback">Лететь на луну</div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="services pro--pack">
                         <div class="services__header"><img src="img/dot.png" alt="">Продвинутый</div>
                         <div class="services__title">От 3000 рублей</div>
-                        <p class="services__text">Стоимость услуги: <span class="color--white">170 р.</span></p>
+                        <p class="services__text">Стоимость услуги: <span class="color--white">10% от депозита</span></p>
                         <p class="services__text">Подходящий период: <span class="color--white">от 9 мес.</span></p>
                         <div class="services__line"></div>
                         <div class="fullpack">Полный пакет услуг
@@ -235,7 +278,7 @@
                             <p class="services__text">Поддержка 24/7, рекомендации по изменению портфеля криптовалют при необходимости</p>
                             <p class="services__text color--white">Подключение к закрытому Telegram-каналу</p>
                         </div>
-                        <div class="tothemoon">Лететь на луну</div>
+                        <div class="tothemoon callback">Лететь на луну</div>
                     </div>
                 </div>
             </div>
@@ -262,8 +305,8 @@
                         <ul class="footer-menu">
                             <li><a class="footer-menu__item" href="#">Контакты</a></li>
                             <li><a class="footer-menu__item" href="#">О нас</a></li>
-                            <li><a class="footer-menu__item" href="#">О крипте</a></li>
                             <li><a class="footer-menu__item" href="#">Услуги</a></li>
+                            <li><a class="footer-menu__item" href="newbie.html">Новичкам</a></li>
                             <li><a class="footer-menu__item" href="#">Кейсы</a></li>
                             <li><a class="footer-menu__item" href="#">Новости</a></li>
                         </ul>
@@ -272,6 +315,15 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <form class="modal-form" id="form">
+            <div class="modal-form__title">Бесплатная консультация</div>
+            <div class="modal-form__desc">Наш специалист свяжется с вами в течение 15 минут</div>
+            <input type="text" class='modal-form__input' name="name" placeholder="Имя" id="name-input" required="">
+            <input type="text" class='modal-form__input' name="phone" placeholder="Телефон" required="" id="phone-input">
+            <button class="modal-form__button" type="submit">Заказать звонок</button>
+        </form>
+    </div>
 </body>
 
 </html>

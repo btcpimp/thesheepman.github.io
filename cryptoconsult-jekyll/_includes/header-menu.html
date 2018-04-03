@@ -1,0 +1,48 @@
+<div class="header-mobile header-preopen">
+    <i class="fa fa-bars open-btn"></i>
+    <a class="mobile-logo" href='/'>Cryptoconsult.</a>
+</div>
+<div class="mobile-menu">
+    <div class="header-mobile">
+        <img src="/img/close-icon.svg" class="close-btn" alt="">
+        <a class="mobile-logo">Cryptoconsult.</a>
+    </div>
+    <div class="mobile__divider"></div>
+    <div class="centered"> <a class="invest-button callback" href="#">Начать инвестировать</a></div>
+    <ul class="mobile-nav">
+        {% for item in site.header-menu %}
+        <li><a href="{{item.url}}">{{item.title}}</a></li>
+        {% endfor %}
+    </ul>
+    <div class="mobile__divider"></div>
+    <div class="mobile-news centered">Новости</div>
+    <div class="centered"> <a href="https://t.me/{{site.telegram}}" target='_blank' class="news-form__submit"><i class="fa fa-telegram"></i> Подписаться</a></div>
+</div>
+<header class="header">
+    <div class="container-fluid container-limit">
+        <div class="row">
+            <div class="col-md-5">
+                <a href="/" class="logo">
+            <img src="/img/logo.png" alt="Logo">
+          </a>
+            </div>
+            <div class="col-md-4">
+                <nav class="main-nav">
+                    <ul class="main-menu hidden-sm-down">
+                        {% for item in site.header-menu %}
+                        <li><a class="main-menu__item goto" href="{{item.url}}">{{item.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-3">
+                <div class="news-form">
+                    <div class="news-form__name">Новости:</div>
+                    <div class="news-form__title">{{site.tg-news}}</div>
+                    <div class="news-form__arrow"><i class="fa fa-angle-down"></i></div>
+                    <span class="news-form__line"></span>
+                    <!-- <input class="news-form__mail" name="mail" required placeholder='Введите ваш e-mail' type="text"> -->
+                    <a href="https://t.me/cryptoconsultby" target='_blank' class="news-form__submit"><i class="fa fa-telegram"></i> Подписаться</a>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,25 @@
+<section class="benefits">
+        <img class="left-decor" src="/img/left-decor.png" alt="">
+        <img class="right-decor" src="/img/right-decor.png" alt="">
+        <img class="right-decor-bottom" src="/img/right-decor-bottom.png" alt="">
+    </section>
+    <section class="newbie-section">
+        <div class="container-fluid container-limit">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cards">
+                         {% for item in site.newbie-items %}
+                        <a class="card-item" href="{{item.url}}">
+                            <div class="card-item__img"><img src="{{item.img}}" alt=""></div>
+                            <div class="card-item__title">{{item.title}}</div>
+                            <div class="card-item__desc">{{item.desc}}</div>
+                            <div class="card-item__time"><i class="fa fa-clock-o"></i> <i>{{item.time}}</i></div>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="bottom-left-decor" src="/img/bottom-left-decor.png" alt="">
+        <img class="bottom-decor" src="/img/bottom-decor.png" alt="">
+    </section>

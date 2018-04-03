@@ -19,6 +19,7 @@ var path = {
         js: [
             './libs/jquery-3.2.1.min.js',
             './libs/owl.carousel.js',
+            './libs/jq-mask.js',
             './js/common.js'
         ]
     },

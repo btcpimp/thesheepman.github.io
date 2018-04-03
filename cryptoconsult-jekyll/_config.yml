@@ -1,0 +1,72 @@
+title: CryptoConsult
+email: cryptoconsultby@gmail.com
+telegram: cryptoconsultby
+phone-1: +375 (29) 650-30-96 
+description: 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+#telegram news
+tg-news: «Чего ожидать от курса биткоина после решения Конгресса США?»
+
+#pages
+header-menu:
+  - title: Новичкам
+    url: /newbie.html
+
+  - title: О крипте
+    url: /crypto.html
+ 
+  - title: Услуги
+    url: /services.html
+
+footer-menu:
+  - title: Контакты
+    url:  /contacts.html
+
+  - title: О нас
+    url:  /about.html
+
+  - title: Услуги
+    url:  /services.html
+
+  - title: Новичкам
+    url:  /newbie.html
+
+  - title: Кейсы
+    url:  /cases.html
+
+  - title: Новости
+    url: /news.html
+
+#categories
+newbie-items:
+  - title: Что такое криптовалюта?
+    desc: Подбробная и легкодоступная информация о криптовалютах и блокчейне.
+    img: /img/newbie/whatisbitcoin.png
+    time: 5 минут чтения
+    url: newbie/what-is-crypto.html
+
+  - title: Как купить биткоин?
+    desc: Полное описание процесса покупки Bitcoin в непосредственно в Беларуси.
+    img: /img/newbie/wheretobuy.png
+    time: 7 минут чтения
+    url: newbie/how-to-buy-bitcoin.html
+
+  - title: Как продать биткоин?
+    desc: Описание процесса продажи биткоина и вывода в фиат криптовалютных активов.
+    img: /img/newbie/howtosell.png
+    time: 3 минуты чтения
+    url: newbie/how-to-sell-bitcoin.html
+
+  - title: Где хранить свою криптовалюту?
+    desc: Описание наиболее безопастных и удобных способов хранения криптовалюты.
+    img: /img/newbie/whatisbitcoin.png
+    time: 5 минут чтения
+    url: newbie/how-to-store-crypto.html
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed

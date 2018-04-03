@@ -2,4 +2,5 @@ shmaster/node_modules/*
 shmaster/psd/*
 shmaster/img-default/*
 shmaster-jekyll/*
-cryptoconsult/node_modules/*
+cryptoconsult-jekyll/node_modules/*
+cryptoconsult/*

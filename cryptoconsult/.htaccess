@@ -4,9 +4,6 @@ RewriteRule ^ https://cryptoconsult.by/$1 [L,R]
 
 #the code above will redirect the entire site into https without www unless the request come with https://www .      
 
-RewriteCond %{THE_REQUEST} \s/+(.*?/)?(?:index)?(.*?)\.html[\s?/] [NC]
-RewriteRule ^ /%1%2 [R=302,L,NE]
-
 #the code above will remove any .HTML.
 
 RewriteCond %{REQUEST_FILENAME} !-f

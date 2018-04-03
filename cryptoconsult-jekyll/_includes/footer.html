@@ -1,0 +1,68 @@
+<footer class="footer">
+    <div class="container-fluid container-limit">
+        <div class="row">
+            <div class="col-md-12 centered"><img src="/img/logo.png" alt=""></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 centered">
+                <div class="footer-telegram">Мы в Telegram</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 centered"><a href='https://t.me/{{site.telegram}}' target='_blank' class="footer-button">Подписаться</a></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="footer-nav">
+                    <ul class="footer-menu">
+                        {% for item in site.footer-menu %}
+                        <li><a class="footer-menu__item" href="{{item.url}}">{{item.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal">
+    <form class="modal-form" id="form">
+        <div class="modal-form__title">Бесплатная консультация</div>
+        <div class="modal-form__desc">Наш специалист свяжется с вами в течение 15 минут</div>
+        <input type="text" class='modal-form__input' name="name" placeholder="Имя" id="name-input" required="">
+        <input type="text" class='modal-form__input' name="phone" placeholder="Телефон" required="" id="phone-input">
+        <button class="modal-form__button" type="submit">Заказать звонок</button>
+    </form>
+</div>
+<div class="coins">
+    <div class="coins-wrapper">
+    <div class="coin-item">
+        <img src="/img/coins/btc.png" alt="Bitcoin" title="Bitcoin"> $ <span class="btc-ticker"></span>
+    </div>
+    <div class="coin-item">
+        <img src="/img/coins/eth.png" alt="Ethereum" title="Ethereum"> $ <span class="eth-ticker"></span>
+    </div>
+    <div class="coin-item">
+        <img src="/img/coins/nas.png" alt="Nebulas" title="Nebulas"> $ <span class="nas-ticker"></span>
+    </div>
+    <div class="coin-item">
+        <img src="/img/coins/xrp.png" alt="Ripple" title="Ripple"> $ <span class="xrp-ticker"></span>
+    </div>
+    <div class="coin-item">
+        <img src="/img/coins/eos.png" alt="EOS" title="EOS"> $ <span class="eos-ticker"></span>
+    </div>
+    <div class="coin-item">
+        <img src="/img/coins/ltc.png" alt="Litecoin" title="Litecoin"> $ <span class="ltc-ticker"></span>
+    </div>
+    <div class="coin-item">
+        <img src="/img/coins/xmr.png" alt="Monero" title="Monero"> $ <span class="xmr-ticker"></span>
+    </div>
+    <div class="coin-item">
+        <img src="/img/coins/neo.png" alt="NEO" title="NEO"> $ <span class="neo-ticker"></span>
+    </div>
+
+    <div class="close-ticker"><i class="fa fa-times" aria-hidden="true"></i></div>
+</div>
+</div>
+</body>
+
+</html>
