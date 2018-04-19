@@ -1257,3 +1257,28 @@ font-size: 20px;
     font-size: 1.5em !important;
     margin-top: 20px;
 }
+
+/*modal-img*/
+.modal-img{
+     display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: visibility .2s,opacity .3s ease;
+    transition: visibility .2s,opacity .3s ease;
+}
+.product-overview__img img{
+    cursor: pointer;
+}

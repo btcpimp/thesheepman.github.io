@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+    <title>Cryptobubble.space</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+    <!-- Custom HTML -->
+    <div id="app" class="container">
+        <div class="content">
+            <div class="header">
+                <a class="logo" href="/">cryptobubble.<span class="--color-accent">space</span></a>
+                <div class="tabs">
+                    <md-tabs class="md-transparent" md-alignment="right">
+                        <md-tab id="tab-home" md-label="Portfolio" v-on:click='activeItem = "portfolio"'></md-tab>
+                        <md-tab id="tab-pages" md-label="ICO" v-on:click='activeItem = "ico"'></md-tab>
+                        <md-tab id="tab-posts" md-label="Log In" v-on:click='activeItem = "login"'></md-tab>
+                    </md-tabs>
+                </div>
+            </div>
+            <div class="preloader" v-if="isLoading">
+                <md-progress-spinner md-mode="indeterminate"></md-progress-spinner>
+            </div>
+            <div v-if="activeItem ==='portfolio'">
+                <div class="portfolio-block">
+                    <div>
+                        <div class="card-subtitle">Andrew's</div>
+                        <div class="card-title">Portfolio</div>
+                    </div>
+                    <div class="total-change">
+                        <div class="total-change__title">24h CHANGE</div>
+                        <span v-bind:style="{color: activeColor}">{{change24fin}}%</span></div>
+                </div>
+                <md-table md-card>
+                    <!-- <md-table-toolbar>
+                    <h1 class="md-title"></h1>
+                </md-table-toolbar> -->
+                    <md-table-row>
+                        <md-table-head md-numeric>#</md-table-head>
+                        <md-table-head>Coin</md-table-head>
+                        <md-table-head>Price USD</md-table-head>
+                        <md-table-head>24h change</md-table-head>
+                        <md-table-head>Coinmarketcap Rank</md-table-head>
+                    </md-table-row>
+                    <md-table-row v-for="(coin, index) in coinsParsedArray" class='default-font'>
+                        <md-table-cell md-numeric>{{index+1}}</md-table-cell>
+                        <md-table-cell>{{coin.name}} ({{coin.symbol}})</md-table-cell>
+                        <md-table-cell>${{coin.price_usd}}</md-table-cell>
+                        <md-table-cell>{{coin.percent_change_24h}}%</md-table-cell>
+                        <md-table-cell>#{{coin.rank}}</md-table-cell>
+                    </md-table-row>
+                </md-table>
+            </div>
+            <!-- LogIn -->
+            <div v-if="activeItem ==='login'">
+                <form novalidate class="md-layout">
+                    <md-card class="md-layout-item  md-size-40 md-small-size-50 login-form">
+                        <md-card-header>
+                            <div class="md-title">Log in</div>
+                        </md-card-header>
+                        <md-card-content>
+                            <md-field>
+                                <label for="email">Email</label>
+                                <md-input type="email" name="email" id="email" autocomplete="email" />
+                                <span class="md-error">The email is required</span>
+                                <span class="md-error">Invalid email</span>
+                            </md-field>
+                        </md-card-content>
+                        <md-card-content>
+                            <md-field>
+                                <label>Password</label>
+                                <md-input type="password"></md-input>
+                            </md-field>
+                        </md-card-content>
+                        <md-card-actions>
+                            <md-button type="submit" class="md-primary">Log in</md-button>
+                        </md-card-actions>
+                    </md-card>
+                </form>
+            </div>
+            <!-- ICO -->
+            <div class="card-expansion ico" v-if="activeItem ==='ico'">
+                <md-card v-for="(ico, index) in icos">
+                    <md-card-media>
+                        <img v-bind:src="'/img/ico/' + ico.ticker + '.jpg'">
+                    </md-card-media>
+                    <md-card-header>
+                        <div class="md-title">{{ico.name}}</div>
+                        <div class="md-subhead">{{ico.title}}</div>
+                    </md-card-header>
+                    <md-card-expand>
+                        <md-card-actions md-alignment="space-between">
+                            <div>
+                                <md-button><a v-bind:href="ico.url" target='_blank'>Website</a></md-button>
+                                <md-button><a v-bind:href="ico.whitepaper" target='_blank'>Whitepaper</a></md-button>
+                            </div>
+                            <md-chip v-bind:class="ico.status">{{ico.status}}</md-chip>
+                            <md-card-expand-trigger>
+                                <md-button class="md-icon-button">
+                                    <md-icon>keyboard_arrow_down</md-icon>
+                                </md-button>
+                            </md-card-expand-trigger>
+                        </md-card-actions>
+                        <md-card-expand-content>
+                            <md-card-content>
+                                <div class="ico-content">
+                                    <div>
+                                        <div>Token Sale: <span>{{ico.date}}</span></div>
+                                        <div>Ticker: <span>{{ico.ticker}}</span></div>
+                                        <div>ICO Token Price: <span>{{ico.icoprice}}</span></div>
+                                        <div>Fundraising Goal: <span>{{ico.fundgoal}}</span></div>
+                                    </div>
+                                </div>
+                            </md-card-content>
+                        </md-card-expand-content>
+                    </md-card-expand>
+                </md-card>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-wrapper">
+                <p><a class="logo" href="/">cryptobubble.<span class="--color-accent">space</span></a></p>
+                <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://t.me/andrewtaw">Andrew</a>.</p>
+                <p>© 2018 CryptoBubble.space</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>

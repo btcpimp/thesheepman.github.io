@@ -33,17 +33,17 @@ jQuery(document).ready(function($) {
     });
 
     //clients
-    $('.map-block').hover(function(){
+    $('.map-block').hover(function() {
         $(this).children('.highlighted').addClass('active')
         $(this).children('.map--contact').addClass('active')
-    }, function(){
-            $(this).children('.highlighted').removeClass('active')
-            $(this).children('.map--contact').removeClass('active')
+    }, function() {
+        $(this).children('.highlighted').removeClass('active')
+        $(this).children('.map--contact').removeClass('active')
 
-        })
+    })
 
     //mail
-        $(".feedback-form").submit(function() {
+    $(".feedback-form").submit(function() {
         $.ajax({
             type: "POST",
             url: "mail.php",
@@ -54,5 +54,21 @@ jQuery(document).ready(function($) {
             $(".feedback-form").trigger("reset");
         });
         return false;
+    });
+
+    //fixes
+    $('.feedback h3').text('Напишите нам, и мы обязательно с Вами свяжемся')
+
+    //img-preview
+    var modalImg = '<div class="modal-img"><img src=""></div>'
+    var minImg = $('.product-overview__img img')
+
+    minImg.click(function(event) {
+        var src = $(this).attr("src")
+        $('html').append(modalImg)
+        $('.modal-img img').attr("src", src)
+        $('.modal-img').click(function(event) {
+            $(this).remove()
+        });
     });
 });

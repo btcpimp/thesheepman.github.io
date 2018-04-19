@@ -4,7 +4,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     cssmin = require('gulp-clean-css'),
     concat = require('gulp-concat'),
-    jsmin = require('gulp-jsmin');
+    jsmin = require('gulp-jsmin'),
+    ext_replace = require('gulp-ext-replace');
+
 const imagemin = require('gulp-imagemin');
 
 var path = {
@@ -49,3 +51,9 @@ gulp.task('img:build', () =>
         .pipe(imagemin())
         .pipe(gulp.dest('imgmin'))
 );
+
+gulp.task('img:change', function() {
+  gulp.src('./psd/**/*.jpg')
+      .pipe(ext_replace('.png'))
+      .pipe(gulp.dest('./psd/ХУЙ'))
+});

@@ -876,13 +876,13 @@ body.noscroll {
     z-index: 10;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .card-item {
+    margin: 20px 55px;
     position: relative;
     width: 280px;
-    margin: 20px;
     background-color: #bfbed8;
     text-decoration: none;
     transition: all ease .2s;
@@ -1085,6 +1085,7 @@ body.noscroll {
 /*Coins*/
 
 .coins {
+    padding: 10px 0px;
     position: fixed;
     bottom: 0px;
     width: 100%;
@@ -1099,7 +1100,7 @@ body.noscroll {
 .coin-item {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 0px 20px;
 }
 
 .coin-item img {

@@ -148,6 +148,9 @@
 }
 
 @media (max-width: 920px) {
+    .modal-img img{
+    width: 100%;
+    }
     .news-note img {
         width: 100%;
     }

@@ -13,12 +13,13 @@ tg-news: «Чего ожидать от курса биткоина после �
 header-menu:
   - title: Новичкам
     url: /newbie.html
-
-  - title: О крипте
-    url: /crypto.html
  
   - title: Услуги
     url: /services.html
+
+  - title: Контакты
+    url: /contacts.html
+
 
 footer-menu:
   - title: Контакты
@@ -65,8 +66,12 @@ newbie-items:
     time: 5 минут чтения
     url: newbie/how-to-store-crypto.html
 
+  - title: Существуют ли риски на криптовалютном рынке?
+    desc: Наша статья о рисках и нюансах инвестирования в криптовалюту.
+    img: /img/newbie/whatisbitcoin.png
+    time: 4 минуты чтения
+    url: newbie/risks.html
+
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
