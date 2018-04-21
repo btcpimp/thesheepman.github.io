@@ -29,7 +29,7 @@ var firebaseApi = function() {
 var cmcApi = function() {
     return $.ajax({
         type: 'get',
-        url: 'https://api.coinmarketcap.com/v1/ticker/?start=0&limit=200',
+        url: 'https://api.coinmarketcap.com/v1/ticker/?start=0&limit=1000',
         dataType: 'json',
         success: function(response2) {
             console.log('api cmc got')
@@ -45,7 +45,7 @@ var app = new Vue({
         var self = this;
         firebaseApi().then(function(response) {
 
-            for (i = 0; i < response.length; i++) {
+            for (var i = 0; i < response.length; i++) {
                 self.coins.push(response[i].symbol)
             }
 
@@ -59,8 +59,8 @@ var app = new Vue({
                     }
                 }
 
-                for (x = 0; x < self.change24.length; x++) {
-                    self.change24fin += self.change24[x] / self.change24.length
+                for (var i = 0; i < self.change24.length; i++) {
+                    self.change24fin += self.change24[i] / self.change24.length
                 }
                 self.change24fin = self.change24fin.toFixed(2)
                 if (self.change24fin > 0) {
@@ -68,7 +68,30 @@ var app = new Vue({
                 } else {
                     self.activeColor = '#ff5959'
                 }
+
                 console.log(self.change24fin)
+
+                for (var i = 0; i < self.icos.length; i++) {
+                    for (var y = 0; y < response2.length; y++) {
+                        if (response2[y].name === self.icos[i].name) {
+
+                            self.icos[i].marketUsd = response2[y].price_usd
+                            self.icos[i].marketBtc = response2[y].price_btc
+
+                        }
+                    }
+                    if (self.icos[i].marketUsd === '') {
+                        self.icos[i].roiusd = '???'
+                        self.icos[i].roibtc = '???'
+                        self.icos[i].marketUsd = 'Pending'
+                    } else {
+                        self.icos[i].roiusd = self.icos[i].marketUsd/self.icos[i].usdStart
+                        self.icos[i].roiusd = self.icos[i].roiusd.toFixed(2)
+                        self.icos[i].roibtc = self.icos[i].marketBtc/self.icos[i].btcStart
+                        self.icos[i].roibtc = self.icos[i].roibtc.toFixed(2)
+                    }
+                    console.log(self.icos[i].marketUsd)
+                }
             })
 
 
@@ -86,7 +109,6 @@ var app = new Vue({
     data: {
         activeItem: 'portfolio',
         symbol: '',
-        qw: [],
         change24: [],
         change24fin: 0,
         coins: [],
@@ -103,7 +125,12 @@ var app = new Vue({
                 ticker: 'NEX',
                 icoprice: '1 NEX = 1.00 USD',
                 fundgoal: '25,000,000 USD',
-                roiusd: 'Pending'
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '',
+                usdStart: '',
+                roiusd: '',
+                roibtc: ''
             },
             {
                 name: 'Block Collider',
@@ -115,7 +142,13 @@ var app = new Vue({
                 ticker: 'EMB',
                 icoprice: '1 EMB = 0.0749 USD (0.00015 ETH)',
                 fundgoal: '7,000,000 USD',
-                roiusd: 'Pending'
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00000936',
+                usdStart: '0.0749',
+                roiusd: '',
+                roibtc: ''
+
             },
             {
                 name: 'Lendingblock',
@@ -127,7 +160,29 @@ var app = new Vue({
                 ticker: 'LND',
                 icoprice: '1 LND = 0.0200 USD',
                 fundgoal: '10,000,000 USD',
-                roiusd: 'Pending'
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00000246',
+                usdStart: '0.0200',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'Endor',
+                status: 'Ended',
+                title: 'Hybrid Intellingence',
+                url: 'https://www.endor.com',
+                whitepaper: 'https://daks2k3a4ib2z.cloudfront.net/59f19167ffa06300013b3a69/5a5e56d3f1856e00018225b0_Endor_Coin_WP.pdf',
+                date: '19 FEB – 14 MAR',
+                ticker: 'EDR',
+                icoprice: '1 EDR = 0.27 USD',
+                fundgoal: '45,000,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00002842',
+                usdStart: '0.27',
+                roiusd: '',
+                roibtc: ''
             },
             {
                 name: 'YGGDRASH',
@@ -139,7 +194,131 @@ var app = new Vue({
                 ticker: 'YEED',
                 icoprice: '1 YEED = 0.0076 USD (0.00001 ETH)',
                 fundgoal: '40,000,000 USD',
-                roiusd: 'Pending'
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00000082',
+                usdStart: ' 0.0076',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'TomoChain',
+                status: 'Ended',
+                title: 'Blockchain',
+                url: 'https://tomocoin.io',
+                whitepaper: 'https://drive.google.com/file/d/1EAs7llLOpQx3YH1onvC4Qb107sIiztcm/view',
+                date: '1 MAR - 2 MAR',
+                ticker: 'TOMO',
+                icoprice: '1 TOMO = 0.25 USD',
+                fundgoal: '8,500,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00002384759',
+                usdStart: '0.25',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'Dether',
+                status: 'Ended',
+                title: 'Payments',
+                url: 'https://dether.io',
+                whitepaper: 'https://whitepaper.dether.io/',
+                date: '7 FEB – 9 FEB',
+                ticker: 'DTH',
+                icoprice: '1 ÐTH = 0.23 USD (0.00026 ETH)',
+                fundgoal: '13,400,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00002875',
+                usdStart: '0.23',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'Arcblock',
+                status: 'Ended',
+                title: 'Blockchain Service',
+                url: 'https://www.arcblock.io',
+                whitepaper: 'https://www.arcblock.io/file/whitepaper/WhitePaperEnV2_en-US.pdf?v=2',
+                date: '4 FEB',
+                ticker: 'ABT',
+                icoprice: '1 ABT = 0.50 USD (0.00053 ETH)',
+                fundgoal: '45,000,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00005882',
+                usdStart: '0.5',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'Fusion',
+                status: 'Ended',
+                title: 'Blockchain',
+                url: 'https://fusion.org',
+                whitepaper: 'https://fusion.org/Content/files/FUSION%20Whitepaper%20V1.0.3.pdf',
+                date: '1 FEB – 11 FEB',
+                ticker: 'FSN',
+                icoprice: '42,200,000 USD (51,200 ETH)',
+                fundgoal: '45,000,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00025121',
+                usdStart: '2.06',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'Sapien Network',
+                status: 'Ended',
+                title: 'Social Network',
+                url: 'https://www.sapien.network',
+                whitepaper: 'https://www.sapien.network/assets/SPNv1_3.pdf',
+                date: '31 JAN - 15 FEB',
+                ticker: 'SPN',
+                icoprice: '1 SPN = 0.11 USD',
+                fundgoal: '30,000,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00001294',
+                usdStart: '0.11',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'DADI',
+                status: 'Ended',
+                title: 'Cloud Storage',
+                url: 'https://dadi.cloud',
+                whitepaper: 'https://docs.google.com/document/d/1t6Sn6uea6UJW4IBxTbSTsTMEzZD3NRtX6Sw6wnf69q4/edit',
+                date: '29 JAN',
+                ticker: 'DADI',
+                icoprice: '1 DADI = 0.50 USD',
+                fundgoal: '29,000,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00004587',
+                usdStart: '0.5',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'BitClave',
+                status: 'Ended',
+                title: 'Blockchain Service',
+                url: 'https://www.bitclave.com',
+                whitepaper: 'https://docsend.com/view/j3sp3mh',
+                date: '29 NOV – 29 NOV',
+                ticker: 'CAT',
+                icoprice: '1 CAT = 0.1000 USD',
+                fundgoal: '25,500,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.000009',
+                usdStart: '0.1',
+                roiusd: '',
+                roibtc: ''
             }
         ]
     },
