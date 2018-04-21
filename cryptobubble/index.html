@@ -77,7 +77,7 @@
                         <div class="card-title">Portfolio</div>
                     </div>
                     <div class="total-change">
-                        <div class="total-change__title">24h CHANGE</div>
+                        <div class="total-change__title">24h PROFIT</div>
                         <span v-bind:style="{color: activeColor}">{{change24fin}}%</span></div>
                 </div>
                 <md-table md-card>
@@ -89,14 +89,16 @@
                         <md-table-head>Coin</md-table-head>
                         <md-table-head>Price USD</md-table-head>
                         <md-table-head>24h change</md-table-head>
-                        <md-table-head>Coinmarketcap Rank</md-table-head>
+                        <!-- <md-table-head>Coinmarketcap Rank</md-table-head> -->
+                        <md-table-head>Share</md-table-head>
                     </md-table-row>
-                    <md-table-row v-for="(coin, index) in coinsParsedArray" class='default-font'>
+                    <md-table-row v-for="(coin, index) in coins" class='default-font'>
                         <md-table-cell md-numeric>{{index+1}}</md-table-cell>
                         <md-table-cell>{{coin.name}} ({{coin.symbol}})</md-table-cell>
-                        <md-table-cell>${{coin.price_usd}}</md-table-cell>
-                        <md-table-cell>{{coin.percent_change_24h}}%</md-table-cell>
-                        <md-table-cell>#{{coin.rank}}</md-table-cell>
+                        <md-table-cell>${{coin.current_price}}</md-table-cell>
+                        <md-table-cell v-bind:style="{color: coin.change24Color}">{{coin.percent_change_24h}}%</md-table-cell>
+                        <!-- <md-table-cell>#{{coin.rank}}</md-table-cell> -->
+                        <md-table-cell>{{coin.share}}%</md-table-cell>
                     </md-table-row>
                 </md-table>
             </div>

@@ -43,61 +43,110 @@ var app = new Vue({
 
     beforeMount() {
         var self = this;
-        firebaseApi().then(function(response) {
+        // firebaseApi().then(function(response) {
 
-            for (var i = 0; i < response.length; i++) {
-                self.coins.push(response[i].symbol)
+        //Portfolio
+        // for (var i = 0; i < self.length; i++) {
+        //     self.coins.push(response[i].symbol)
+        // }
+
+        for (var i = 0; i < self.coins.length; i++) {
+
+
+        }
+
+        cmcApi().then(function(response2) {
+
+            for (var i = 0; i < self.icos.length; i++) {
+                for (var y = 0; y < response2.length; y++) {
+                    if (response2[y].name === self.icos[i].name) {
+
+                        self.icos[i].marketUsd = response2[y].price_usd
+                        self.icos[i].marketBtc = response2[y].price_btc
+
+                    }
+                }
+                if (self.icos[i].marketUsd === '') {
+                    self.icos[i].roiusd = '???'
+                    self.icos[i].roibtc = '???'
+                    self.icos[i].marketUsd = self.icos[i].usdStart
+                } else {
+                    self.icos[i].roiusd = self.icos[i].marketUsd / self.icos[i].usdStart
+                    self.icos[i].roiusd = self.icos[i].roiusd.toFixed(2)
+                    self.icos[i].roibtc = self.icos[i].marketBtc / self.icos[i].btcStart
+                    self.icos[i].roibtc = self.icos[i].roibtc.toFixed(2)
+
+                }
             }
 
-            cmcApi().then(function(response2) {
-                for (var i = 0; i < self.coins.length; i++) {
-                    for (var y = 0; y < response2.length; y++) {
-                        if (response2[y].symbol === self.coins[i]) {
-                            self.coinsParsedArray.push(response2[y])
-                            self.change24.push(parseInt(response2[y].percent_change_24h))
-                        }
+            for (var i = 0; i < self.coins.length; i++) {
+
+                for (var x = 0; x < self.icos.length; x++) {
+                    if (self.coins[i].name === self.icos[x].name) {
+                        self.coins[i].symbol = self.icos[x].ticker
+                        self.coins[i].price_usd = self.icos[x].marketUsd
+                        self.coins[i].percent_change_24h = 0
+                        self.coins[i].usdVal = self.coins[i].price_usd * self.coins[i].amount
+                        self.coins[i].usdChange = 0;
+                        self.totalUsd += self.coins[i].usdVal
+                        self.coins[i].current_price = self.coins[i].price_usd + " (ICO Token Price)"
+                    }
+
+                }
+
+                for (var y = 0; y < response2.length; y++) {
+
+
+                    if (self.coins[i].name === response2[y].name) {
+                        self.coins[i].symbol = response2[y].symbol
+                        self.coins[i].rank = response2[y].rank
+                        self.coins[i].price_usd = response2[y].price_usd
+                        self.coins[i].percent_change_24h = response2[y].percent_change_24h
+                        self.coins[i].current_price = self.coins[i].price_usd
+                        self.coins[i].usdVal = response2[y].price_usd * self.coins[i].amount
+                        self.coins[i].usdChange = self.coins[i].usdVal / 100 * self.coins[i].percent_change_24h
+
+                        self.totalUsd += self.coins[i].usdVal
+
                     }
                 }
 
-                for (var i = 0; i < self.change24.length; i++) {
-                    self.change24fin += self.change24[i] / self.change24.length
+            }
+            //share
+            for (var i = 0; i < self.coins.length; i++) {
+                self.coins[i].share = self.coins[i].usdVal / self.totalUsd * 100
+                self.coins[i].share = self.coins[i].share.toFixed(2)
+
+                self.coins[i].pl24 = self.coins[i].usdChange / self.totalUsd * 100
+                self.change24fin += self.coins[i].pl24
+
+                if (self.coins[i].percent_change_24h > 0) {
+                    self.coins[i].change24Color = '#1f993b'
+                } else if (self.coins[i].percent_change_24h < 0) {
+                    self.coins[i].change24Color = '#ff5959'
                 }
-                self.change24fin = self.change24fin.toFixed(2)
-                if (self.change24fin > 0) {
-                    self.activeColor = '#1f993b'
-                } else {
-                    self.activeColor = '#ff5959'
-                }
+                console.log(self.coins[i].share)
+            }
 
-                console.log(self.change24fin)
+            //Portfolio 24h change
+            self.change24fin = self.change24fin.toFixed(2)
 
-                for (var i = 0; i < self.icos.length; i++) {
-                    for (var y = 0; y < response2.length; y++) {
-                        if (response2[y].name === self.icos[i].name) {
+            if (self.change24fin > 0) {
+                self.activeColor = '#1f993b'
+            } else {
+                self.activeColor = '#ff5959'
+            }
 
-                            self.icos[i].marketUsd = response2[y].price_usd
-                            self.icos[i].marketBtc = response2[y].price_btc
+            console.log(self.change24fin)
 
-                        }
-                    }
-                    if (self.icos[i].marketUsd === '') {
-                        self.icos[i].roiusd = '???'
-                        self.icos[i].roibtc = '???'
-                        self.icos[i].marketUsd = 'Pending'
-                    } else {
-                        self.icos[i].roiusd = self.icos[i].marketUsd/self.icos[i].usdStart
-                        self.icos[i].roiusd = self.icos[i].roiusd.toFixed(2)
-                        self.icos[i].roibtc = self.icos[i].marketBtc/self.icos[i].btcStart
-                        self.icos[i].roibtc = self.icos[i].roibtc.toFixed(2)
-                    }
-                    console.log(self.icos[i].marketUsd)
-                }
-            })
+            //ICO
+
+        })
 
 
 
 
-        }, function(error) {});
+        // }, function(error) {});
 
     },
     mounted() {
@@ -109,9 +158,56 @@ var app = new Vue({
     data: {
         activeItem: 'portfolio',
         symbol: '',
-        change24: [],
         change24fin: 0,
-        coins: [],
+        coins: [{
+                "name": "Nebulas",
+                "amount": 73
+            }, {
+                "name": "POA Network",
+                "amount": 176
+            }, {
+                "name": "Fusion",
+                "amount": 137
+            }, {
+                "name": "EOS",
+                "amount": 37
+            }, {
+                "name": "Wanchain",
+                "amount": 18.7
+            }, {
+                "name": "Bitcoin",
+                "amount": 0.034,
+            }, {
+                "name": "Ethereum",
+                "amount": 0.31
+            },
+            {
+                "name": "Dether",
+                "amount": 670
+            },
+            {
+                "name": "Block Collider",
+                "amount": 3780
+            },
+            {
+                "name": "YGGDRASH",
+                "amount": 18376
+            },
+            {
+                "name": "Lendingblock",
+                "amount": 7830
+            },
+            {
+                "name": "Endor",
+                "amount": 528
+            },
+            {
+                "name": "Sapien Network",
+                "amount": 245
+            }
+
+        ],
+        totalUsd: 0,
         activeColor: '',
         isLoading: true,
         coinsParsedArray: [],
@@ -197,7 +293,7 @@ var app = new Vue({
                 marketUsd: '',
                 marketBtc: '',
                 btcStart: '0.00000082',
-                usdStart: ' 0.0076',
+                usdStart: '0.0076',
                 roiusd: '',
                 roibtc: ''
             },
@@ -326,28 +422,7 @@ var app = new Vue({
     //     coins: db.ref("coins")
     // },
     methods: {
-        // cmcApi: function() {
-        //     this.$http.get('https://api.coinmarketcap.com/v1/ticker/?start=0&limit=200').then(function(data) {
-        //         this.parseCoins();
-        //         for (var i = 0; i < coinsParsed.length; i++) {
-        //             for (var y = 0; y < data.body.length; y++) {
-        //                 if (data.body[y].symbol === coinsParsed[i]) {
-        //                     coinsParsedArray.push(data.body[y])
 
-        //                     var price = data.body[y].price_usd
-        //                     price = parseFloat(price).toFixed(2)
-        //                     // console.log(coinsParsedArray)
-        //                 }
-        //             }
-        //         }
-        //         this.qwe()
-        //     })
-        // },
-
-        // qwe: function() {
-        //     qw = coinsParsedArray
-        //     console.log(qw)
-        // }
 
     }
 })
