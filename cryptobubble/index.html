@@ -129,6 +129,18 @@
                     </md-card>
                 </form>
             </div>
+            <!-- ADMIN -->
+            <!-- <div>
+                <transition-group name="todo-item" tag="ul" class="todo-list">
+                    <li v-for="(item, index) in coins" v-bind:key="item.name">
+                        <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="checkbox">
+                        <label v-bind:for="'item_' + item.id"></label>
+                        <span class="todo-text">{{ item.name }}</span>
+                        <span class="delete" @click="deleteItem(item)"></span>
+                    </li>
+                    </transition>
+                    <md-button class="md-primary md-raised" @click="movie = 'pulp-fiction'">Set Pulp Fiction</md-button>
+            </div> -->
             <!-- ICO -->
             <div class="card-expansion ico" v-if="activeItem ==='ico'">
                 <md-card v-for="(ico, index) in icos">

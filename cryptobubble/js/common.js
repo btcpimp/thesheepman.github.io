@@ -29,7 +29,7 @@ var firebaseApi = function() {
 var cmcApi = function() {
     return $.ajax({
         type: 'get',
-        url: 'https://api.coinmarketcap.com/v1/ticker/?start=0&limit=1000',
+        url: 'https://api.coinmarketcap.com/v1/ticker/?start=0&limit=1500',
         dataType: 'json',
         success: function(response2) {
             console.log('api cmc got')
@@ -38,6 +38,20 @@ var cmcApi = function() {
     });
 }
 
+// var STORAGE_KEY = 'todos-vuejs-2.0'
+// var todoStorage = {
+//   fetch: function () {
+//     var todos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+//     todos.forEach(function (todo, index) {
+//       todo.id = index
+//     })
+//     todoStorage.uid = todos.length
+//     return todos
+//   },
+//   save: function (todos) {
+//     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
+//   }
+// }
 
 var app = new Vue({
 
@@ -56,7 +70,7 @@ var app = new Vue({
         }
 
         cmcApi().then(function(response2) {
-
+            self.allCoins = response2
             for (var i = 0; i < self.icos.length; i++) {
                 for (var y = 0; y < response2.length; y++) {
                     if (response2[y].name === self.icos[i].name) {
@@ -88,7 +102,6 @@ var app = new Vue({
                         self.coins[i].percent_change_24h = 0
                         self.coins[i].usdVal = self.coins[i].price_usd * self.coins[i].amount
                         self.coins[i].usdChange = 0;
-                        self.totalUsd += self.coins[i].usdVal
                         self.coins[i].current_price = self.coins[i].price_usd + " (ICO Token Price)"
                     }
 
@@ -105,15 +118,14 @@ var app = new Vue({
                         self.coins[i].current_price = self.coins[i].price_usd
                         self.coins[i].usdVal = response2[y].price_usd * self.coins[i].amount
                         self.coins[i].usdChange = self.coins[i].usdVal / 100 * self.coins[i].percent_change_24h
-
-                        self.totalUsd += self.coins[i].usdVal
-
                     }
                 }
-
+                console.log(self.coins[i].name, self.coins[i].usdVal, self.totalUsd)
+                self.totalUsd += self.coins[i].usdVal
             }
             //share
             for (var i = 0; i < self.coins.length; i++) {
+
                 self.coins[i].share = self.coins[i].usdVal / self.totalUsd * 100
                 self.coins[i].share = self.coins[i].share.toFixed(2)
 
@@ -125,7 +137,6 @@ var app = new Vue({
                 } else if (self.coins[i].percent_change_24h < 0) {
                     self.coins[i].change24Color = '#ff5959'
                 }
-                console.log(self.coins[i].share)
             }
 
             //Portfolio 24h change
@@ -136,8 +147,6 @@ var app = new Vue({
             } else {
                 self.activeColor = '#ff5959'
             }
-
-            console.log(self.change24fin)
 
             //ICO
 
@@ -158,6 +167,7 @@ var app = new Vue({
     data: {
         activeItem: 'portfolio',
         symbol: '',
+        selected: '',
         change24fin: 0,
         coins: [{
                 "name": "Nebulas",
@@ -167,23 +177,20 @@ var app = new Vue({
                 "amount": 176
             }, {
                 "name": "Fusion",
-                "amount": 95
-            }, {
-                "name": "EOS",
-                "amount": 26
+                "amount": 139
             }, {
                 "name": "Wanchain",
                 "amount": 18.7
             }, {
                 "name": "Bitcoin",
-                "amount": 0.01294947,
+                "amount": 0.0279,
             }, {
                 "name": "Tether",
-                "amount": 770
+                "amount": 790
             },
             {
-                "name": "Dether",
-                "amount": 670
+                "name": "Lendingblock",
+                "amount": 7830
             },
             {
                 "name": "Block Collider",
@@ -194,13 +201,14 @@ var app = new Vue({
                 "amount": 18376
             },
             {
-                "name": "Lendingblock",
-                "amount": 7830
-            },
-            {
                 "name": "Endor",
                 "amount": 528
             },
+            {
+                "name": "Libra Credit",
+                "amount": 2400
+            },
+
             {
                 "name": "Sapien Network",
                 "amount": 245
@@ -212,6 +220,22 @@ var app = new Vue({
         isLoading: true,
         coinsParsedArray: [],
         icos: [{
+                name: 'Merculet',
+                status: 'Upcoming',
+                title: 'Blockchain Service',
+                url: 'http://merculet.io',
+                whitepaper: 'https://merculet.io/static/pdf/Merculet_Whitepaper_V0331a-EN.pdf',
+                date: '30 APRIL',
+                ticker: 'MVP',
+                icoprice: '1 MVP = 0.0094 USD',
+                fundgoal: '24,400,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '',
+                usdStart: '0.0094',
+                roiusd: '',
+                roibtc: ''
+            },{
                 name: 'Neonexchange',
                 status: 'Upcoming',
                 title: 'Exchange',
@@ -225,6 +249,23 @@ var app = new Vue({
                 marketBtc: '',
                 btcStart: '',
                 usdStart: '',
+                roiusd: '',
+                roibtc: ''
+            },
+            {
+                name: 'Libra Credit',
+                status: 'Ended',
+                title: 'Finance',
+                url: 'https://libracredit.io',
+                whitepaper: 'https://www.libracredit.io/page/Libra%20Credit%20Whitepaper.pdf',
+                date: '30 APRIL',
+                ticker: 'LBA',
+                icoprice: '1 LBA = 0.1000 USD',
+                fundgoal: '26,400,000 USD',
+                marketUsd: '',
+                marketBtc: '',
+                btcStart: '0.00001113',
+                usdStart: '0.1000',
                 roiusd: '',
                 roibtc: ''
             },
@@ -423,7 +464,9 @@ var app = new Vue({
     // },
     methods: {
 
-
+        deleteItem(item) {
+            this.coins.splice(this.coins.indexOf(item), 1);
+        }
     }
 })
 
