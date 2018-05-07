@@ -1,84 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <!-- META -->
-    <meta charset=utf-8>
-    <meta content="IE=edge" http-equiv=X-UA-Compatible>
-    <meta content="width=device-width,initial-scale=1" name=viewport>
-    <title>JustWriteMyName</title>
-    <link rel="icon" type="images" sizes="60x60" href="images/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="adaptive.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src='common.js'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>mynameis.</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <!--     <link rel="stylesheet" href="libs/reset.css">
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <script src="libs/nebPay.js"></script>
+    <script src=libs/jquery-3.3.1.min.js></script>
+    <script src="js/common.js"></script> -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/script.min.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48781892 = new Ya.Metrika({
+                    id: 48781892,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+                });
+            } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function() { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/48781892" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
-    <div class="background-1"></div>
-    <div class="background-2"></div>
-    <section class="center-block">
-        <div class="login">
-            <div class="row">
-                <div class="col-md-2 offset-md-11"><a href="#" id="login">Log In</a></div>
-            </div>
-        </div>
+    <header class="header">
         <div class="container">
-            <div class="intro">
-                <div class="row">
-                    <div class="col-md-12 col-xs-10 ">My name is Igor Mathewshonok. I'm Minsk based &amp;
-                        <br> self-tought illustrator. I'm working on theproject
-                        <br> called “BBOY life perspective” that became famous a
-                        <br>little time ago. I was inspired by my crew and mode2.</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="226" height="91" viewBox="0 0 226 91">
+                            <script xmlns="" />
+                            <metadata>
+                                <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                                        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                            <rdf:Description rdf:about="" />
+                                        </rdf:RDF>
+                                    </x:xmpmeta>
+                                    <?xpacket end="w"?>
+                            </metadata>
+                            <image id="hello" width="226" height="91" xlink:href="data:img/png;base64,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" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="no-extension">
+                        <div id="noExtension">
+                            <div class="no-extension__note">Note!</div>
+                            <div class="no-extension__alert">Please install <a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a> to use mynameis.</div>
+                        </div>
+                        <div class="total-names-title">Total nicknames registered</div>
+                        <div class="total-names__counter">+<span class="totalNames">0</span><span class="date"></span></div>
+                    </div>
                 </div>
             </div>
-            <div class="check-button"><a href="#">Check the project </a></div>
         </div>
-        <div class="socials">
-            <ul>
-                <li><a href="">Dribble</a></li>
-                <li><a href="">Behance</a></li>
-                <li><a href="https://github.com/thesheepman">Github</a></li>
-            </ul>
+    </header>
+    <section class="welcome">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="nebulas-logo"><img src="img/nebulas-logo.png" alt=""></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="welcome__divider"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="welcome__title">Register, check, change or delete your nickname <span>in a second!</span></div>
+                </div>
+            </div>
         </div>
     </section>
-    <div class="modal">
-        <div class="form">
-            <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
-            <div class="skip">Skip<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></div>
-            <div class="form__main">
-                <div class="step">Step 1</div>
-                <div class="location">Your location</div>
-                <div class="ui-widget">
-                    <div class="icon-wrapper"><i class='fa fa-map-marker' aria-hidden='true'></i></div>
-                    <input id="tags">
+    <div class="block-divider"></div>
+    <section class="form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="form-block">
+                        <div class="form-block__title">Check information here</div>
+                        <div class="form-block__data">
+                            <input class="data-input" id="getNameOfVal" type="text" placeholder="n1ZU1WSZHmcJbeJbWHKcMQdP6vM15Q56qdZ">
+                            <button class="data-btn" id=getNameOf>Check!</button>
+                            <p class="data-result hide" id="getNameOfResult"></p>
+                        </div>
+                        <div class="form-block__data">
+                            <input class="data-input" id="getAddressOfVal" type="text" placeholder="NebulasFan_228">
+                            <button class="data-btn" id=getAddressOf>Check!</button>
+                            <p class="data-result hide" id="getAddressOfResult"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="socials-block"><a class="socials-block__item" href="https://github.com/thesheepman" target="_blank"><img src="img/git.png" alt="">
+</a><a class="socials-block__item" href="https://dribbble.com/igormathewshonok" target="_blank"><img src="img/dribble.png" alt="">
+</a></div>
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-85721434-6', 'auto');
-    ga('send', 'pageview');
-    </script>
+    </section>
+    <section class="form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="form-block">
+                        <div class="form-block__title">Manage your nickname</div>
+                        <div class="form-block__data">
+                            <input class="data-input" id="addNameVal" type="text" placeholder="Enter nickname here">
+                            <button class="data-btn" id=addName>Register</button>
+                            <p class="data-result hide" id="addNameResult"></p>
+                        </div>
+                        <div class="form-block__data">
+                            <input class="data-input" id="changeNameVal" type="text" placeholder="Enter new nickname here">
+                            <button class="data-btn" id=changeName>Change</button>
+                            <p class="data-result hide" id="changeNameResult"></p>
+                        </div>
+                        <div class="delete-block">
+                            <div class="delete-block__title">Delete your nickname forever!</div>
+                            <button class="data-btn --btn-black" id=deleteName>Delete</button>
+                            <p class="data-result hide" id="deleteNameResult"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer__logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="226" height="91" viewBox="0 0 226 91">
+                            <script xmlns="" />
+                            <metadata>
+                                <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                                    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                                        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                            <rdf:Description rdf:about="" />
+                                        </rdf:RDF>
+                                    </x:xmpmeta>
+                                    <?xpacket end="w"?>
+                            </metadata>
+                            <image id="hello" width="226" height="91" xlink:href="data:img/png;base64,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" />
+                        </svg>
+                    </div>
+                    <div class="footer__copyright">Built and designed in Minsk, 2018</div>
+                    <div class="footer__love">From Belarus with <i aria-hidden="true" class="fa fa-heart"></i> to Nebulas Community</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer__created">
+                        <div class="created-block">
+                            <div class="created-block__title">Code</div>
+                            <div class="created-block__content">andrtaw1@gmail.com</div>
+                            <div class="created-block__title">Design</div>
+                            <div class="created-block__content">Igormathewshonok@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

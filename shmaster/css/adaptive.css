@@ -152,7 +152,8 @@
     width: 100%;
     }
     .news-note img {
-        width: 100%;
+        width: auto;
+        height: none;
     }
     .page__news-small__item img{
         max-width: 100%;

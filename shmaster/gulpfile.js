@@ -53,7 +53,7 @@ gulp.task('img:build', () =>
 );
 
 gulp.task('img:change', function() {
-  gulp.src('./psd/**/*.jpg')
+  gulp.src('./psd/ХУЙ/**/*.jpg')
       .pipe(ext_replace('.png'))
-      .pipe(gulp.dest('./psd/ХУЙ'))
+      .pipe(gulp.dest('./psd/ХУЙ2'))
 });
