@@ -5,6 +5,9 @@ var NebPay = require("nebpay");
 var nebPay = new NebPay();
 if (typeof(webExtensionWallet) === "undefined") {
 
+    alert('Please install webExtensionWallet!')
+} else {
+
     window.postMessage({
         "target": "contentscript",
         "data": {},
@@ -17,9 +20,6 @@ if (typeof(webExtensionWallet) === "undefined") {
             $('.account-address').text(e.data.data.account)
         }
     });
-} else {
-
-
 }
 
 
