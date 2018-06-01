@@ -35,9 +35,11 @@ oktopus.prototype = {
             if (yyyy > year) {
                 throw new Error("you must enter a future date");
 
-            } else if (yyyy === year && mm > month) {
+            }
+            if (yyyy >= year && mm > month) {
                 throw new Error("you must enter a future date");
-            } else if (yyyy === year && mm === month && dd > date) {
+            }
+            if (yyyy >= year && mm > month && dd > date) {
                 throw new Error("you must enter a future date");
             }
             this.account.set(from, { name: name, expDate: expDate, day: date, month: month, year: year })
@@ -84,10 +86,12 @@ oktopus.prototype = {
                 if (yyyy < this.account.get(from).year) {
                     throw new Error("You should wait until " + this.account.get(from).expDate);
 
-                } else if (yyyy === this.account.get(from).year && mm < this.account.get(from).month) {
+                }
+                if (yyyy <= this.account.get(from).year && mm < this.account.get(from).month) {
                     throw new Error("You should wait until " + this.account.get(from).expDate);
 
-                } else if (yyyy === this.account.get(from).year && mm === this.account.get(from).month && dd < this.account.get(from).day) {
+                }
+                if (yyyy <= this.account.get(from).year && mm <= this.account.get(from).month && dd < this.account.get(from).day) {
                     throw new Error("You should wait until " + this.account.get(from).expDate);
                 }
 
