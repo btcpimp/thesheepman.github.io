@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Ok:topus</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700|Montserrat:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="libs/reset.css">
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="libs/nebPay.js"></script>
+    <script src=libs/vue.js></script>
+    <script src=libs/vue-material.js></script>
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <script src="js/script.min.js"></script>
+</head>
+
+<body>
+    <section class="dashboard" id='app'>
+        <div class="preloader" v-if="isLoading">
+            <md-progress-spinner class="md-accent" md-mode="indeterminate"></md-progress-spinner>
+        </div>
+        <template>
+            <div class="page-container">
+                <md-app>
+                    <md-app-toolbar class="md-primary">
+                        <span class="md-title"><a class="dashboard-title" href="./index.html">Ok:topus</a></span>
+                        <span class="right"><b>Account: </b><span class="account-address"></span> </span>
+                        <a class="exit" href="index.html"><i class="material-icons">
+exit_to_app
+</i></a>
+                    </md-app-toolbar>
+                    <md-app-drawer md-permanent="card">
+                        <md-list>
+                            <md-list-item onclick='getInfo()' v-on:click='activeItem = "start"'>
+                                <span class="md-list-item-text">Create moneybox</span>
+                            </md-list-item>
+                            <md-list-item :disabled="deposit ? false : true" v-on:click='depoActivate()'>
+                                <span class="md-list-item-text">Deposit</span>
+                            </md-list-item>
+                            <md-list-item :disabled="withdraw ? false : true" v-on:click='withdrawActivate()'>
+                                <span class="md-list-item-text withdraw-btn">Withdraw</span>
+                            </md-list-item>
+                        </md-list>
+                        <div class="moneybox-balance-btm">Moneybox balance: <span>{{balance}}</span> NAS</div>
+                    </md-app-drawer>
+                    <md-app-content>
+                        <md-card>
+                            <div class="col-md-12" v-if="activeItem ==='start'">
+                                <div class="card">
+                                    <div class="center">
+                                        <div class="card-title">You are welcome!</div>
+                                    </div>
+                                    <div class="card-label">Enter your moneybox name</div>
+                                    <input class="card-data mg-fix moneybox-name-input" required>
+                                    <div class="card-label">Enter a date of breaking a moneybox</div>
+                                    <template>
+                                        <div>
+                                            <md-datepicker md-immediately required class="card-data" />
+                                        </div>
+                                    </template>
+                                    <a class="card-button --green" onclick="createMoneybox()">Create moneybox</a>
+                                    <div class="md-chip add-tooltip tooltip md-theme-default hide --fail"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" v-if="activeItem ==='deposit'">
+                                <div class="card">
+                                    <div class="center">
+                                        <div class="card-title moneybox-name">{{name}}</div>
+                                    </div>
+                                    <div class="card-label"><b>Moneybox balance:</b> <span class="moneybox-balance">{{balance}} NAS</span></div>
+                                    <div class="card-label"><b>Expires on:</b> <span class="moneybox-expire">{{expDate}}</span></div>
+                                    <div class="card-label">Enter NAS deposit amount</div>
+                                    <input class="card-data mg-fix deposit" required placeholder="15000">
+                                    <a class="card-button --green" onclick="deposit()">Deposit</a>
+                                    <div class="md-chip deposit-tooltip tooltip md-theme-default hide --fail"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" v-if="activeItem ==='withdraw'">
+                                <div class="card">
+                                    <div class="center">
+                                        <div class="card-title moneybox-name">{{name}}</div>
+                                    </div>
+                                    <div class="card-label"><b>Moneybox balance:</b> <span class="moneybox-balance">{{balance}} NAS</span></div>
+                                    <div class="card-label"><b>Expires on:</b> <span class="moneybox-expire">{{expDate}}</span></div>
+                                    <a class="card-button --green withdraw" onclick="withdrawFunds()">Withdraw</a>
+                                    <div class="md-chip withdraw-tooltip tooltip md-theme-default hide --fail"></div>
+                                </div>
+                            </div>
+                        </md-card>
+                    </md-app-content>
+                </md-app>
+            </div>
+        </template>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><img src="img/footer-logo.png" alt=""></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
