@@ -19,7 +19,7 @@ It will help you to estimate your budget in more proper way, to kill your alter 
 
 ### 3. Smart Contract Instructions for Use
 
-Contract address: n1dxDzLsLW5vsEUoiqSw8jX7uUvs86p1S88
+Contract address: n1wRnTsp71SpcFLiuS8Q5Fmu5bVRB8BA3Yt
 
 #### 3.1 Using `createBank`
 

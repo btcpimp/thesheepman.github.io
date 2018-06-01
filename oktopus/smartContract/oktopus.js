@@ -12,8 +12,8 @@ oktopus.prototype = {
     createBank: function(name, date, month, year) {
         var from = Blockchain.transaction.from;
         name = name.trim();
-        if (name === ""){
-        	throw new Error("Name must contain at least 1 symbol.");
+        if (name === "") {
+            throw new Error("Name must contain at least 1 symbol.");
         }
         if (this.account.get(from)) {
             throw new Error("You have already setup a timer");
@@ -35,12 +35,12 @@ oktopus.prototype = {
             if (yyyy > year) {
                 throw new Error("you must enter a future date");
 
-            } else if (mm > month) {
+            } else if (yyyy > year && mm > month) {
                 throw new Error("you must enter a future date");
-            } else if (dd > date) {
+            } else if (yyyy > year && mm > month && dd > date) {
                 throw new Error("you must enter a future date");
             }
-            this.account.set(from, {name: name, expDate: expDate, day: date, month: month, year: year })
+            this.account.set(from, { name: name, expDate: expDate, day: date, month: month, year: year })
             var startAmount = new BigNumber(0)
             this.bank.set(from, startAmount)
             return true
@@ -55,7 +55,7 @@ oktopus.prototype = {
         if (!this.account.get(from)) {
             throw new Error("You haven't created vault yet.");
         }
-        if (value <= 0 ){
+        if (value <= 0) {
             throw new Error("Your deposit must be more than 0.");
         }
 
@@ -86,10 +86,10 @@ oktopus.prototype = {
 
 
 
-                } else if (mm < this.account.get(from).month) {
+                } else if (yyyy < this.account.get(from).year && mm < this.account.get(from).month) {
                     throw new Error("You should wait until " + this.account.get(from).expDate);
 
-                } else if (dd < this.account.get(from).day) {
+                } else if (yyyy < this.account.get(from).year && mm < this.account.get(from).month && dd < this.account.get(from).day) {
                     throw new Error("You should wait until " + this.account.get(from).expDate);
                 }
 
@@ -120,7 +120,7 @@ oktopus.prototype = {
     getInfo: function() {
         var from = Blockchain.transaction.from;
         if (this.account.get(from)) {
-        	return this.account.get(from)
+            return this.account.get(from)
         } else {
             throw new Error("You haven't created vault yet.");
         }
