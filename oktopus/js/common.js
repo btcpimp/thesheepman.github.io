@@ -1,5 +1,5 @@
 AOS.init();
-var dappAddress = "n1wRnTsp71SpcFLiuS8Q5Fmu5bVRB8BA3Yt";
+var dappAddress = "n1hC3Zek2ic3x9hYNX4QfqAi9vtDHTrcZ7v";
 
 var NebPay = require("nebpay");
 var nebPay = new NebPay();
