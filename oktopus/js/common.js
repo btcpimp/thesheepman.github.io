@@ -3,24 +3,6 @@ var dappAddress = "n1iY3s1mMqdRzHwo8ieKCPG2QjYDGz9tUHt";
 
 var NebPay = require("nebpay");
 var nebPay = new NebPay();
-if (typeof(webExtensionWallet) === "undefined") {
-
-    alert('Please install webExtensionWallet!')
-} else {
-
-    window.postMessage({
-        "target": "contentscript",
-        "data": {},
-        "method": "getAccount",
-    }, "*");
-    window.addEventListener('message', function(e) {
-        // e.detail contains the transferred data (can
-        console.log("recived by page:" + e + ", e.data:" + JSON.stringify(e.data));
-        if (!!e.data.data) {
-            $('.account-address').text(e.data.data.account)
-        }
-    });
-}
 
 
 var isWithdraw = false

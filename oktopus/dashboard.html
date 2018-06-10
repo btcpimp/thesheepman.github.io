@@ -110,6 +110,20 @@ exit_to_app
         </div>
     </footer>
     <script src="js/common.js"></script>
+    <script>
+    window.postMessage({
+        "target": "contentscript",
+        "data": {},
+        "method": "getAccount",
+    }, "*");
+    window.addEventListener('message', function(e) {
+        // e.detail contains the transferred data (can
+        console.log("recived by page:" + e + ", e.data:" + JSON.stringify(e.data));
+        if (!!e.data.data) {
+            $('.account-address').text(e.data.data.account)
+        }
+    });
+    </script>
 </body>
 
 </html>
