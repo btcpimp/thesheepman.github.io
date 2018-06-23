@@ -1,49 +1,80 @@
-# Ok:topus
+# Ok:mail
 
 ### 1. What is it?
 
-Oktopus is a new era crypto moneybox for you and your family. You are able to easily save your crypto, input the date of breaking the moneybox. 
+Ok:mail is a new era crypto electronic mail for business. You are able to easily communicate with your friends, and partners.
 
-It will help you to estimate your budget in more proper way, to kill your alter gambling ego, not to waste money for useless things and invest heavily into the future!
+Encryption, user-friendly interface and all features of new-era mailboxes included!
 
+### 2. Smart Contract Instructions for Use
 
-### 2. Features of Ok:topus.
-```
-- Infinite quantity of moneyboxes
-- 100% safe & secure
-- Kill your gambling alter ego forever
-- You are not able to waste crypto funds
-- All family is in the game
-- Lambo!
-```
+Contract address: n1gGBTN9a8zcvVGKpNMxSrvzM6i7YuNPaCh
 
-### 3. Smart Contract Instructions for Use
+#### 2.1 `createAccount`
 
-Contract address: n1iY3s1mMqdRzHwo8ieKCPG2QjYDGz9tUHt
-
-#### 3.1 Using `createBank`
-
-Function, that creates your moneybox. U have to enter your moneybox name and date of moneybox breaking. Example:
+Function, that creates your account. U have to enter your name. Example:
 ```js
-["MyNewMoneyBox", "31", "08", "2018"]
+["andrew"]
 ```
-#### 3.2 `addFunds`
+#### 2.2 `getAccount`
  
-This function allows you to deposit NAS into moneybox u have created. No arguments needed.
+This function returns your account name if u have registered it. No arguments needed.
 
-#### 3.3 `withdraw`
+#### 2.3 `removeAccount`
  
-If the date of breaking has come, this function allows you break your moneybox and withdraw all NAS. No arguments needed.
+This function delete your account with all your mail and data. No arguments needed.
 
-#### 3.4 `getBalance`
+#### 2.4 `sendMessage`
  
-This function returns your moneybox balance. No arguments needed.
+Function, that allows you send messages. U have to enter recipient okmail, title and text. Example:
+```js
+["andrew@okmail, "Important thing", "In nebulas we trust!"]
+```
 
-#### 3.5 `getInfo`
+#### 2.5 `loadMail`
  
-This function returns your moneybox name and date of expiration. No arguments needed.
+This function returns all your mail. No arguments needed.
+
+#### 2.6 `delMsgById`
+
+Function, that allows you to delete message. U have to enter message id. Example:
+```js
+["1"]
+```
+
+#### 2.7 `toggleSpamById`
+
+Function, that allows you to mark message as spam. U have to enter message id. Example:
+```js
+["1"]
+```
+
+#### 2.8 `toggleMarkById`
+
+Function, that allows you to mark message as important. U have to enter message id. Example:
+```js
+["1"]
+```
+
+#### 2.8 `addContact`
+
+Function, that allows you to add contact into your contactsbook. U have to enter okmail. Example:
+```js
+["partner@okmail"]
+```
+
+#### 2.9 `removeContact`
+
+Function, that allows you to remove contact from your contactsbook. U have to enter okmail. Example:
+```js
+["partner@okmail"]
+```
+
+#### 2.10 `getContacts`
+
+This function returns list of your contacts. No arguments needed.
 
 ### Links
 
 - Nebulas: https://nebulas.io/
-- Ok:topus: http://thesheepman.github.io/oktopus
+- Ok:topus: http://thesheepman.github.io/okmail
