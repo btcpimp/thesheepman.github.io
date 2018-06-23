@@ -127,23 +127,23 @@ function createAccountRespTrue(resp) {
 }
 
 
-function deleteAccount() {
+function removeAccount() {
     var args2 = '[' + '"' + '"' + ']';
-    var func = "deleteAccount";
+    var func = "removeAccount";
     nebPay.simulateCall(dappAddress, 0, func, args2, {
-        listener: deleteAccountResp
+        listener: removeAccountResp
     });
 }
 
-function deleteAccountTrue() {
+function removeAccountTrue() {
     var args2 = '[' + '"' + '"' + ']';
-    var func = "deleteAccount";
+    var func = "removeAccount";
     nebPay.call(dappAddress, 0, func, args2, {
-        listener: deleteAccountRespTrue
+        listener: removeAccountRespTrue
     });
 }
 
-function deleteAccountResp(resp) {
+function removeAccountResp(resp) {
     if (
         resp.result === "Error: You haven't created account yet."
     ) {
@@ -152,11 +152,11 @@ function deleteAccountResp(resp) {
         $('.notify').addClass('--fail')
         $(".notify").text(resp.result);
     } else {
-        deleteAccountTrue();
+        removeAccountTrue();
     }
 }
 
-function deleteAccountRespTrue(resp) {
+function removeAccountRespTrue(resp) {
     if (resp != "Error: Transaction rejected by user") {
         $('.notify-wrapper').removeClass('hide')
         $('.notify').removeClass('--fail')
@@ -408,6 +408,53 @@ function sendMessageRespTrue(resp) {
         $('.notify-wrapper').removeClass('hide')
         $('.notify').removeClass('--fail')
         $(".notify").text("Your message has been succefully sent.");
+    } else {
+        $('.notify-wrapper').removeClass('hide')
+        $('.notify').addClass('--fail')
+        $('.notify').text("You have rejected transaction.");
+    }
+
+}
+
+
+
+
+function addContact() {
+    var contact = $('.new-contact').val()
+    var args2 = '[' + '"' + contact +'"' + ']';
+    var func = "addContact";
+    nebPay.simulateCall(dappAddress, 0, func, args2, {
+        listener: addContactResp
+    });
+}
+
+function addContactTrue() {
+    var contact = $('.new-contact').val()
+    var args2 = '[' + '"' + contact +'"' + ']';
+    var func = "addContact";
+    nebPay.call(dappAddress, 0, func, args2, {
+        listener: addContactRespTrue
+    });
+}
+
+function addContactResp(resp) {
+    if (
+        resp.result === "Error: You haven't created account yet." || resp.result === "Error: Account with this name doesn't exist"
+    ) {
+
+        $('.notify-wrapper').removeClass('hide')
+        $('.notify').addClass('--fail')
+        $(".notify").text(resp.result);
+    } else {
+        addContactTrue();
+    }
+}
+
+function addContactRespTrue(resp) {
+    if (resp != "Error: Transaction rejected by user") {
+        $('.notify-wrapper').removeClass('hide')
+        $('.notify').removeClass('--fail')
+        $(".notify").text("Contact succefully added.");
     } else {
         $('.notify-wrapper').removeClass('hide')
         $('.notify').addClass('--fail')

@@ -632,6 +632,12 @@ input {
     width: 100%;
 }
 
+.mailbox {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
 .menu__logo {}
 
 .card-button i {
@@ -705,16 +711,19 @@ input {
     bottom: 25px;
     color: #E46A66;
 }
-.prev-item__del{
+
+.prev-item__del {
     cursor: pointer;
     right: 30px;
     font-size: 18px;
     position: absolute;
     top: 45px;
 }
-.contacts .prev-item{
+
+.contacts .prev-item {
     padding: 30px 50px !important;
 }
+
 .current-start {
     display: flex;
     justify-content: center;
@@ -729,8 +738,9 @@ input {
     width: 50%;
     color: #6E6E6E;
 }
-.form-top{
-        text-align: center;
+
+.form-top {
+    text-align: center;
     position: relative;
     padding: 91px 30px !important;
     font-size: 36px;
@@ -738,15 +748,14 @@ input {
     color: #E46A66;
     border-bottom: 2px solid #F2DADC;
 }
+
 .read-top {
     position: relative;
     padding: 73px 30px;
     border-bottom: 2px solid #F2DADC;
 }
 
-.current-read {
-    
-}
+.current-read {}
 
 .read__from {
     color: #C6C5CB;
@@ -783,25 +792,31 @@ input {
     right: 30px;
     bottom: 50px;
 }
-.read-main{
-        padding: 50px 30px;
+
+.read-main {
+    padding: 50px 30px;
 }
-.main__title{
+
+.main__title {
     font-size: 16px;
     color: #343434;
     margin-bottom: 20px;
     font-weight: 600;
-
-}.main__text{
-    font-size: 16px;
 }
-.notify{
+
+.main__text {
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.notify {
     background-color: #00C853;
     text-align: center;
     padding: 20px;
     position: relative;
 }
-.notify__close{
+
+.notify__close {
     cursor: pointer;
     color: #fff;
     font-size: 20px;
@@ -809,22 +824,68 @@ input {
     top: 20px;
     right: 20px;
 }
-.notify-wrapper{
+
+.notify-wrapper {
     position: relative;
 }
-textarea{
+
+textarea {
     font-family: 'Poppins', sans-serif;
     color: #6E6E6E;
     width: 100% !important;
-      resize: none;
-      outline: none !important;
+    resize: none;
+    outline: none !important;
 }
-.send-wrapper{
+
+.send-wrapper {
     padding: 0px 30px;
 }
-.send__new{
+
+.send__new {
     margin-top: 30px;
 }
-.send-title{
+
+.send-title {
     margin-top: 30px;
 }
+
+.ok-card img {
+    width: 400px;
+}
+
+.ok-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.createAccount {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper:after {
+    content: "@okmail";
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 132px;
+    top: 102px;
+    color: #6E6E6E;
+    right: 5px;
+    height: 66px;
+    border-left: 2px solid #FAE1E0
+}
+
+.add-contact {
+    padding: 30px 50px 60px 50px;
+}
+
+.new-contact {}

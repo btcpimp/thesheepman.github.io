@@ -1,75 +1,92 @@
-@media (max-width: 1200px) {
-
+@media (max-width: 1600px) {
+    .mailbox-menu {
+        margin: 60px 10px;
+    }
+    .card-button {
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+    .card-button i {
+        margin-right: 5px;
+    }
+    .list-item {
+        font-size: 14px;
+    }
+    .main__text {
+        font-size: 16px;
+        word-wrap: break-word;
+    }
 }
 
 @media (max-width: 990px) {
-    .card{
+    .card {
         padding: 30px;
     }
-    .benefits-box__item-img{
+    .benefits-box__item-img {
         padding: 0px;
     }
 }
+
 @media (max-width: 742px) {
-    .benefits{
+    .benefits {
         margin-top: 50px;
     }
-    .benefits-box{
+    .benefits-box {
         margin-top: 30px;
     }
     .explain {
-    
-    margin-top: 50px;
-}
-.graphic-title{
-    margin-top: 30px;
-}
-.card{
-    margin-top: 30px;
-}
-.graphic{
-    text-align: center;
-}
-.benefits-box__item {
-    width: 100%;
-    margin-left: 0px;
-    margin-bottom: 0px;
-}
-.benefits-title{
-    font-size: 24px;
-}
-.roadmap {
 
-    padding: 20px;
-}
-.graphic{
-    padding: 40px;
-}
-.inspire-block{
-    width: 100%;
-}
-.header{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-}
-.title{
-    font-size: 27px;
-}
-.logo{
-    font-size: 55px;
-}
-.benefits-divider {
-    margin: 25px 0px;
-}
-.explain-box__item{
-    width: 100%;
-}
-.mg-btm{
-    padding-bottom: 50px;
-}
-.explain-box__item-img{
-    margin-top: 20px;
-    text-align: center;
-}
+        margin-top: 50px;
+    }
+    .graphic-title {
+        margin-top: 30px;
+    }
+    .card {
+        margin-top: 30px;
+    }
+    .graphic {
+        text-align: center;
+    }
+    .benefits-box__item {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    .benefits-title {
+        font-size: 24px;
+    }
+    .roadmap {
+
+        padding: 20px;
+    }
+    .graphic {
+        padding: 40px;
+    }
+    .inspire-block {
+        width: 100%;
+    }
+    .header {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .title {
+        font-size: 27px;
+    }
+    .logo {
+        font-size: 55px;
+    }
+    .benefits-divider {
+        margin: 25px 0px;
+    }
+    .explain-box__item {
+        width: 100%;
+    }
+    .mg-btm {
+        padding-bottom: 50px;
+    }
+    .explain-box__item-img {
+        margin-top: 20px;
+        text-align: center;
+    }
 }

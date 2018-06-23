@@ -23,6 +23,37 @@
     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/adaptive.css">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter49350253 = new Ya.Metrika2({
+                    id: 49350253,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+                });
+            } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function() { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/49350253" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -33,15 +64,20 @@
             <div class="notify__close" onclick='closeNotify()'><i class="fa fa-times-circle"></i>
             </div>
         </div>
-        <!-- <div class="preloader" v-if="isLoading">
+        <div class="preloader" v-if="isLoading">
             <md-progress-spinner class="md-accent" md-mode="indeterminate"></md-progress-spinner>
-        </div> -->
-        <div class="ok-card" v-if="activeItem ==='start'">
-            <input class="card-data mg-fix createAccount" required placeholder="Enter your name">
-            <a class="card-button --orange" onclick="createAccount()"><i class="fas fa-plus-circle"></i>
+        </div>
+        <div class="ok-card-wrapper" v-if="activeItem ==='start'">
+            <div class="ok-card">
+                <img src="img/logo.svg" alt="">
+                <div class="input-wrapper">
+                    <input class="card-data mg-fix createAccount" required placeholder="Enter your name">
+                </div>
+                <a class="card-button --orange" onclick="createAccount()">
 
  Create mailbox</a>
-            <div class="md-chip createAccount-tooltip tooltip md-theme-default hide --fail"></div>
+                <div class="md-chip createAccount-tooltip tooltip md-theme-default hide --fail"></div>
+            </div>
         </div>
         <div class="mailbox" v-if="activeItem ==='dashboard'">
             <div class="mailbox-menu">
@@ -62,7 +98,7 @@
                 <ul class="menu__list">
                     <li class="list-item" v-bind:class="{ itemActive: preview ==='contacts'}" v-on:click='preview = "contacts"'><i class="far fa-address-book"></i> Contacts
                     </li>
-                    <li class="list-item" onclick="deleteAccount()"><i class="fas fa-user-times"></i> Delete Account
+                    <li class="list-item" onclick="removeAccount()"><i class="fas fa-user-times"></i> Delete Account
                     </li>
                 </ul>
                 <div class="menu__footer">{{accountName}}</div>
@@ -105,6 +141,11 @@
                     </div>
                 </div>
                 <div class="contacts" v-if="preview ==='contacts'">
+                    <div class="add-contact">
+                        <input class="card-data mg-fix new-contact" type="text" placeholder="andrew@okmail">
+                        <div class="card-button --orange send__new" onclick="addContact()"><i class="fas fa-user-plus"></i> Add contact
+                        </div>
+                    </div>
                     <div class="prev-item" v-for="(contact, index) in contacts" :key="index" v-bind:id="contact">
                         <div class="prev-item__title">{{contact}}</div>
                         <div class="prev-item__del" onclick="clickRemoveContact(this.getAttribute('id'))" v-bind:id="contact"><i class="far fa-trash-alt"></i></div>
