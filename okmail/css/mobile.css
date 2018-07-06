@@ -1,3 +1,10 @@
+
+@media (min-width: 1200px){
+.container {
+    width: 100%;
+    max-width: 100%;
+}
+}
 @media (max-width: 1600px) {
     .mailbox-menu {
         margin: 60px 10px;
