@@ -18,6 +18,24 @@
     }
 }
 
+@media (max-width: 1420px) {
+    .ok-table th {
+        padding: 0px;
+        padding-bottom: 40px;
+        width: 200px;
+    }
+    .ok-title{
+        font-size: 58px;
+    }
+    .ok-subtitle{
+        line-height: 1em;
+    }
+    .ok-table{
+            margin: 33px;
+
+    }
+}
+
 @media (max-width: 990px) {
     .card {
         padding: 30px;
@@ -25,9 +43,49 @@
     .benefits-box__item-img {
         padding: 0px;
     }
+    .ok-title {
+    font-size: 38px;
+}
+.ok-landing{
+    padding: 0px;
+}
+.try-btn{
+    margin: 30px 0px;
+}
+.ok-scroll{
+    text-align: center;
+}
+.ok-bottom{
+    text-align: center;
+}
+}
+@media (max-width: 1080px) {
+    
 }
 
 @media (max-width: 742px) {
+    .ok-table th{
+        font-size: 18px;
+        padding: 5px;
+    }
+    .ok-table tr td:nth-child(1){
+        padding-right: 10px;
+    }
+    .ok-table tr td{
+        padding: 0px;
+    }
+    .ok-subflex{
+        display: none;
+    }
+    .synch-img{
+        display: none;
+    }
+    .try-second{
+        display: none;
+    }
+    .roadmap-wrap{
+        display: none;
+    }
     .benefits {
         margin-top: 50px;
     }

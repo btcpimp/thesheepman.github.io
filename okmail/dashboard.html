@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Ok:mail</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="libs/reset.css">
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="libs/nebPay.js"></script>
+    <script src=libs/vue.js></script>
+    <script src=libs/vue-material.js></script>
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adaptive.css">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter49350253 = new Ya.Metrika2({
+                    id: 49350253,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true
+                });
+            } catch (e) {}
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function() { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/49350253" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body>
+    <section class="dashboard" id='app'>
+        <div class="notify-wrapper hide">
+            <div class="notify">
+            </div>
+            <div class="notify__close" onclick='closeNotify()'><i class="fa fa-times-circle"></i>
+            </div>
+        </div>
+        <div class="preloader" v-if="isLoading">
+            <md-progress-spinner class="md-accent" md-mode="indeterminate"></md-progress-spinner>
+        </div>
+        <div class="ok-card-wrapper" v-if="activeItem ==='start'">
+            <div class="ok-card">
+                <img src="img/logo.svg" alt="">
+                <div class="input-wrapper">
+                    <input class="card-data mg-fix createAccount" required placeholder="Enter your name">
+                </div>
+                <a class="card-button --orange" onclick="createAccount()">
+
+ Create mailbox</a>
+                <div class="md-chip createAccount-tooltip tooltip md-theme-default hide --fail"></div>
+            </div>
+        </div>
+        <div class="mailbox" v-if="activeItem ==='dashboard'">
+            <div class="mailbox-menu">
+                <div class="menu__logo"><img src="img/logo.svg" alt=""></div>
+                <div class="card-button --orange menu__new" v-on:click='current = "send"'><i class="fas fa-plus-circle"></i> New message</div>
+                <ul class="menu__list">
+                    <li class="list-item" v-bind:class="{ itemActive: preview ==='inbox'}" v-on:click='preview = "inbox", current="start"'>
+                        <i class="far fa-envelope"></i> Inbox
+                    </li>
+                    <li class="list-item" v-bind:class="{ itemActive: preview ==='outbox'}" v-on:click='preview = "outbox", current="start"'><i class="fab fa-telegram-plane"></i> Outbox
+                    </li>
+                    <li class="list-item" v-bind:class="{ itemActive: preview ==='marked'}" v-on:click='preview = "marked", current="start"'><i class="far fa-star"></i> Marked
+                    </li>
+                    <li class="list-item" v-bind:class="{ itemActive: preview ==='spam'}" v-on:click='preview = "spam", current="start"'><i class="far fa-thumbs-down"></i> Spam
+                    </li>
+                </ul>
+                <div class="menu__divider"></div>
+                <ul class="menu__list">
+                    <li class="list-item" v-bind:class="{ itemActive: preview ==='contacts'}" v-on:click='preview = "contacts"'><i class="far fa-address-book"></i> Contacts
+                    </li>
+                    <li class="list-item" onclick="removeAccount()"><i class="fas fa-user-times"></i> Delete Account
+                    </li>
+                </ul>
+                <div class="menu__footer">{{accountName}}</div>
+            </div>
+            <div class="mailbox-prev">
+                <div class="inbox" v-if="preview ==='inbox'">
+                    <div class="prev-item" v-on:click='current = "inbox", currentId=index' v-for='(mail, index) in mail.inbox' v-bind:id="mail.id">
+                        <div class="prev-item__from">{{mail.from}}</div>
+                        <div class="prev-item__title">{{mail.title}}</div>
+                        <div class="prev-item__text">{{mail.text}}</div>
+                        <div class="prev-item__mark" onclick="clickAddMark(this.getAttribute('id'))" v-bind:id="mail.id"><i class="far fa-star"></i></div>
+                        <div class="prev-item__date">{{mail.date}}</div>
+                    </div>
+                </div>
+                <div class="marked" v-if="preview ==='marked'">
+                    <div class="prev-item" v-on:click='current = "marked", currentId=index' v-for='(marked, index) in marked' v-bind:id="marked.id">
+                        <div class="prev-item__from">{{marked.from}}</div>
+                        <div class="prev-item__title">{{marked.title}}</div>
+                        <div class="prev-item__text">{{marked.text}}</div>
+                        <div class="prev-item__mark" onclick="clickAddMark(this.getAttribute('id'))" v-bind:id="marked.id"><i class="fas fa-star"></i></div>
+                        <div class="prev-item__date">{{marked.date}}</div>
+                    </div>
+                </div>
+                <div class="spam" v-if="preview ==='spam'">
+                    <div class="prev-item" v-on:click='current = "spam", currentId=index' v-for='(spam, index) in spam' v-bind:id="spam.id">
+                        <div class="prev-item__from">{{spam.from}}</div>
+                        <div class="prev-item__title">{{spam.title}}</div>
+                        <div class="prev-item__text">{{spam.text}}</div>
+                        <div class="prev-item__mark" onclick="clickAddMark(this.getAttribute('id'))" v-bind:id="spam.id"><i class="far fa-star"></i></div>
+                        <div class="prev-item__date">{{spam.date}}</div>
+                    </div>
+                </div>
+                <div class="outbox" v-if="preview ==='outbox'">
+                    <div class="prev-item" v-on:click='current = "outbox", currentId=index' v-for='(mail, index) in mail.outbox' v-bind:id="mail.id">
+                        <div class="prev-item__from">{{mail.from}}</div>
+                        <div class="prev-item__title">{{mail.title}}</div>
+                        <div class="prev-item__text">{{mail.text}}</div>
+                        <div class="prev-item__mark" onclick="clickAddMark(this.getAttribute('id'))" v-bind:id="mail.id"><i class="far fa-star"></i></div>
+                        <div class="prev-item__date">{{mail.date}}</div>
+                    </div>
+                </div>
+                <div class="contacts" v-if="preview ==='contacts'">
+                    <div class="add-contact">
+                        <input class="card-data mg-fix new-contact" type="text" placeholder="andrew@okmail">
+                        <div class="card-button --orange send__new" onclick="addContact()"><i class="fas fa-user-plus"></i> Add contact
+                        </div>
+                    </div>
+                    <div class="prev-item" v-for="(contact, index) in contacts" :key="index" v-bind:id="contact">
+                        <div class="prev-item__title">{{contact}}</div>
+                        <div class="prev-item__del" onclick="clickRemoveContact(this.getAttribute('id'))" v-bind:id="contact"><i class="far fa-trash-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mailbox-current">
+                <div class="current-start" v-if="current ==='start'">
+                    <img src="img/start.svg" alt="">
+                </div>
+                <div class="current-send" v-if="current ==='send'">
+                    <div class="send-form">
+                        <div class="read-top form-top">
+                            <div class="new-message">New Message</div>
+                        </div>
+                        <div class="send-wrapper">
+                            <input class="card-data mg-fix send-to" type="text" placeholder="andrew@okmail">
+                            <input class="card-data mg-fix send-title" type="text" placeholder="Nebulas mainnet launch!">
+                            <textarea class="card-data mg-fix send-text" placeholder="Hi! Did u heard about Nebulas?" name="Text1" cols="40" rows="5"></textarea>
+                            <div class="card-button --orange send__new" onclick="sendMessage()">Send message <i class="fas fa-paper-plane"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="current-read" v-if="current === 'inbox'">
+                    <div class="read-top">
+                        <div class="read__from">From: <span>{{mail.inbox[currentId].from}}</span></div>
+                        <div class="read__from">To: <span>{{mail.inbox[currentId].to}}</span></div>
+                        <div class="read__date">{{mail.inbox[currentId].date}}</div>
+                        <div class="read__menu"><span onclick="clickAddMark(this.getAttribute('id'))" v-bind:id="mail.inbox[currentId].id"><i class="far fa-star"></i></span><span onclick="clickAddSpam(this.getAttribute('id'))" v-bind:id="mail.inbox[currentId].id"><i class="far fa-thumbs-down"></i>
+
+</span><span onclick="clickDelMsg(this.getAttribute('id'))" v-bind:id="mail.inbox[currentId].id"><i class="far fa-trash-alt"></i>
+
+
+
+</span></div>
+                    </div>
+                    <div class="read-main">
+                        <div class="main__title">{{mail.inbox[currentId].title}}</div>
+                        <div class="main__text">{{mail.inbox[currentId].text}}</div>
+                    </div>
+                </div>
+                <div class="current-read" v-if="current === 'marked'">
+                    <div class="read-top">
+                        <div class="read__from">From: <span>{{marked[currentId].from}}</span></div>
+                        <div class="read__from">To: <span>{{marked[currentId].to}}</span></div>
+                        <div class="read__date">{{marked[currentId].date}}</div>
+                        <div class="read__menu"><span onclick="clickAddMark(this.getAttribute('id'))" v-bind:id="marked[currentId].id"><i class="far fa-star"></i></span><span onclick="clickAddSpam(this.getAttribute('id'))" v-bind:id="marked[currentId].id"><i class="far fa-thumbs-down"></i>
+
+</span><span onclick="clickDelMsg(this.getAttribute('id'))" v-bind:id="marked[currentId].id"><i class="far fa-trash-alt"></i>
+
+
+
+</span></div>
+                    </div>
+                    <div class="read-main">
+                        <div class="main__title">{{marked[currentId].title}}</div>
+                        <div class="main__text">{{marked[currentId].text}}</div>
+                    </div>
+                </div>
+                <div class="current-read" v-if="current === 'spam'">
+                    <div class="read-top">
+                        <div class="read__from">From: <span>{{spam[currentId].from}}</span></div>
+                        <div class="read__from">To: <span>{{spam[currentId].to}}</span></div>
+                        <div class="read__date">{{spam[currentId].date}}</div>
+                        <div class="read__menu"><span onclick="clickAddMark(this.getAttribute('id'))" v-bind:id="spam[currentId].id"><i class="far fa-star"></i></span><span onclick="clickAddSpam(this.getAttribute('id'))" v-bind:id="spam[currentId].id"><i class="far fa-thumbs-down"></i>
+
+</span><span onclick="clickDelMsg(this.getAttribute('id'))" v-bind:id="spam[currentId].id"><i class="far fa-trash-alt"></i>
+
+
+
+</span></div>
+                    </div>
+                    <div class="read-main">
+                        <div class="main__title">{{spam[currentId].title}}</div>
+                        <div class="main__text">{{spam[currentId].text}}</div>
+                    </div>
+                </div>
+                <div class="current-read" v-if="current === 'outbox'">
+                    <div class="read-top">
+                        <div class="read__from">From: <span>{{mail.outbox[currentId].from}}</span></div>
+                        <div class="read__from">To: <span>{{mail.outbox[currentId].to}}</span></div>
+                        <div class="read__date">{{mail.outbox[currentId].date}}</div>
+                        <div class="read__menu"><span onclick="clickDelMsg(this.getAttribute('id'))" v-bind:id="mail.outbox[currentId].id"><i class="far fa-trash-alt"></i>
+
+
+
+</span></div>
+                    </div>
+                    <div class="read-main">
+                        <div class="main__title">{{mail.outbox[currentId].title}}</div>
+                        <div class="main__text">{{mail.outbox[currentId].text}}</div>
+                    </div>
+                </div>
+                <div class="current-new" v-if="current ==='new'">
+                    <div class="prev-item" v-for='mail in mail.inbox' v-bind:id="mail.id">
+                        <div class="prev-item__from">{{mail.from}}</div>
+                        <div class="prev-item__title">{{mail.title}}</div>
+                        <div class="prev-item__text">{{mail.text}}</div>
+                        <div class="prev-item__mark" v-bind:id="mail.id"><i class="far fa-star"></i></div>
+                        <div class="prev-item__date">{{mail.date}}</div>
+                    </div>
+                </div>
+                <div class="current-new" v-if="current ==='addContact'">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -887,5 +887,108 @@ textarea {
 .add-contact {
     padding: 30px 50px 60px 50px;
 }
+.ok-logo{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    flex-flow: row wrap;
+}
+.ok-flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 100vh;
+}
+.ok-flex .row{
+    width: 100%;
+}
+.ok-landing{
+        overflow-y:hidden;
 
-.new-contact {}
+    background-color: #E46A66;
+    padding: 0px 70px;
+}
+.ok-title{
+    font-size: 65px;
+    font-family: "Arvo";
+    font-size: 64px;
+    line-height: 1.3em;
+}
+.ok-title span{
+    color: #21314E;
+}
+.ok-subtitle{
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 85px;
+}
+.ok-bottom{
+       
+
+    font-size: 16px;
+    font-weight: 500;
+}
+.ok-scroll{
+    
+}
+.ok-subflex{
+    display: flex;
+    align-items: center;
+}
+.try-btn{
+    background-color: #21314E;
+    padding: 25px 65px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease all;
+    border-radius: 5px;
+
+}
+.try-btn:hover{
+    background-color: #0f254c;
+}
+.scroll-wrapper{
+        position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    transition: transform .5s ease;
+}
+.ok-table{
+    text-align: center;
+}
+.ok-table th{
+    width: 400px;
+    font-size: 22px;
+     padding-bottom: 40px;
+}
+.ok-table tr th:nth-child(2){
+    color: #21314F;
+}
+.ok-table tr td{
+    padding: 20px 100px;
+    border: 2px solid #E87F7B;
+    border-radius: 5px;
+}
+.ok-table tr td:nth-child(1) {
+    padding: 20px 0px;
+    border: none;
+    text-align: right;
+    padding-right: 30px;
+}
+.synch-back{
+    background: url(../img/synch-ok.svg);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+.synch-img{
+        position: relative;
+    right: 50px;
+}
+.ok-table img{
+    max-width: initial;
+}
