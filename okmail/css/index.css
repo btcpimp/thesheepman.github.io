@@ -1045,3 +1045,9 @@ textarea {
   display: inline-block;
   line-height: 1em;
 }
+.img-footer{
+    margin-bottom: 100px;
+}
+.title-footer{
+    margin-top: 200px;
+}
