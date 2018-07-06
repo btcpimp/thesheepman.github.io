@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,600,700" rel="stylesheet">
     <script src="libs/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    
+    <script src="libs/typed.min.js"></script>
+
     <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/mobile.css">
@@ -67,10 +68,11 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="ok-title">Hey!
+                            <div class="ok-title" id="typed-strings">Hey!
                                 <br>We Are the <span>First<br>Encrypted Mail</span>
                             </div>
-                            <div class="ok-subtitle">Encrypt your messages & feel safe about data!</div>
+
+                            <div class="ok-subtitle" id="typed-1"></div>
                         </div>
                     </div>
                     
@@ -250,6 +252,15 @@ jQuery(document).ready(function($) {
             }, 500); // -> Here you can modify the time between functions call
         }
     });
+    
+var options = {
+  strings: ["Encrypt your messages &amp; feel safe about data!"],
+  typeSpeed: 40,
+  showCursor: false
+}
+
+var typed = new Typed("#typed-1", options);
+var typed = new Typed("#typed-2", options);
 });
 </script>
 
