@@ -931,6 +931,7 @@ textarea {
 }
 
 .ok-subtitle {
+    height: 25px;
     margin-top: 50px;
     font-weight: 500;
     font-size: 22px;
@@ -1050,4 +1051,7 @@ textarea {
 }
 .title-footer{
     margin-top: 200px;
+}
+.mg-150{
+    margin-top: 150px;
 }
