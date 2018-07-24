@@ -140,12 +140,26 @@ $(document).ready(function() {
     var container = $('.masters');
     var windowHeight = window.innerHeight;
     var windowWidth = window.innerWidth;
-    var scrollArea = 1000 - windowHeight;
+    var scrollArea = windowHeight;
     var car = $('.car')
-    window.addEventListener('scroll', function() {
-         var scrollTop = window.pageYOffset || window.scrollTop;
-        var scrollPercent = scrollTop/scrollArea*1.2 || 0;
 
-         car.css('left', scrollPercent*window.innerWidth/100-1200 + 'px')
+
+    $(window).on('scroll', function() {
+        var $elem = $('.car');
+        var $window = $(window);
+
+        var docViewTop = $window.scrollTop();
+        var docViewBottom = docViewTop + $window.height();
+        var elemTop = $elem.offset().top;
+        var elemBottom = elemTop + $elem.height();
+        if (elemBottom - 300 < docViewBottom) {
+            var windowsOffset = $(window).scrollTop()
+            var scrollTop = windowsOffset - car.offset().top
+
+            var scrollPercent = scrollTop / scrollArea
+
+            car.css('left', scrollPercent / 5 * window.innerWidth + 'px')
+        }
     });
+
 });
