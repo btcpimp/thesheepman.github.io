@@ -132,6 +132,9 @@
 }
 
 @media (max-width: 796px) {
+    .car{
+        display: none;
+    }
 .about-list__item{
     width: 100%;
     margin-bottom: 40px;

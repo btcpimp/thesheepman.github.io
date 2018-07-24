@@ -1,10 +1,10 @@
 $(document).ready(function() {
-  AOS.init();
+    AOS.init();
     //MENU SCROLL
     $(".header-mnu__link").on("click", function(event) {
         event.preventDefault();
         var id = $(this).attr('href'),
-            top = $(id).offset().top-80;
+            top = $(id).offset().top - 80;
         $('body,html').animate({ scrollTop: top }, 400);
     });
 
@@ -118,12 +118,34 @@ $(document).ready(function() {
         $('.rightDescr').eq(currentItem).addClass('active')
     });
     $('.descr-item__close').click(function(event) {
-       $('.descr-item').removeClass('active')
+        $('.descr-item').removeClass('active')
     });
     $('.burger').click(function(event) {
         $('.vert-mnu').toggleClass('vert-mnu_visible');
     });
     $('.vert-mnu-close').click(function(event) {
-          $('.vert-mnu').toggleClass('vert-mnu_visible');
+        $('.vert-mnu').toggleClass('vert-mnu_visible');
+    });
+
+
+
+
+
+
+
+
+
+
+
+    var container = $('.masters');
+    var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
+    var scrollArea = 1000 - windowHeight;
+    var car = $('.car')
+    window.addEventListener('scroll', function() {
+         var scrollTop = window.pageYOffset || window.scrollTop;
+        var scrollPercent = scrollTop/scrollArea*1.2 || 0;
+
+         car.css('left', scrollPercent*window.innerWidth/100-1200 + 'px')
     });
 });
