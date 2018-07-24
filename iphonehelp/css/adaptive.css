@@ -1,0 +1,234 @@
+@media (max-width: 1250px) {
+    .contacts {
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.benefits-item{
+    padding: 18px;
+}
+.benefits-item h2{
+    padding: 16px;
+}
+.form__phone{
+    min-width: 400px;
+}
+.price-buttons button{
+     padding: 8px 17px;
+}
+.descr-item{
+    width: 300px;
+}
+.price-table__descr{
+    left: 330px;
+}
+.benefits-item h2{
+    padding: 0px;
+    font-size: 16px;
+}
+
+}
+
+@media (max-width: 1100px) {
+    h1{
+        text-align: center;
+    }
+    .burger{
+        display: inline-block;
+    }
+    .header-mnu{
+        display: none;
+    }
+    .logo svg{
+        width: 50px;
+    }
+    .logo{
+        font-size: 22px;
+        line-height: 0px;
+    }
+    .header-body{
+        padding: 5px 100px;
+    }
+    .header{
+        height: auto;
+    }
+    .content-wrapper{
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+    .header form{
+        margin: 60px 0px;
+    }
+    .price form{
+        margin-top: 60px;
+    }
+    .header-mnu__link{
+        color: #333;
+    }
+    .header-choose__item{
+        width: 33%;
+        margin-bottom: 20px;
+    }
+    .phone-model{
+        display: none;
+    }
+    .price .col-md-4{
+        width: 100%;
+            -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    }
+    .price-table{
+        height: auto;
+    }
+    h1{
+        font-size: 28px !important;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .contacts{
+        width: 820px;
+    }
+    .about-list__number{
+        font-size: 72px;
+    }
+    .contacts-left h2{
+        font-size: 15px;
+    }
+    .contacts h1{
+        text-align: left;
+    }
+}
+
+@media (max-width: 992px) {
+    .benefits-item {
+    margin-top: 30px;
+    min-height: auto;
+    width: 100%;
+}
+.benefits-item {
+       border-left: 2px solid red;
+}
+.benefits-item:nth-child(3) {
+       border-left: 2px solid red;
+}
+.benefits-item {
+    border-right: 0px;
+}
+.contacts-left{
+    width: 100%;
+}
+.contacts-right {
+    margin-bottom: 30px;
+    width: 100%;
+    position: relative;
+}
+.price-table__descr{
+    display: none;
+}
+}
+
+@media (max-width: 796px) {
+.about-list__item{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.margin-50{
+    margin-top: 0px;
+}
+.form__phone{
+    min-width: 300px;
+}
+.about, .benefits, .masters, .feedback, .faq, .price{
+    padding: 25px 0px;
+}
+.contacts{
+    width: 100%;
+    padding: 20px 50px;
+}
+.faq-q{
+    padding-left: 20px;
+    border-right: 0px;
+    border-left: 2px solid #f5382b;
+    margin-bottom: 30px;
+}
+.form__phone{
+    min-width: 190px;
+}
+.feedback-block__item{
+    width: 100%;
+    border-right: 0px;
+     border-left: 2px solid #f5382b;
+}
+.feedback-block__item:nth-child(1){
+    border-right: 0px;
+}
+.feedback__link{
+    display: block;
+    text-align: center;
+}
+h1{
+    font-size: 20px !important;
+    font-weight: bolder;
+}
+h2{
+    font-size: 14px !important;
+}
+}
+@media (max-width: 565px) {
+.header-body{
+    padding: 10px;
+}
+.vert-mnu-header{
+    padding: 10px;
+}
+.about, .benefits, .masters, .feedback, .faq, .price {
+    padding: 25px 10px;
+}
+}
+@media (max-width: 530px) {
+.header-body{
+    padding: 10px;
+}
+.vert-mnu-header{
+    padding: 10px;
+}
+.about, .benefits, .masters, .feedback, .faq, .price {
+    padding: 25px 10px;
+}
+.form__button{
+    display: block;
+     margin: 0 auto;
+    margin-top: 10px;
+
+}
+.form__phone{
+    display: block;
+    margin: 0 auto;
+}
+.header-choose__item{
+    width: 50%;
+}
+.header-content{
+   padding: 0 10px;
+}
+.contacts h1{
+    text-align: center;
+}
+.contacts {
+    width: 100%;
+    padding: 20px 10px;
+}
+.contacts-left h2 i {
+    margin-right: 7px;
+    font-size: 18px;
+    width: 15px;
+}
+.price-buttons{
+    margin-left: auto;
+    margin-right: auto;
+}
+}

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>iPhoneHelp.</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700|Montserrat:300,400,500" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- 	<link rel="stylesheet" href="libs/reset.css">
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/adaptive.css"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <!--  <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/countUp.js"></script>
+    <script src="libs/jquery.maskedinput.js"></script> -->
+    <!-- <script src="js/common.js"></script> -->
+     <script src="js/script.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-body">
+            <div class="vert-mnu">
+                <div class="vert-mnu-header">
+                    <div class="logo">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 708.74 800" fill='#fff'>
+                            <title>logo</title>
+                            <polygon points="109.84 168.67 168.82 134.76 176.78 148.47 394.1 23 378.33 13.86 362.26 4.57 354.29 0 0 204.64 0 213.78 101.88 154.96 109.84 168.67" />
+                            <polygon points="109.84 297.53 280.28 199.04 288.24 212.9 505.57 87.43 489.64 78.14 473.87 69 465.9 64.43 0 333.36 0 342.5 101.73 283.67 109.84 297.53" />
+                            <polygon points="109.84 361.96 336.01 231.33 343.97 245.04 561.45 119.42 545.52 110.43 529.6 101.14 521.49 96.57 0 397.64 0 406.93 101.73 348.1 109.84 361.96" />
+                            <polygon points="109.84 426.24 393.22 262.59 401.33 276.3 617.18 151.71 601.11 142.43 585.18 133.28 577.22 128.71 0 462.07 0 471.21 101.73 412.38 109.84 426.24" />
+                            <polygon points="109.84 490.53 448.95 294.73 456.91 308.59 672.76 183.86 656.84 174.71 641.06 165.43 633.1 160.85 0 526.36 0 535.5 101.73 476.81 109.84 490.53" />
+                            <polygon points="696.79 197.72 688.83 193 0 590.78 0 599.93 101.73 541.25 109.84 554.96 448.95 359.16 456.91 372.87 708.74 227.65 708.74 209.22 708.74 204.64 696.79 197.72" />
+                            <polygon points="43.79 639 100.85 606.12 108.81 619.83 447.48 424.33 455.44 438.19 708.74 291.93 708.74 273.5 708.74 255.07 708.74 245.93 35.83 634.43 43.79 639" />
+                            <polyline points="447.48 488.76 455.44 502.62 708.74 356.36 708.74 337.93 708.74 319.5 708.74 310.36 91.56 666.57 99.52 671.14 157.61 637.67 165.43 651.53" />
+                            <polygon points="155.25 703.43 213.34 669.81 221.31 683.67 447.48 553.04 455.44 566.9 708.74 420.64 708.74 402.21 708.74 383.93 708.74 374.64 147.29 698.71 155.25 703.43" />
+                            <polygon points="210.98 735.57 269.07 702.1 277.04 715.81 447.48 617.47 455.44 631.18 708.74 484.92 708.74 466.64 708.74 448.21 708.74 439.07 203.02 731 210.98 735.57" />
+                            <polygon points="258.75 763.14 266.72 767.71 324.81 734.24 332.62 748.1 447.48 681.75 455.44 695.61 708.74 549.36 708.74 530.92 708.74 512.5 708.74 503.35 258.75 763.14" />
+                            <polygon points="322.45 800 380.54 766.38 388.5 780.24 447.48 746.04 455.44 759.9 708.74 613.78 708.74 595.36 708.74 576.93 708.74 567.78 314.49 795.43 322.45 800" />
+                            <polygon points="449.98 55.14 433.91 46 433.91 46 417.99 36.86 410.03 32.14 0 268.93 0 278.07 101.73 219.39 109.84 233.1 224.55 166.9 232.51 180.76 449.98 55.14" />
+                        </svg>iPhoneHelp<span>.</span></div>
+                    <div class="vert-mnu__rigth-side">
+                        <div class="vert-mnu-close">
+                            <span class="vert-mnu-close__item"></span>
+                            <span class="vert-mnu-close__item"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="vert-mnu-body">
+                    <li class="header-mnu__item">
+                        <a href="#price" class="header-mnu__link">
+                              Цены
+                              </a>
+                    </li>
+                    <li class="header-mnu__item">
+                        <a href="#benefits" class="header-mnu__link">
+                              Преимущества
+                              </a>
+                    </li>
+                    <li class="header-mnu__item">
+                        <a href="#about" class="header-mnu__link">
+                              О нас
+                              </a>
+                    </li>
+                    <li class="header-mnu__item">
+                        <a href="#feedback" class="header-mnu__link">
+                              Отзывы
+                              </a>
+                    </li>
+                    <li class="header-mnu__item">
+                        <a href="#faq" target="_blank" class="header-mnu__link header-mnu__link_active">
+                              FAQ
+                              </a>
+                    </li>
+                    <li class="header-mnu__item">
+                        <a href="#contacts" class="header-mnu__link">
+                              Контакты
+                              </a>
+                    </li>
+                    <li class="header-mnu__item">
+                        <div class="header-mnu__contacts"><a href="#contacts" class="header-mnu__phone" href="tel:+375(29) 512 72 76">+375 (29) 512-72-76
+                              </a><a href="#contacts" class="header-mnu__phone" href="tel:+375(29) 650 30 96">+375 (29) 650-30-96
+                              </a></div>
+                    </li>
+                </div>
+            </div>
+            <div class="header-wrapper">
+                <a href="/" class="logo">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 708.74 800" fill='#fff'>
+                        <title>logo</title>
+                        <polygon points="109.84 168.67 168.82 134.76 176.78 148.47 394.1 23 378.33 13.86 362.26 4.57 354.29 0 0 204.64 0 213.78 101.88 154.96 109.84 168.67" />
+                        <polygon points="109.84 297.53 280.28 199.04 288.24 212.9 505.57 87.43 489.64 78.14 473.87 69 465.9 64.43 0 333.36 0 342.5 101.73 283.67 109.84 297.53" />
+                        <polygon points="109.84 361.96 336.01 231.33 343.97 245.04 561.45 119.42 545.52 110.43 529.6 101.14 521.49 96.57 0 397.64 0 406.93 101.73 348.1 109.84 361.96" />
+                        <polygon points="109.84 426.24 393.22 262.59 401.33 276.3 617.18 151.71 601.11 142.43 585.18 133.28 577.22 128.71 0 462.07 0 471.21 101.73 412.38 109.84 426.24" />
+                        <polygon points="109.84 490.53 448.95 294.73 456.91 308.59 672.76 183.86 656.84 174.71 641.06 165.43 633.1 160.85 0 526.36 0 535.5 101.73 476.81 109.84 490.53" />
+                        <polygon points="696.79 197.72 688.83 193 0 590.78 0 599.93 101.73 541.25 109.84 554.96 448.95 359.16 456.91 372.87 708.74 227.65 708.74 209.22 708.74 204.64 696.79 197.72" />
+                        <polygon points="43.79 639 100.85 606.12 108.81 619.83 447.48 424.33 455.44 438.19 708.74 291.93 708.74 273.5 708.74 255.07 708.74 245.93 35.83 634.43 43.79 639" />
+                        <polyline points="447.48 488.76 455.44 502.62 708.74 356.36 708.74 337.93 708.74 319.5 708.74 310.36 91.56 666.57 99.52 671.14 157.61 637.67 165.43 651.53" />
+                        <polygon points="155.25 703.43 213.34 669.81 221.31 683.67 447.48 553.04 455.44 566.9 708.74 420.64 708.74 402.21 708.74 383.93 708.74 374.64 147.29 698.71 155.25 703.43" />
+                        <polygon points="210.98 735.57 269.07 702.1 277.04 715.81 447.48 617.47 455.44 631.18 708.74 484.92 708.74 466.64 708.74 448.21 708.74 439.07 203.02 731 210.98 735.57" />
+                        <polygon points="258.75 763.14 266.72 767.71 324.81 734.24 332.62 748.1 447.48 681.75 455.44 695.61 708.74 549.36 708.74 530.92 708.74 512.5 708.74 503.35 258.75 763.14" />
+                        <polygon points="322.45 800 380.54 766.38 388.5 780.24 447.48 746.04 455.44 759.9 708.74 613.78 708.74 595.36 708.74 576.93 708.74 567.78 314.49 795.43 322.45 800" />
+                        <polygon points="449.98 55.14 433.91 46 433.91 46 417.99 36.86 410.03 32.14 0 268.93 0 278.07 101.73 219.39 109.84 233.1 224.55 166.9 232.51 180.76 449.98 55.14" />
+                    </svg>iPhoneHelp<span>.</span>
+                </a>
+                <div class="header-right-side">
+                    <ul class="header-mnu">
+                        <li class="header-mnu__item">
+                            <a href="#price" class="header-mnu__link">
+                              Цены
+                              </a>
+                        </li>
+                        <li class="header-mnu__item">
+                            <a href="#benefits" class="header-mnu__link">
+                              Преимущества
+                              </a>
+                        </li>
+                        <li class="header-mnu__item">
+                            <a href="#about" class="header-mnu__link">
+                              О нас
+                              </a>
+                        </li>
+                        <li class="header-mnu__item">
+                            <a href="#feedback" class="header-mnu__link">
+                              Отзывы
+                              </a>
+                        </li>
+                        <li class="header-mnu__item">
+                            <a href="#faq" target="_blank" class="header-mnu__link header-mnu__link_active">
+                              FAQ
+                              </a>
+                        </li>
+                        <li class="header-mnu__item">
+                            <a href="#contacts" class="header-mnu__link">
+                              Контакты
+                              </a>
+                        </li>
+                        <li class="header-mnu__item">
+                            <div class="header-mnu__contacts"><a href="#contacts" class="header-mnu__phone" href="tel:+375(29) 512 72 76">+375 (29) 512-72-76
+                              </a><a href="#contacts" class="header-mnu__phone" href="tel:+375(29) 650 30 96">+375 (29) 650-30-96
+                              </a></div>
+                        </li>
+                    </ul>
+                    <div class="burger">
+                        <span class="burger__item"></span>
+                        <span class="burger__item"></span>
+                        <span class="burger__item"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="header-content">
+                <h1>Выездной ремонт техники Apple.</h1>
+                <p class="regular-text">Наш сервисный центр выполнит ремонт iPhone прямо при вас по лучшей цене в городе. Закажите обратный звонок и наш мастер свяжется с вами в течение 60 секунд.</p>
+            </div>
+            <form class="header-form">
+                <input type="text" name="phone" class="form__phone" placeholder="Введите ваш телефон" required="">
+                <button type="submit" class="form__button">Заказать звонок</button>
+            </form>
+            <div class="header-choose">
+                <h1>Выберите модель</h1>
+                <div class="header-choose__block" data-aos="fade-up">
+                    <div class="header-choose__item" data-model='5'><img src="img/iphone-5.png" alt="">
+                        <div class="header-choose__label">iPhone 5/5c/5s</div>
+                    </div>
+                    <div class="header-choose__item" data-model='6'><img src="img/iphone-6s.png" alt="">
+                        <div class="header-choose__label">iPhone 6/6+</div>
+                    </div>
+                    <div class="header-choose__item" data-model='6s'><img src="img/iphone-6.png" alt="">
+                        <div class="header-choose__label">iPhone 6s/6s+</div>
+                    </div>
+                    <div class="header-choose__item" data-model='7'><img src="img/iphone-7.png" alt="">
+                        <div class="header-choose__label">iPhone 7/7+</div>
+                    </div>
+                    <div class="header-choose__item" data-model='8'><img src="img/iphone-8.png" alt="">
+                        <div class="header-choose__label">iPhone 8/8+</div>
+                    </div>
+                    <div class="header-choose__item" data-model='x'><img src="img/iphone-10.png" alt="">
+                        <div class="header-choose__label">iPhone X</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="price" id="price">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Все цены на сайте окончательные и не поменяются в ходе работ</h1>
+                    <h2>Цены указаны только на оригинальные запчасти (аналоги подбираются индивидуально)</h2>
+                    <div class="price-buttons">
+                        <button data-model="5" class="price-button">5</button>
+                        <button data-model="5c" class="price-button">5C</button>
+                        <button data-model="5s" class="price-button active">5S</button>
+                        <button data-model="se" class="price-button">SE</button>
+                        <button data-model="6" class="price-button">6</button>
+                        <button data-model="6plus" class="price-button">6 Plus</button>
+                        <button data-model="6s" class="price-button">6S</button>
+                        <button data-model="6splus" class="price-button">6S Plus</button>
+                        <button data-model="7" class="price-button">7</button>
+                        <button data-model="7plus" class="price-button">7 Plus</button>
+                        <button data-model="8" class="price-button">8</button>
+                        <button data-model="8plus" class="price-button">8 Plus</button>
+                        <button data-model="x" class="price-button">X</button>
+                    </div>
+                    <div class="price-table">
+                        <div class="price-table__descr">
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item leftDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                            <div class="descr-item rightDescr">
+                                <div class="descr-item__close"><i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                                <div class="descr-item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quo praesentium asperiores quaerat, dolores optio ea recusandae molestiae aut consectetur fuga, illum natus maiores! Esse, amet voluptate id ipsa dolor?</div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="5">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone5.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="5c">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone5c.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models active" data-model="5s">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone5s.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="se">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphonese.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="6">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone6s.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="6plus">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone6s.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="6s">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone6s.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="6splus">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone6s.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="7">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone7.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="7plus">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone7-s.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="8">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone8.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="8plus">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphone8-s.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-table__models" data-model="x">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <ul class="models-list">
+                                        <li class="models-list__item leftItems"><span>Замена дисплея</span><strong>89 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Экспресс замена стекла</span><strong>75 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена стекла</span><strong>70 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена аккумулятора</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена передней камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена основной камеры</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item leftItems"> <span>Замена корпуса</span><strong>80 р.</strong></li>
+                                        <li class="models-list__item leftItems"><span>Замена разъема&nbsp;зарядки</span><strong>35 р.</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4"><img alt="Девайс" class="phone-model" src="img/iphonex.jpg"></div>
+                                <div class="col-md-4">
+                                    <ul class="models-list" class="list-right">
+                                        <li class="models-list__item rightItems"><span>Замена слухового динамика</span><strong>35 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки "Home"</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки включения</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена микрофона</span><strong>40 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки вибро</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена кнопки громкости</span><strong>45 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Замена полиф. динамика</span><strong>30 р.</strong></li>
+                                        <li class="models-list__item rightItems"><span>Диагностика&nbsp;</span><strong>0 p.</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="header-form centered" data-aos="fade-up">
+                        <input type="text" name="phone" class="form__phone" placeholder="Введите ваш телефон" required="">
+                        <button type="submit" class="form__button">Узнать цены</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="centered">Наши преимущества</h1></div>
+            </div>
+            <div class="benefits-wrapper">
+                <div class="benefits-item" data-aos="fade-right">
+                    <h2>Профессионалы своего дела</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dignissimos, voluptas. Consectetur, aut architecto nesciunt pariatur soluta perspiciatis culpa! Optio quas eligendi debitis sapiente expedita odio mollitia reiciendis, qui. Veniam.</p>
+                </div>
+                <div class="benefits-item" data-aos="fade-down">
+                    <h2>Безопастность превыше всего</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique officia impedit perferendis, quia, molestias omnis reiciendis reprehenderit laboriosam quos totam minus quas, iusto commodi vitae, magnam sapiente aperiam ducimus error.</p>
+                </div>
+                <div class="benefits-item" data-aos="fade-left">
+                    <h2>Пожизненная гарантия</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque architecto, vitae voluptates ducimus, perferendis accusamus dignissimos odit deleniti repellendus facere doloremque sed culpa, aut omnis odio tempore harum similique. Nobis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="centered">Наши сила в цифрах</h1>
+                    <div class="about-list">
+                        <div class="about-list__item">
+                            <div class="about-list__number Count">3732</div>
+                            <p>Выезда к
+                                <br>клиентам</p>
+                        </div>
+                        <div class="about-list__item">
+                            <div class="about-list__number Count">1138</div>
+                            <p>Экранов iPhone
+                                <br>было заменено</p>
+                        </div>
+                        <div class="about-list__item">
+                            <div class="about-list__number"><span class="Count">99</span>%</div>
+                            <p>Клиентов
+                                <br>рекоммендуют нас</p>
+                        </div>
+                    </div>
+                    <div class="about-list margin-50" data-aos="fade-up">
+                        <div class="about-list__item">
+                            <div class="about-list__img"><img src="img/prev-1.png" alt="сервисный центр iPhone"></div>
+                            <p>Квалифицированный ремонт
+                                <br> при вас за <span>20 минут</span></p>
+                        </div>
+                        <div class="about-list__item">
+                            <div class="about-list__img"><img src="img/prev-2.png" alt="сервисный центр iPhone"></div>
+                            <p>Оригинальные
+                                <br> комплектующие <span>с гарантией</span></p>
+                        </div>
+                        <div class="about-list__item">
+                            <div class="about-list__img"><img src="img/prev-3.png" alt="сервисный центр iPhone"></div>
+                            <p>Гарантия на запчасть
+                                <br>
+                                <span>3 месяца</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="masters" id="masters">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="centered">Нет времени приезжать в сервисный центр? Приедем к вам сами!
+</h1>
+                    <h2>Мастер приедет и отремонтирует устройство прямо у вас.<br>
+Если Вам негде принять мастера: осуществим ремонт в оборудованной машине или отвезем технику в сервис.</h2>
+                    <form data-aos="fade-right" class="header-form centered">
+                        <input type="text" name="phone" class="form__phone" placeholder="Введите ваш телефон" required="">
+                        <button type="submit" class="form__button">Вызывать мастера</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback" id="feedback">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="centered">Отзывы наших клиентов</h1></div>
+            </div>
+            <div class="row feedback-wrapper" data-aos="fade-up">
+                <div class="col-md-4"><a class="feedback__link" href="#"><img src="img/feedback1.jpg" alt=""></a></div>
+                <div class="col-md-4"><a class="feedback__link" href="#"><img src="img/feedback1.jpg" alt=""></a></div>
+                <div class="col-md-4"><a class="feedback__link" href="#"><img src="img/feedback1.jpg" alt=""></a></div>
+            </div>
+            <div class="feedback-block">
+                <div class="feedback-block__item" data-aos="fade-right">
+                    <p>Мы всегда приветствуем честные и объективные отзывы о выполненных нами работах. </p>
+                </div>
+                <div class="feedback-block__item" data-aos="fade-left">
+                    <p>За оставленный отзыв о наших услугах в социальных сетях, наши клиенты получают 5% кэшбэка от полной стоимости ремонта.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="centered">Оветы на часто задаваемые вопросы</h1></div>
+            </div>
+            <div class="row faq-wrapper">
+                <div class="col-md-3" data-aos="fade-right">
+                    <div class="faq-q">
+                        <ul class="q-list">
+                            <li class="q-list__item active">Примерный вопрос 1?</li>
+                            <li class="q-list__item">Примерный вопрос 2?</li>
+                            <li class="q-list__item">Примерный вопрос 3?</li>
+                            <li class="q-list__item">Примерный вопрос 4?</li>
+                            <li class="q-list__item">Примерный вопрос 5?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9" data-aos="fade-left">
+                    <div class="faq-a">
+                        <div class="faq-a__item active">
+                            <h3>Примерный вопрос 1?</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quaerat ullam impedit, eum. Officiis, ipsam cupiditate eligendi accusamus illum fugit! Modi saepe, aperiam aspernatur eaque quibusdam omnis earum soluta accusamus.</p>
+                            <a class="a-item__more" target="_blank" href="#">Подробнее...</a>
+                            <form class="header-form">
+                                <input type="text" name="phone" class="form__phone" placeholder="Введите ваш телефон" required="">
+                                <button type="submit" class="form__button">Бесплатная консультация</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="contacts-wrapper">
+            <div class="contacts-block">
+                <div class="contacts-right">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5c230d985d947bb8d45d730454291a6cb2c2332835fc3fcbdca06a19e1b172e2&amp;source=constructor" width="100%" height="408" frameborder="0"></iframe>
+                </div>
+                <div class="contacts-left">
+                    <h1>Как с нами связаться?</h1>
+                    <h2><i class="fa fa-clock-o" aria-hidden="true"></i>
+
+
+ <span>Время:</span> Ежедневно с 9:00 до 23:00</h2>
+                    <h2><i class="fa fa-map-marker" aria-hidden="true"></i>
+
+
+<span>Адрес:</span> г. Минск, ул. Веры Хоружей 1А</h2>
+                    <h2><i class="fa fa-phone" aria-hidden="true"></i>
+<span>Телефон #1:</span> <a class="card-item__link" href="tel:+375(29) 512 72 76">+375 (29) 512-72-76</a></h2>
+                    <h2><i class="fa fa-phone" aria-hidden="true"></i>
+<span>Телефон #2:</span><a class="card-item__link" href="tel:+375(29) 650 30 96">+375 (29) 650-30-96</a></h2>
+                    <div class="socials">
+                        <h2>Мы в социальных сетях:</h2>
+                        <div class="socials-list">
+                            <a class="socials-list__item" href="instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+</a><a class="socials-list__item" href="instagram" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i>
+
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
